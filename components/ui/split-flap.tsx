@@ -82,97 +82,47 @@ export function SplitFlapDigit({
     return () => clearTimeout(timer);
   }, [char]);
 
-  // Size dimensions
-  const sizeStyles = {
-    hero: {
-      container: 'w-10 sm:w-14 md:w-16 h-16 sm:h-20 md:h-24 text-3xl sm:text-4xl md:text-5xl',
-      topHeight: 'h-8 sm:h-10 md:h-12',
-      bottomHeight: 'h-8 sm:h-10 md:h-12',
-      fontSize: 'text-3xl sm:text-4xl md:text-5xl',
-      lineHeight: 'leading-[64px] sm:leading-[80px] md:leading-[96px]',
-      seamHeight: 'h-[2px]',
-    },
-    lg: {
-      container: 'w-9 sm:w-11 h-14 sm:h-16 text-2xl sm:text-3xl',
-      topHeight: 'h-7 sm:h-8',
-      bottomHeight: 'h-7 sm:h-8',
-      fontSize: 'text-2xl sm:text-3xl',
-      lineHeight: 'leading-[56px] sm:leading-[64px]',
-      seamHeight: 'h-[2px]',
-    },
-    md: {
-      container: 'w-7 sm:w-8 h-10 sm:h-12 text-lg sm:text-xl',
-      topHeight: 'h-5 sm:h-6',
-      bottomHeight: 'h-5 sm:h-6',
-      fontSize: 'text-lg sm:text-xl',
-      lineHeight: 'leading-[40px] sm:leading-[48px]',
-      seamHeight: 'h-[1.5px]',
-    },
-    sm: {
-      container: 'w-5 sm:w-6 h-8 sm:h-9 text-xs sm:text-sm',
-      topHeight: 'h-4 sm:h-4.5',
-      bottomHeight: 'h-4 sm:h-4.5',
-      fontSize: 'text-xs sm:text-sm',
-      lineHeight: 'leading-[32px] sm:leading-[36px]',
-      seamHeight: 'h-[1px]',
-    },
-  };
-
-  const currentSize = sizeStyles[size];
-
-  // Special compact width for punctuation
-  const isCompact = char === '.' || char === ':' || char === ' ';
-  const widthOverride = isCompact
-    ? size === 'hero'
-      ? 'w-4 sm:w-6'
-      : size === 'lg'
-      ? 'w-4 sm:w-5'
-      : 'w-3'
-    : '';
+  // Special compact width for punctuation and spaces
+  const isCompact = char === '.' || char === ':' || char === ' ' || char === '-';
 
   return (
     <div
       className={cn(
         'flap-container shrink-0 relative bg-[#0B0F17] rounded shadow-[0_2px_8px_rgba(0,0,0,0.6)] select-none border border-[#232F46]/80',
-        currentSize.container,
-        widthOverride
+        `flap-size-${size}`
       )}
+      style={{
+        width: isCompact ? 'var(--flap-w-compact)' : 'var(--flap-w)',
+        height: 'var(--flap-h)',
+      }}
     >
       {/* Mechanical Side Hinges */}
       <div className="flap-hinge-left" />
       <div className="flap-hinge-right" />
 
       {/* 1. Static Upper Flap (shows next char top half) */}
-      <div
-        className={cn(
-          'flap-half flap-top absolute top-0 left-0 right-0 w-full overflow-hidden text-primary font-mono',
-          currentSize.topHeight
-        )}
-      >
+      <div className="flap-half flap-top absolute top-0 left-0 right-0 w-full overflow-hidden text-primary font-mono h-1/2">
         <span
-          className={cn(
-            'absolute top-0 w-full text-center font-bold tracking-tight',
-            currentSize.fontSize,
-            currentSize.lineHeight
-          )}
+          className="absolute top-0 left-0 right-0 w-full text-center font-bold tracking-tight select-none"
+          style={{
+            fontSize: 'var(--flap-fs)',
+            lineHeight: 'var(--flap-h)',
+            height: 'var(--flap-h)',
+          }}
         >
           {displayTop}
         </span>
       </div>
 
       {/* 2. Static Lower Flap (shows current char bottom half) */}
-      <div
-        className={cn(
-          'flap-half flap-bottom absolute bottom-0 left-0 right-0 w-full overflow-hidden text-primary font-mono',
-          currentSize.bottomHeight
-        )}
-      >
+      <div className="flap-half flap-bottom absolute bottom-0 left-0 right-0 w-full overflow-hidden text-primary font-mono h-1/2">
         <span
-          className={cn(
-            'absolute bottom-0 w-full text-center font-bold tracking-tight',
-            currentSize.fontSize,
-            currentSize.lineHeight
-          )}
+          className="absolute top-[-100%] left-0 right-0 w-full text-center font-bold tracking-tight select-none"
+          style={{
+            fontSize: 'var(--flap-fs)',
+            lineHeight: 'var(--flap-h)',
+            height: 'var(--flap-h)',
+          }}
         >
           {displayBottom}
         </span>
@@ -181,21 +131,19 @@ export function SplitFlapDigit({
       {/* 3. Animated Top Flipper (flips down from 0 to -90 deg) */}
       {animating && (
         <div
-          className={cn(
-            'flap-half flap-top absolute top-0 left-0 right-0 w-full overflow-hidden z-20 text-primary font-mono origin-bottom transition-transform duration-150 ease-in',
-            currentSize.topHeight
-          )}
+          className="flap-half flap-top absolute top-0 left-0 right-0 w-full overflow-hidden z-20 text-primary font-mono origin-bottom transition-transform duration-150 ease-in h-1/2"
           style={{
             transform: 'rotateX(-90deg)',
             backfaceVisibility: 'hidden',
           }}
         >
           <span
-            className={cn(
-              'absolute top-0 w-full text-center font-bold tracking-tight',
-              currentSize.fontSize,
-              currentSize.lineHeight
-            )}
+            className="absolute top-0 left-0 right-0 w-full text-center font-bold tracking-tight select-none"
+            style={{
+              fontSize: 'var(--flap-fs)',
+              lineHeight: 'var(--flap-h)',
+              height: 'var(--flap-h)',
+            }}
           >
             {flipperTop}
           </span>
@@ -205,20 +153,18 @@ export function SplitFlapDigit({
       {/* 4. Animated Bottom Flipper (flips from 90 to 0 deg) */}
       {animating && (
         <div
-          className={cn(
-            'flap-half flap-bottom absolute bottom-0 left-0 right-0 w-full overflow-hidden z-20 text-primary font-mono origin-top animate-flip-bottom',
-            currentSize.bottomHeight
-          )}
+          className="flap-half flap-bottom absolute bottom-0 left-0 right-0 w-full overflow-hidden z-20 text-primary font-mono origin-top animate-flip-bottom h-1/2"
           style={{
             backfaceVisibility: 'hidden',
           }}
         >
           <span
-            className={cn(
-              'absolute bottom-0 w-full text-center font-bold tracking-tight',
-              currentSize.fontSize,
-              currentSize.lineHeight
-            )}
+            className="absolute top-[-100%] left-0 right-0 w-full text-center font-bold tracking-tight select-none"
+            style={{
+              fontSize: 'var(--flap-fs)',
+              lineHeight: 'var(--flap-h)',
+              height: 'var(--flap-h)',
+            }}
           >
             {flipperBottom}
           </span>
@@ -246,6 +192,7 @@ export interface SplitFlapDisplayProps {
 /**
  * SplitFlapDisplay: The signature Solari / Airport Departure Board numeral display.
  * Handles strings, numbers, decimals, and staggered multi-digit mechanical transitions.
+ * Fully fluid and responsive across mobile (375px), tablet (768px), and desktop (1440px).
  */
 export function SplitFlapDisplay({
   value,
@@ -333,8 +280,47 @@ export function SplitFlapDisplay({
     };
   }, [targetStr, staggerMs, cycleSteps, enableAudio]);
 
+  // Group characters into word units so words wrap cleanly onto multiple lines without mid-word breaking
+  const charGroups = React.useMemo(() => {
+    const groups: { wordIdx: number; chars: { char: string; prevChar: string; index: number }[] }[] = [];
+    let currentGroup: { char: string; prevChar: string; index: number }[] = [];
+    let wordCounter = 0;
+
+    currentChars.forEach((ch, idx) => {
+      if (ch === ' ') {
+        if (currentGroup.length > 0) {
+          groups.push({ wordIdx: wordCounter++, chars: currentGroup });
+          currentGroup = [];
+        }
+      } else {
+        currentGroup.push({
+          char: ch,
+          prevChar: prevChars[idx] || ' ',
+          index: idx,
+        });
+      }
+    });
+
+    if (currentGroup.length > 0) {
+      groups.push({ wordIdx: wordCounter++, chars: currentGroup });
+    }
+
+    if (groups.length === 0 && currentChars.length > 0) {
+      groups.push({
+        wordIdx: 0,
+        chars: currentChars.map((ch, idx) => ({
+          char: ch,
+          prevChar: prevChars[idx] || ' ',
+          index: idx,
+        })),
+      });
+    }
+
+    return groups;
+  }, [currentChars, prevChars]);
+
   return (
-    <div className={cn('flex flex-col gap-2', className)}>
+    <div className={cn('flex flex-col gap-2 w-full max-w-full', className)}>
       {(label || sublabel) && (
         <div className="flex items-center justify-between font-mono text-xs">
           {label && (
@@ -348,15 +334,22 @@ export function SplitFlapDisplay({
         </div>
       )}
 
-      {/* Flap Units Row */}
-      <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 p-2 sm:p-3 md:p-4 bg-[#090D15] rounded-md border border-border-subtle shadow-panel-elevated overflow-x-auto">
-        {currentChars.map((ch, idx) => (
-          <SplitFlapDigit
-            key={`flap-${idx}`}
-            char={ch}
-            prevChar={prevChars[idx] || ' '}
-            size={size}
-          />
+      {/* Flap Units Container: Fluid wrap, zero horizontal scrollbar */}
+      <div className="flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-2 p-2 sm:p-3 md:p-4 bg-[#090D15] rounded-md border border-border-subtle shadow-panel-elevated w-full max-w-full overflow-hidden">
+        {charGroups.map((group) => (
+          <div
+            key={`word-${group.wordIdx}`}
+            className="flex flex-wrap items-center gap-1 sm:gap-1.5 shrink-0 max-w-full"
+          >
+            {group.chars.map((item) => (
+              <SplitFlapDigit
+                key={`flap-${item.index}`}
+                char={item.char}
+                prevChar={item.prevChar}
+                size={size}
+              />
+            ))}
+          </div>
         ))}
       </div>
     </div>

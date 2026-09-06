@@ -78,6 +78,34 @@ body {
 }
 
 /* Split-Flap 3D Perspective and Card Flip Mechanics */
+.flap-size-hero {
+  --flap-w: clamp(28px, 6vw, 56px);
+  --flap-w-compact: clamp(14px, 3vw, 28px);
+  --flap-h: calc(var(--flap-w) * 1.45);
+  --flap-fs: calc(var(--flap-w) * 0.72);
+}
+
+.flap-size-lg {
+  --flap-w: clamp(22px, 4.5vw, 44px);
+  --flap-w-compact: clamp(11px, 2.25vw, 22px);
+  --flap-h: calc(var(--flap-w) * 1.45);
+  --flap-fs: calc(var(--flap-w) * 0.72);
+}
+
+.flap-size-md {
+  --flap-w: clamp(18px, 3.5vw, 32px);
+  --flap-w-compact: clamp(9px, 1.75vw, 16px);
+  --flap-h: calc(var(--flap-w) * 1.45);
+  --flap-fs: calc(var(--flap-w) * 0.7);
+}
+
+.flap-size-sm {
+  --flap-w: clamp(14px, 2.5vw, 24px);
+  --flap-w-compact: clamp(7px, 1.25vw, 12px);
+  --flap-h: calc(var(--flap-w) * 1.45);
+  --flap-fs: calc(var(--flap-w) * 0.7);
+}
+
 .flap-container {
   perspective: 600px;
   -webkit-perspective: 600px;

@@ -110,7 +110,7 @@ export function IndexOverview({ currentIndex, status = 'live', statusMessage, au
         <PanelContent className="p-4 sm:p-6 lg:p-8 bg-surface-subtle/30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Solari Display Left */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-4">
+            <div className="lg:col-span-7 flex flex-col items-start gap-4 w-full min-w-0 max-w-full">
               <div className="flex flex-wrap items-center gap-2.5">
                 <span className="font-mono text-xs text-secondary-muted uppercase tracking-wider">
                   INSTRUMENT VALUE (BASE 2026.01 = 100.00):
@@ -130,7 +130,7 @@ export function IndexOverview({ currentIndex, status = 'live', statusMessage, au
               </div>
 
               {/* Solari Split-Flap Display */}
-              <div className="w-full">
+              <div className="w-full min-w-0 max-w-full">
                 <SplitFlapDisplay
                   value={liveIndexData && typeof liveIndexData.apix_value === 'number' ? `APIX ${liveIndexData.apix_value.toFixed(2)}` : 'APIX ---.--'}
                   size="hero"
