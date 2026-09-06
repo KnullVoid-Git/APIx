@@ -122,10 +122,10 @@ export function MethodologyView({ methodologyNotes }: MethodologyViewProps) {
                 <strong>Yatra.com:</strong> Restricts bot access on <code className="text-delta-negative">/pwa/</code>, <code className="text-delta-negative">/fresco/</code>, and flight search interfaces; excluded from direct scraper pipeline.
               </p>
               <p>
-                <strong>AirIndia.com:</strong> Direct automated requests encounter edge firewall connection termination (<code className="text-delta-negative">net::ERR_HTTP2_PROTOCOL_ERROR</code>) across runner and cloud IP ranges; excluded from direct scraper pipeline. 100% of Air India (AI) and Air India Express (IX) flights and tariffs are fully captured through compliant multi-carrier aggregator sources (EaseMyTrip & Cleartrip).
+                <strong>AirIndia.com:</strong> Direct automated requests encounter edge firewall connection termination (<code className="text-delta-negative">net::ERR_HTTP2_PROTOCOL_ERROR</code>) across runner and cloud IP ranges; excluded from direct scraper pipeline. Air India and Air India Express fares are represented in the index via compliant OTA aggregators (EaseMyTrip, Cleartrip) where available; OTA-listed fares may differ from airline-direct pricing due to aggregator markups, and coverage is partial rather than exhaustive.
               </p>
               <p>
-                <strong>MakeMyTrip / IndiGo:</strong> Direct search URLs disallowed via robots.txt. All carrier inventory (IndiGo 6E, Air India AI, Akasa QP, SpiceJet SG, AIX IX) is fully captured via compliant OTA aggregators (EaseMyTrip & Cleartrip), preserving 100% national basket coverage while respecting RFC 9309 crawler standards.
+                <strong>MakeMyTrip / IndiGo:</strong> Direct search URLs disallowed via robots.txt. Carrier inventories (IndiGo 6E, Air India AI, Akasa QP, SpiceJet SG, AIX IX) are represented via compliant OTA aggregators (EaseMyTrip & Cleartrip) where available, maintaining broad national basket coverage while respecting RFC 9309 crawler standards.
               </p>
             </div>
           </PanelContent>
