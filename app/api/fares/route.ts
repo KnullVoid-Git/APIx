@@ -74,7 +74,7 @@ function loadCleanedFareRecords(): CleanedFareRecord[] {
 }
 
 export async function GET(request: NextRequest) {
-  const rateLimit = checkRateLimit(request);
+  const rateLimit = await checkRateLimit(request);
   if (!rateLimit.allowed) {
     return apiError(
       'RATE_LIMIT_EXCEEDED',

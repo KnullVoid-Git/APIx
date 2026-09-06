@@ -90,7 +90,7 @@ function loadStoredTimeSeries(): TimeSeriesRecord[] {
 
 export async function GET(request: NextRequest) {
   // 1. Rate Limit Check
-  const rateLimit = checkRateLimit(request);
+  const rateLimit = await checkRateLimit(request);
   if (!rateLimit.allowed) {
     return apiError(
       'RATE_LIMIT_EXCEEDED',

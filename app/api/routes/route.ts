@@ -4,7 +4,7 @@ import { checkRateLimit } from '@/lib/api/rate-limiter';
 import { DGCA_ROUTE_BASKET } from '@/lib/mock-data';
 
 export async function GET(request: NextRequest) {
-  const rateLimit = checkRateLimit(request);
+  const rateLimit = await checkRateLimit(request);
   if (!rateLimit.allowed) {
     return apiError(
       'RATE_LIMIT_EXCEEDED',
