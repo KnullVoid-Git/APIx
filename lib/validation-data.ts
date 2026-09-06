@@ -199,7 +199,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 5200,
     variance_inr: 20,
     variance_pct: 0.39,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 420,
     grade: 'A+',
   },
@@ -211,7 +211,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 5100,
     variance_inr: 40,
     variance_pct: 0.79,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 415,
     grade: 'A+',
   },
@@ -223,7 +223,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 6700,
     variance_inr: 120,
     variance_pct: 1.82,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 380,
     grade: 'A+',
   },
@@ -235,7 +235,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 6600,
     variance_inr: 110,
     variance_pct: 1.69,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 385,
     grade: 'A+',
   },
@@ -247,7 +247,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 4100,
     variance_inr: 50,
     variance_pct: 1.23,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 310,
     grade: 'A+',
   },
@@ -259,7 +259,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 4150,
     variance_inr: 70,
     variance_pct: 1.72,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 315,
     grade: 'A+',
   },
@@ -271,7 +271,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 5700,
     variance_inr: 110,
     variance_pct: 1.97,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 290,
     grade: 'A+',
   },
@@ -283,7 +283,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 5600,
     variance_inr: 90,
     variance_pct: 1.63,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 285,
     grade: 'A+',
   },
@@ -295,7 +295,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 3500,
     variance_inr: 60,
     variance_pct: 1.74,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 260,
     grade: 'A+',
   },
@@ -307,7 +307,7 @@ export const INITIAL_ROUTE_BENCHMARKS: DgcaReferenceFareRecord[] = [
     apix_computed_fare: 6200,
     variance_inr: 120,
     variance_pct: 1.97,
-    source_report_ref: 'DGCA-MR-2026-01-SEC4',
+    source_report_ref: 'ILLUSTRATIVE (Pending Verified DGCA Sourcing)',
     sample_size_quotes: 240,
     grade: 'A+',
   },
@@ -384,16 +384,16 @@ export function calculateValidationMetrics(
 }
 
 export const SAMPLE_DGCA_CSV_TEMPLATE = `month,route_id,dgca_official_fare,source_report_ref
-2026-01,DEL-BOM,5180,DGCA-MR-2026-01-SEC4
-2026-01,BOM-DEL,5060,DGCA-MR-2026-01-SEC4
-2026-01,DEL-BLR,6580,DGCA-MR-2026-01-SEC4
-2026-01,BLR-DEL,6490,DGCA-MR-2026-01-SEC4
-2026-01,BOM-BLR,4050,DGCA-MR-2026-01-SEC4
-2026-01,BLR-BOM,4080,DGCA-MR-2026-01-SEC4
-2026-01,DEL-CCU,5590,DGCA-MR-2026-01-SEC4
-2026-01,CCU-DEL,5510,DGCA-MR-2026-01-SEC4
-2026-01,BLR-HYD,3440,DGCA-MR-2026-01-SEC4
-2026-01,MAA-DEL,6080,DGCA-MR-2026-01-SEC4`;
+2026-01,DEL-BOM,5180,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,BOM-DEL,5060,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,DEL-BLR,6580,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,BLR-DEL,6490,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,BOM-BLR,4050,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,BLR-BOM,4080,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,DEL-CCU,5590,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,CCU-DEL,5510,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,BLR-HYD,3440,ILLUSTRATIVE-DGCA-REF-2026-01
+2026-01,MAA-DEL,6080,ILLUSTRATIVE-DGCA-REF-2026-01`;
 
 /**
  * Parses user-uploaded DGCA CSV report rows

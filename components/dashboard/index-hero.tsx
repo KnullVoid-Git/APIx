@@ -51,7 +51,7 @@ export function IndexHero({ currentIndex, audioEnabled }: IndexHeroProps) {
       <Panel variant="highlight" className="overflow-hidden">
         <PanelHeader
           kicker="[INDEX-01 // NATIONAL METRIC]"
-          title="APIx — REAL-TIME NATIONAL AIRFARE PRICE INDEX"
+          title="APIx — NATIONAL AIRFARE PRICE INDEX"
           statusDot="amber"
           actions={
             <div className="flex items-center gap-2">

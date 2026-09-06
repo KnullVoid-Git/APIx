@@ -204,7 +204,7 @@ export function ValidationView({ initialDatesCount = 2 }: ValidationViewProps) {
       <SectionHeader
         kicker="[MODULE 05 // EMPIRICAL VALIDATION & GROUND TRUTH]"
         title="DGCA Back-Test Validation & Econometric Convergence"
-        description="Empirical validation of the real-time APIx Index against official Ministry of Civil Aviation / DGCA tariff benchmark circulars. Live validation requires minimum N ≥ 2 overlapping monthly periods."
+        description="Empirical validation of the daily-computed APIx Index against official Ministry of Civil Aviation / DGCA tariff benchmark circulars. Live validation requires minimum N ≥ 2 overlapping monthly periods."
       />
 
       {/* 1. Executive Statistical Accuracy KPI Banner */}

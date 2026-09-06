@@ -115,13 +115,13 @@ export class ScraperRunner {
       targetSources = options.sources
         .map((s) => this.registry.get(s))
         .filter((s): s is IScraperSource => Boolean(s));
-    }
-      // Default sources: EaseMyTrip + Cleartrip + Akasa Air + Air India
+    } else {
+      // Default active sources: EaseMyTrip + Cleartrip + Akasa Air
       const easemytrip = this.registry.get('easemytrip');
       const cleartrip = this.registry.get('cleartrip');
       const akasa = this.registry.get('akasa');
-      const airindia = this.registry.get('airindia');
-      targetSources = [easemytrip, cleartrip, akasa, airindia].filter((s): s is IScraperSource => Boolean(s));
+      targetSources = [easemytrip, cleartrip, akasa].filter((s): s is IScraperSource => Boolean(s));
+    }
 
     const tasks = this.buildTasks(targetRoutes, targetWindows);
     const totalRuns = tasks.length * targetSources.length;

@@ -13,7 +13,6 @@ export class ScraperRegistry {
     this.register(new EaseMyTripScraper());
     this.register(new CleartripScraper());
     this.register(new AkasaScraper());
-    this.register(new AirIndiaScraper());
   }
 
   public static getInstance(): ScraperRegistry {
@@ -24,24 +23,54 @@ export class ScraperRegistry {
   }
 
   public register(scraper: IScraperSource) {
-    this.sources.set(scraper.name.toLowerCase(), scraper);
+    const rawName = scraper.name.toLowerCase();
+    const normalizedKey = rawName.replace(/[-_ ]/g, '');
+    this.sources.set(rawName, scraper);
+    this.sources.set(normalizedKey, scraper);
+
+    // Register common aliases
+    if (normalizedKey === 'akasaair') {
+      this.sources.set('akasa', scraper);
+      this.sources.set('akasa-air', scraper);
+    } else if (normalizedKey === 'airindia') {
+      this.sources.set('air-india', scraper);
+      this.sources.set('ai', scraper);
+    } else if (normalizedKey === 'easemytrip') {
+      this.sources.set('emt', scraper);
+      this.sources.set('ease-my-trip', scraper);
+    }
   }
 
   public get(name: string): IScraperSource | undefined {
-    const key = name.toLowerCase().replace(/[-_ ]/g, '');
+    if (!name) return undefined;
+    const raw = name.toLowerCase().trim();
+    const normalized = raw.replace(/[-_ ]/g, '');
+
+    // Direct check
+    if (this.sources.has(raw)) return this.sources.get(raw);
+    if (this.sources.has(normalized)) return this.sources.get(normalized);
+
+    // Scan through registered sources
     for (const [k, v] of this.sources.entries()) {
-      if (k.replace(/[-_ ]/g, '') === key) {
+      const normKey = k.toLowerCase().replace(/[-_ ]/g, '');
+      if (normKey === normalized || normKey.startsWith(normalized) || normalized.startsWith(normKey)) {
         return v;
       }
     }
-    return this.sources.get(name.toLowerCase());
+    return undefined;
   }
 
   public getAll(): IScraperSource[] {
-    return Array.from(this.sources.values());
+    // Return distinct scrapers
+    const distinct = new Set<IScraperSource>(this.sources.values());
+    return Array.from(distinct);
   }
 
   public getNames(): string[] {
-    return Array.from(this.sources.keys());
+    const distinct = new Set<string>();
+    for (const scraper of this.sources.values()) {
+      distinct.add(scraper.name);
+    }
+    return Array.from(distinct);
   }
 }

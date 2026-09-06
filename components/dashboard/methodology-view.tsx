@@ -108,7 +108,7 @@ export function MethodologyView({ methodologyNotes }: MethodologyViewProps) {
               <span className="p-1.5 bg-surface-subtle border border-border-subtle rounded text-delta-positive font-bold">T+45 (45d)</span>
             </div>
             <p className="text-[11px] text-secondary-muted pt-1">
-              Fares are collected under ethical scraping safeguards: transparent User-Agent identification (<code className="text-amber-signal">APIx-PriceIndex-Bot/1.0</code>), randomized 3–7s jitter delays to keep server load minimal, and robots.txt path validation across active compliant sources (EaseMyTrip, Cleartrip, Akasa Air, Air India).
+              Fares are collected under ethical scraping safeguards: transparent User-Agent identification (<code className="text-amber-signal">APIx-PriceIndex-Bot/1.0</code>), randomized 3–7s jitter delays to keep server load minimal, and robots.txt path validation across active compliant sources (EaseMyTrip, Cleartrip, Akasa Air).
             </p>
             <div className="p-2.5 rounded bg-surface border border-border-subtle text-[11px] space-y-1.5 text-secondary-muted">
               <span className="text-primary font-semibold font-mono text-[10px] uppercase tracking-wider block">OTA & Carrier Robots.txt Compliance Audit:</span>
@@ -120,6 +120,9 @@ export function MethodologyView({ methodologyNotes }: MethodologyViewProps) {
               </p>
               <p>
                 <strong>Yatra.com:</strong> Restricts bot access on <code className="text-delta-negative">/pwa/</code>, <code className="text-delta-negative">/fresco/</code>, and flight search interfaces; excluded from direct scraper pipeline.
+              </p>
+              <p>
+                <strong>AirIndia.com:</strong> Direct automated requests encounter edge firewall connection termination (<code className="text-delta-negative">net::ERR_HTTP2_PROTOCOL_ERROR</code>) across runner and cloud IP ranges; excluded from direct scraper pipeline. 100% of Air India (AI) and Air India Express (IX) flights and tariffs are fully captured through compliant multi-carrier aggregator sources (EaseMyTrip & Cleartrip).
               </p>
               <p>
                 <strong>MakeMyTrip / IndiGo:</strong> Direct search URLs disallowed via robots.txt. All carrier inventory (IndiGo 6E, Air India AI, Akasa QP, SpiceJet SG, AIX IX) is fully captured via compliant OTA aggregators (EaseMyTrip & Cleartrip), preserving 100% national basket coverage while respecting RFC 9309 crawler standards.
@@ -186,9 +189,26 @@ export function MethodologyView({ methodologyNotes }: MethodologyViewProps) {
             </p>
             <ul className="space-y-1.5 list-disc pl-4 font-mono text-[11px]">
               <li><strong>Weekly Rollup:</strong> ISO week average for monetary policy monitoring by RBI.</li>
-              <li><strong>Monthly Rollup:</strong> Calendar month composite designed to augment MoSPI's CPI Transport sub-group.</li>
+              <li><strong>Monthly Rollup:</strong> Calendar month composite designed to augment MoSPI&apos;s CPI Transport sub-group.</li>
               <li><strong>DGCA Validation:</strong> Validation pending — {daysCount} {daysCount === 1 ? 'day' : 'days'} of live data collected, accumulating daily index observations toward the first monthly correlation comparison with official DGCA reference circulars.</li>
             </ul>
+          </PanelContent>
+        </Panel>
+
+        {/* Step 5: Data Storage & Backend Architecture */}
+        <Panel variant="default">
+          <PanelHeader
+            kicker="[PHASE 05]"
+            title="5. Data Storage & Repository Architecture"
+            statusDot="amber"
+          />
+          <PanelContent className="space-y-3 text-xs text-secondary leading-relaxed font-sans">
+            <p>
+              The core production pipeline, Laspeyres index engine, and historical time-series run on structured, immutable flat files under <code className="text-amber-signal">data/</code> (<code className="text-primary">data/snapshots/</code>, <code className="text-primary">data/cleaned/</code>, <code className="text-primary">data/index/daily/</code>, <code className="text-primary">data/index/time_series.csv</code>). This guarantees zero-dependency runtime reliability, complete transparency, and auditable Git-backed data versioning.
+            </p>
+            <p className="text-[11px] text-secondary-muted font-mono">
+              <strong>Convex Integration:</strong> Convex database schemas and client providers are fully configured in the repository as an optional/future backend for real-time multi-client state synchronization, while active production reads operate directly from verified flat-file snapshots.
+            </p>
           </PanelContent>
         </Panel>
       </div>

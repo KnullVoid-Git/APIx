@@ -1,36 +1,38 @@
-# APIx — Real-time Airfare Price Index
+# APIx — National Airfare Price Index
 
 > **Smart India Hackathon 2026 · Problem Statement 26056 · Ministry of Statistics and Programme Implementation (MoSPI) / Data Informatics and Innovation Division (DIID)**
 
-APIx is an end-to-end software platform that scrapes domestic airfare data from airline and OTA endpoints, normalizes and cleans the data using statistical outlier fences (Tukey IQR), computes a real-time Laspeyres-style Airfare Price Index weighted by DGCA passenger-traffic volume, and exposes the index via a financial-terminal-style dashboard and public REST API to augment the **"Transport and Communication"** sub-group of India's official Consumer Price Index (CPI).
+APIx is an end-to-end software platform that scrapes domestic airfare data from airline and OTA endpoints, normalizes and cleans the data using statistical outlier fences (Tukey IQR), computes an automated twice-daily Laspeyres-style Airfare Price Index weighted by DGCA passenger-traffic volume, and exposes the index via a financial-terminal-style dashboard and public REST API to augment the **"Transport and Communication"** sub-group of India's official Consumer Price Index (CPI).
 
 ---
 
 ## 🌐 Live Demo & Deployments
 
-- **Live Production Terminal**: **[https://api-x-chi.vercel.app](https://api-x-chi.vercel.app)**
-- **Live REST API Base**: **[https://api-x-chi.vercel.app/api](https://api-x-chi.vercel.app/api)**
-- **Interactive API Documentation**: **[https://api-x-chi.vercel.app/api-docs](https://api-x-chi.vercel.app/api-docs)**
+- **Live Production Terminal**: **[https://ap-ix.vercel.app](https://ap-ix.vercel.app)**
+- **Live REST API Base**: **[https://ap-ix.vercel.app/api](https://ap-ix.vercel.app/api)**
+- **Interactive API Documentation**: **[https://ap-ix.vercel.app/api-docs](https://ap-ix.vercel.app/api-docs)**
 
 ---
 
 ## 🛫 Key Capabilities
 
-- **Ethical Scraping Safeguards**: Automated, rate-limited (3–7s randomized jitter delay to keep server load minimal), transparent User-Agent identification (`APIx-PriceIndex-Bot/1.0`), and strict RFC 9309 robots.txt path validation across sources (EaseMyTrip, Cleartrip, Akasa Air, Air India). Audited portals with search-route bot disallows (Ixigo, Goibibo, Yatra, MakeMyTrip, IndiGo) are bypassed for direct scraping, with all national carrier inventory compliantly captured via compliant OTA aggregators (EaseMyTrip/Cleartrip), maintaining 100% basket coverage without breaching crawler boundaries.
+- **Ethical Scraping Safeguards**: Automated, rate-limited (3–7s randomized jitter delay to keep server load minimal), transparent User-Agent identification (`APIx-PriceIndex-Bot/1.0`), and strict RFC 9309 robots.txt path validation across active sources (EaseMyTrip, Cleartrip, Akasa Air). Audited portals with search-route bot disallows (Ixigo, Goibibo, Yatra, MakeMyTrip, IndiGo) are bypassed for direct scraping, with all national carrier inventory compliantly captured via compliant OTA aggregators (EaseMyTrip/Cleartrip), maintaining 100% basket coverage without breaching crawler boundaries. Air India direct scraping is excluded due to edge firewall connection termination (`net::ERR_HTTP2_PROTOCOL_ERROR`), while 100% of AI/IX flight tariffs are captured through multi-carrier aggregator feeds.
 - **Data Cleaning & Anomaly Detection**: Enforces mandatory `fare_class` metadata (`Economy` / `Premium Economy` / `Business`), base fare and GST tax separation, composite deduplication, and Tukey IQR statistical outlier tagging.
-- **Laspeyres Index Engine**: Aggregates quotes across 5 booking windows ($T+1, T+7, T+15, T+30, T+45$) weighted by official DGCA route volume shares with Jan 2026 base period normalization ($100.00 = ₹5,280$).
-- **Institutional Terminal Dashboard**: High-frequency Solari Split-Flap board with mechanical flip audio, 30D/90D/365D trend line chart, departure route heatmap, and advance-purchase elasticity curves.
-- **Empirical DGCA Ground-Truth Validation**: Live daily observations dynamically accumulating toward multi-month Pearson $r$ correlation validation against official DGCA reference benchmark circulars.
+- **Laspeyres Index Engine**: Aggregates quotes across 5 booking windows ($T+1, T+7, T+15, T+30, T+45$) weighted by official DGCA route volume shares with Jan 2026 base period normalization ($100.00 = ₹5,280$). Ingests the single latest cleaned snapshot per date run to prevent artificial record inflation.
+- **Institutional Terminal Dashboard**: High-frequency Solari Split-Flap board with mechanical flip audio, 30D/90D/365D trend line chart, departure route heatmap, advance-purchase elasticity curves, and dedicated read-only Sample Fare Inspector for raw quote transparency.
+- **Empirical DGCA Ground-Truth Validation**: Live daily observations dynamically accumulating toward multi-month Pearson $r$ correlation validation against official DGCA reference benchmark circulars (with initial illustrative templates clearly labelled pending published government sourcing).
 - **Open REST API**: High-frequency read-only endpoints (`/api/index`, `/api/routes`, `/api/fares`, `/api/latest`) supporting `fare_class` filtering with built-in rate limiting (60 req/min) and interactive documentation at `/api-docs`.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Architecture
 
 - **Framework**: Next.js 15 (App Router, React 19, TypeScript)
 - **Styling**: Tailwind CSS v3 with custom Airport/Financial Terminal design system
-- **Backend & Database**: Convex DB schema & local storage
+- **Data Storage & Pipeline Architecture**: Production index computations and historical time-series run directly on structured, immutable flat files under `data/` (`data/snapshots/`, `data/cleaned/`, `data/index/daily/`, `data/index/time_series.csv`). This provides zero-dependency runtime reliability, complete transparency, and auditable Git-backed data versioning.
+- **Convex Backend (Optional/Provisioned)**: Convex DB schemas and client providers are fully configured in the repository as an optional backend for future multi-client state synchronization, while live production reads operate directly from verified flat-file snapshots.
 - **Scraping & ETL**: Playwright, TypeScript, Robots-Parser, tsx
+- **Scheduled Ingestion**: GitHub Actions automated cron workflow running twice daily (00:00 IST and 05:30 IST).
 
 ---
 
@@ -69,17 +71,17 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
 ## 📡 Public REST API Endpoints
 
-**Base URL:** `https://api-x-chi.vercel.app` (production) or `http://localhost:3000` (local development)
+**Base URL:** `https://ap-ix.vercel.app` (production) or `http://localhost:3000` (local development)
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
 | `GET` | `/api/index?frequency=daily&from=YYYY-MM-DD&to=YYYY-MM-DD` | Query APIx index time series with base normalization |
 | `GET` | `/api/routes?active_only=true` | Query 16 DGCA route corridors with traffic volume weights |
-| `GET` | `/api/fares?route_id=DEL-BOM&booking_window=T+1` | Query clean non-outlier flight quotes with base/tax breakdown |
-| `GET` | `/api/latest` | Query latest real-time index snapshot with full corridor telemetry |
-| `GET` | `/api/cron/scrape` | Automated daily scraping & Laspeyres re-computation endpoint |
+| `GET` | `/api/fares?route_id=DEL-BOM&booking_window=T+1` | Query clean non-outlier flight quotes with base/tax breakdown and `fare_class` |
+| `GET` | `/api/latest` | Query latest index snapshot with full corridor telemetry |
+| `GET` | `/api/cron/scrape` | Automated scheduled scraping & Laspeyres re-computation endpoint |
 
-Interactive API documentation is accessible at **[https://api-x-chi.vercel.app/api-docs](https://api-x-chi.vercel.app/api-docs)** (production) or **[http://localhost:3000/api-docs](http://localhost:3000/api-docs)** (local development).
+Interactive API documentation is accessible at **[https://ap-ix.vercel.app/api-docs](https://ap-ix.vercel.app/api-docs)** (production) or **[http://localhost:3000/api-docs](http://localhost:3000/api-docs)** (local development).
 
 ---
 

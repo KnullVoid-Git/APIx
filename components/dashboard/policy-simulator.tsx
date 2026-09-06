@@ -112,7 +112,7 @@ export function PolicySimulator({
         {/* Content */}
         <div className="p-6 sm:p-8 space-y-6 bg-[#0E1420]">
           <p className="text-xs text-secondary leading-relaxed font-sans">
-            Model real-time policy adjustments and macroeconomic shocks on India&apos;s National Airfare Price
+            Model policy adjustments and macroeconomic shocks on India&apos;s National Airfare Price
             Index (APIx) and downstream headline Consumer Price Index (CPI) inflation.
           </p>
 

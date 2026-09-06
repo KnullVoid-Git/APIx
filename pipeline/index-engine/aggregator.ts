@@ -57,11 +57,17 @@ export class RouteAggregator {
 
     for (const dir of targetDirs) {
       const fullDir = path.join(cleanedBase, dir);
-      const jsonFiles = fs.readdirSync(fullDir).filter((f) => f.startsWith('cleaned_fares_') && f.endsWith('.json'));
+      const jsonFiles = fs
+        .readdirSync(fullDir)
+        .filter((f) => f.startsWith('cleaned_fares_') && f.endsWith('.json'))
+        .sort()
+        .reverse();
 
-      for (const file of jsonFiles) {
+      // Fix: Use ONLY the latest cleaned file per date folder to prevent record inflation
+      if (jsonFiles.length > 0) {
+        const latestFile = jsonFiles[0];
         try {
-          const content = fs.readFileSync(path.join(fullDir, file), 'utf-8');
+          const content = fs.readFileSync(path.join(fullDir, latestFile), 'utf-8');
           const parsed = JSON.parse(content);
           if (Array.isArray(parsed.records)) {
             allRecords.push(...parsed.records);
@@ -70,7 +76,8 @@ export class RouteAggregator {
           // Ignore corrupt file
         }
       }
-      if (dateOption === 'latest' && allRecords.length > 0) break;
+
+      if ((!dateOption || dateOption === 'latest') && allRecords.length > 0) break;
     }
 
     return allRecords;

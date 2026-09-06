@@ -25,9 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'APIx — Real-time Airfare Price Index (MoSPI / DIID)',
+  title: 'APIx — National Airfare Price Index (MoSPI / DIID)',
   description:
-    'Real-time, high-frequency Airfare Price Index weighted by DGCA passenger-traffic share, designed for MoSPI CPI augmentation (SIH 2026 PS 26056).',
+    'High-frequency Airfare Price Index automatically updated twice daily, weighted by DGCA passenger-traffic share, designed for MoSPI CPI augmentation (SIH 2026 PS 26056).',
 };
 
 export default function RootLayout({

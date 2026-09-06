@@ -48,9 +48,11 @@ function loadCleanedFareRecords(): CleanedFareRecord[] {
         .sort()
         .reverse();
 
-      for (const file of jsonFiles) {
+      // Use ONLY the latest cleaned file for the target date
+      if (jsonFiles.length > 0) {
+        const latestFile = jsonFiles[0];
         try {
-          const content = fs.readFileSync(path.join(fullDir, file), 'utf-8');
+          const content = fs.readFileSync(path.join(fullDir, latestFile), 'utf-8');
           const parsed = JSON.parse(content);
           if (Array.isArray(parsed.records) && parsed.records.length > 0) {
             allRecords.push(...parsed.records);

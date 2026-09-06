@@ -12,13 +12,14 @@ import { FareInspectorView } from '@/components/dashboard/fare-inspector-view';
 import { BulletinModal } from '@/components/dashboard/bulletin-modal';
 import { PolicySimulator } from '@/components/dashboard/policy-simulator';
 import { AntiGougingWatchdog } from '@/components/dashboard/anti-gouging-watchdog';
-import { CURRENT_LIVE_INDEX } from '@/lib/mock-data';
 import { DailyIndex } from '@/types';
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = React.useState<string>('overview');
   const [audioEnabled, setAudioEnabled] = React.useState<boolean>(false);
-  const [liveIndex, setLiveIndex] = React.useState<DailyIndex>(CURRENT_LIVE_INDEX);
+  const [liveIndex, setLiveIndex] = React.useState<DailyIndex | null>(null);
+  const [dataStatus, setDataStatus] = React.useState<'loading' | 'live' | 'insufficient_data'>('loading');
+  const [statusMessage, setStatusMessage] = React.useState<string>('');
   const [isBulletinOpen, setIsBulletinOpen] = React.useState<boolean>(false);
   const [isSimulatorOpen, setIsSimulatorOpen] = React.useState<boolean>(false);
 
@@ -36,34 +37,43 @@ export default function HomePage() {
     }
   }, []);
 
-  // Fetch real-time computed index from /api/latest (with auto-polling & focus refresh)
+  // Fetch real computed index from /api/latest (with auto-polling & focus refresh)
   React.useEffect(() => {
     async function loadRealComputedData() {
       try {
         const res = await fetch('/api/latest');
         if (res.ok) {
           const json = await res.json();
-          if (json.data && json.data.current_index) {
+          if (json.data?.status === 'insufficient_data' || !json.data?.current_index) {
+            setLiveIndex(null);
+            setDataStatus('insufficient_data');
+            setStatusMessage(json.data?.message || 'No real scraped flight quotes available for the current date. Waiting for scheduled pipeline execution.');
+          } else if (json.data && json.data.current_index) {
             const cur = json.data.current_index;
             setLiveIndex({
               id: cur.id || 'daily_index_latest',
-              index_date: cur.index_date || '2026-08-26',
+              index_date: cur.index_date || '2026-09-04',
               frequency: cur.frequency || 'daily',
-              apix_value: typeof cur.apix_value === 'number' ? cur.apix_value : CURRENT_LIVE_INDEX.apix_value,
+              apix_value: typeof cur.apix_value === 'number' ? cur.apix_value : 0,
               base_period_value: cur.base_period_value || 100.0,
-              weighted_basket_fare: cur.raw_weighted_fare || 9849,
-              median_basket_fare: cur.base_weighted_fare || 5280,
-              delta_24h: typeof cur.delta_24h === 'number' ? cur.delta_24h : 30.29,
-              methodology_notes: cur.methodology_notes || CURRENT_LIVE_INDEX.methodology_notes,
-              active_routes_count: cur.active_routes_count || 16,
-              records_processed: cur.total_records_processed || 94584,
-              distinct_dates_count: cur.distinct_dates_count || 4,
+              weighted_basket_fare: cur.raw_weighted_fare || cur.weighted_basket_fare || 0,
+              median_basket_fare: cur.base_weighted_fare || cur.median_basket_fare || 5280,
+              delta_24h: typeof cur.delta_24h === 'number' ? cur.delta_24h : 0,
+              methodology_notes: cur.methodology_notes || '',
+              active_routes_count: cur.active_routes_count || 0,
+              records_processed: cur.total_records_processed || cur.records_processed || 0,
+              distinct_dates_count: cur.distinct_dates_count || 0,
               collected_dates: cur.collected_dates || [],
             });
+            setDataStatus('live');
           }
+        } else {
+          setDataStatus('insufficient_data');
+          setStatusMessage('Live index endpoint returned error.');
         }
       } catch {
-        // Keep initial state if offline
+        setDataStatus('insufficient_data');
+        setStatusMessage('Network connectivity issue. Unable to fetch live pipeline index.');
       }
     }
 
@@ -106,6 +116,8 @@ export default function HomePage() {
         {activeTab === 'overview' && (
           <IndexOverview
             currentIndex={liveIndex}
+            status={dataStatus}
+            statusMessage={statusMessage}
             audioEnabled={audioEnabled}
           />
         )}
@@ -125,7 +137,7 @@ export default function HomePage() {
 
         {activeTab === 'methodology' && (
           <MethodologyView
-            methodologyNotes={liveIndex.methodology_notes}
+            methodologyNotes={liveIndex?.methodology_notes || ''}
           />
         )}
 
@@ -137,12 +149,12 @@ export default function HomePage() {
         isOpen={isBulletinOpen}
         onClose={() => setIsBulletinOpen(false)}
         indexData={{
-          apix_value: liveIndex.apix_value,
-          weighted_basket_fare: liveIndex.weighted_basket_fare || 9855,
-          base_period_value: liveIndex.base_period_value || 100.0,
-          delta_24h: liveIndex.delta_24h ?? 30.33,
-          index_date: liveIndex.index_date,
-          distinct_dates_count: liveIndex.distinct_dates_count || 2,
+          apix_value: liveIndex?.apix_value ?? 100.0,
+          weighted_basket_fare: liveIndex?.weighted_basket_fare ?? 5280,
+          base_period_value: liveIndex?.base_period_value ?? 100.0,
+          delta_24h: liveIndex?.delta_24h ?? 0,
+          index_date: liveIndex?.index_date ?? new Date().toISOString().split('T')[0],
+          distinct_dates_count: liveIndex?.distinct_dates_count ?? 1,
         }}
       />
 
@@ -150,8 +162,8 @@ export default function HomePage() {
       <PolicySimulator
         isOpen={isSimulatorOpen}
         onClose={() => setIsSimulatorOpen(false)}
-        baseIndexValue={liveIndex.apix_value}
-        baseBasketFare={liveIndex.weighted_basket_fare || 9855}
+        baseIndexValue={liveIndex?.apix_value ?? 100.0}
+        baseBasketFare={liveIndex?.weighted_basket_fare ?? 5280}
       />
 
       {/* Terminal Footer */}
@@ -159,9 +171,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>APIx · SMART INDIA HACKATHON 2026 · PROBLEM STATEMENT 26056 · MoSPI / DIID</span>
           <div className="flex items-center gap-4 text-[11px]">
-            <span>DGCA VALIDATION PENDING ({liveIndex.distinct_dates_count || 2} {(liveIndex.distinct_dates_count || 2) === 1 ? 'DAY' : 'DAYS'} LIVE DATA COLLECTED)</span>
+            <span>DGCA VALIDATION PENDING ({liveIndex?.distinct_dates_count ?? 1} {(liveIndex?.distinct_dates_count ?? 1) === 1 ? 'DAY' : 'DAYS'} LIVE DATA COLLECTED)</span>
             <span className="text-border-subtle">|</span>
-            <span className="text-amber-signal">LIVE COMPUTED ENGINE (BASE = 100.00)</span>
+            <span className="text-amber-signal">LASPEYRES INDEX (BASE 2026.01 = 100.00)</span>
           </div>
         </div>
       </footer>

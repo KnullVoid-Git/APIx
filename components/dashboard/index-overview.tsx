@@ -9,20 +9,26 @@ import { Button } from '@/components/ui/button';
 import { IndexTrendChart } from './index-trend-chart';
 import { formatINR, formatIndexValue } from '@/lib/utils';
 import { DailyIndex } from '@/types';
-import { RefreshCw, Layers, Compass, BarChart2, ShieldCheck, Activity, Database, CheckCircle2 } from 'lucide-react';
+import { RefreshCw, Layers, Compass, BarChart2, ShieldCheck, Activity, Database, CheckCircle2, AlertTriangle } from 'lucide-react';
 
 interface IndexOverviewProps {
-  currentIndex: DailyIndex;
+  currentIndex: DailyIndex | null;
+  status?: 'loading' | 'live' | 'insufficient_data';
+  statusMessage?: string;
   audioEnabled: boolean;
 }
 
-export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps) {
+export function IndexOverview({ currentIndex, status = 'live', statusMessage, audioEnabled }: IndexOverviewProps) {
   const [isSyncing, setIsSyncing] = React.useState<boolean>(false);
-  const [liveIndexData, setLiveIndexData] = React.useState<DailyIndex>(currentIndex);
+  const [liveIndexData, setLiveIndexData] = React.useState<DailyIndex | null>(currentIndex);
+  const [currentStatus, setCurrentStatus] = React.useState<'loading' | 'live' | 'insufficient_data'>(status);
+  const [currentMessage, setCurrentMessage] = React.useState<string>(statusMessage || '');
 
   React.useEffect(() => {
     setLiveIndexData(currentIndex);
-  }, [currentIndex]);
+    setCurrentStatus(status);
+    if (statusMessage) setCurrentMessage(statusMessage);
+  }, [currentIndex, status, statusMessage]);
 
   const handleSyncLive = async () => {
     setIsSyncing(true);
@@ -30,27 +36,36 @@ export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps
       const res = await fetch('/api/latest');
       if (res.ok) {
         const json = await res.json();
-        if (json.data?.current_index) {
+        if (json.data?.status === 'insufficient_data' || !json.data?.current_index) {
+          setLiveIndexData(null);
+          setCurrentStatus('insufficient_data');
+          setCurrentMessage(json.data?.message || 'No real scraped flight quotes available for current date.');
+        } else if (json.data?.current_index) {
           const cur = json.data.current_index;
           setLiveIndexData({
-            id: cur.id,
-            index_date: cur.index_date,
+            id: cur.id || 'daily_index_latest',
+            index_date: cur.index_date || '',
             frequency: cur.frequency || 'daily',
-            apix_value: cur.apix_value ?? 186.53,
+            apix_value: typeof cur.apix_value === 'number' ? cur.apix_value : 0,
             base_period_value: cur.base_period_value || 100.0,
-            weighted_basket_fare: cur.raw_weighted_fare || 9855,
-            median_basket_fare: cur.base_weighted_fare || 5280,
-            delta_24h: cur.delta_24h ?? 30.29,
-            methodology_notes: cur.methodology_notes || currentIndex.methodology_notes,
-            active_routes_count: cur.active_routes_count || 16,
-            records_processed: cur.total_records_processed || 45006,
-            distinct_dates_count: cur.distinct_dates_count || 2,
+            weighted_basket_fare: cur.raw_weighted_fare || cur.weighted_basket_fare || 0,
+            median_basket_fare: cur.base_weighted_fare || cur.median_basket_fare || 5280,
+            delta_24h: typeof cur.delta_24h === 'number' ? cur.delta_24h : 0,
+            methodology_notes: cur.methodology_notes || '',
+            active_routes_count: cur.active_routes_count || 0,
+            records_processed: cur.total_records_processed || cur.records_processed || 0,
+            distinct_dates_count: cur.distinct_dates_count || 0,
             collected_dates: cur.collected_dates || [],
           });
+          setCurrentStatus('live');
         }
+      } else {
+        setCurrentStatus('insufficient_data');
+        setCurrentMessage('Live index endpoint returned error.');
       }
     } catch {
-      // Graceful fallback
+      setCurrentStatus('insufficient_data');
+      setCurrentMessage('Connection error while fetching live index.');
     } finally {
       setTimeout(() => setIsSyncing(false), 600);
     }
@@ -58,12 +73,28 @@ export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps
 
   return (
     <div className="space-y-6">
+      {/* Insufficient Data / Pipeline Warning Banner */}
+      {currentStatus === 'insufficient_data' && (
+        <div className="bg-amber-signal/10 border border-amber-signal/40 rounded p-4 flex items-start gap-3 text-amber-signal font-mono text-xs">
+          <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5 text-amber-signal" />
+          <div className="space-y-1">
+            <div className="font-bold uppercase tracking-wider text-amber-signal flex items-center gap-2">
+              <span>NO FRESH INGEST DATA AVAILABLE</span>
+              <TerminalBadge variant="amber" size="xs">AWAITING PIPELINE RUN</TerminalBadge>
+            </div>
+            <div className="text-secondary">
+              {currentMessage || 'The automated scraping pipeline has not ingested fresh quotes for today or data is awaiting scheduled ingestion.'}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 1. Hero Split-Flap Terminal Instrument */}
       <Panel variant="highlight" className="overflow-hidden">
         <PanelHeader
           kicker="[INDEX-01 // NATIONAL METRIC]"
           title="APIx — NATIONAL AIRFARE PRICE INDEX"
-          statusDot="amber"
+          statusDot={currentStatus === 'insufficient_data' ? 'red' : 'amber'}
           actions={
             <div className="flex items-center gap-2">
               <TerminalBadge variant="default" size="xs">
@@ -84,18 +115,24 @@ export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps
                 <span className="font-mono text-xs text-secondary-muted uppercase tracking-wider">
                   INSTRUMENT VALUE (BASE 2026.01 = 100.00):
                 </span>
-                <DeltaBadge
-                  value={liveIndexData.delta_24h ?? 30.29}
-                  format="percent"
-                  size="md"
-                  prefix="24H "
-                />
+                {liveIndexData ? (
+                  <DeltaBadge
+                    value={liveIndexData.delta_24h ?? 0}
+                    format="percent"
+                    size="md"
+                    prefix="24H "
+                  />
+                ) : (
+                  <span className="font-mono text-xs text-secondary-muted bg-surface px-2 py-0.5 rounded border border-border-subtle">
+                    24H --%
+                  </span>
+                )}
               </div>
 
               {/* Solari Split-Flap Display */}
               <div className="w-full">
                 <SplitFlapDisplay
-                  value={`APIX ${(liveIndexData.apix_value ?? 186.53).toFixed(2)}`}
+                  value={liveIndexData && typeof liveIndexData.apix_value === 'number' ? `APIX ${liveIndexData.apix_value.toFixed(2)}` : 'APIX ---.--'}
                   size="hero"
                   enableAudio={audioEnabled}
                   staggerMs={60}
@@ -113,14 +150,14 @@ export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps
                 <div className="flex items-center gap-1.5">
                   <span className="text-secondary-muted">CURRENT BASKET:</span>
                   <span className="text-amber-signal font-semibold">
-                    {formatINR(liveIndexData.weighted_basket_fare || 5588)}
+                    {liveIndexData?.weighted_basket_fare ? formatINR(liveIndexData.weighted_basket_fare) : '₹--'}
                   </span>
                 </div>
                 <span className="text-border-subtle">|</span>
                 <div className="flex items-center gap-1.5">
                   <span className="text-secondary-muted">OBSERVATIONS:</span>
                   <span className="text-primary font-semibold">
-                    {liveIndexData.records_processed || 1420} FLIGHTS / DAY
+                    {liveIndexData?.records_processed ? `${liveIndexData.records_processed.toLocaleString('en-IN')} FLIGHTS / RUN` : '-- FLIGHTS'}
                   </span>
                 </div>
               </div>
@@ -135,9 +172,9 @@ export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps
                     CORRIDOR TELEMETRY & CPI IMPACT
                   </span>
                 </div>
-                <span className="text-[10px] text-delta-positive font-bold flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-delta-positive animate-pulse-subtle" />
-                  LIVE STREAM
+                <span className={`text-[10px] font-bold flex items-center gap-1 ${currentStatus === 'insufficient_data' ? 'text-delta-negative' : 'text-delta-positive'}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${currentStatus === 'insufficient_data' ? 'bg-delta-negative' : 'bg-delta-positive animate-pulse-subtle'}`} />
+                  {currentStatus === 'insufficient_data' ? 'INSUFFICIENT DATA' : 'BATCH INGESTED'}
                 </span>
               </div>
 
@@ -145,21 +182,25 @@ export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="p-2.5 bg-surface-elevated/70 rounded border border-border-subtle flex flex-col gap-1">
                   <span className="text-[10px] text-secondary-muted">NATIONAL BASKET</span>
-                  <span className="text-primary font-bold">{formatINR(liveIndexData.weighted_basket_fare || 9855)}</span>
+                  <span className="text-primary font-bold">
+                    {liveIndexData?.weighted_basket_fare ? formatINR(liveIndexData.weighted_basket_fare) : '₹--'}
+                  </span>
                   <span className="text-[10px] text-secondary">Weighted DGCA Fare</span>
                 </div>
 
                 <div className="p-2.5 bg-surface-elevated/70 rounded border border-border-subtle flex flex-col gap-1">
                   <span className="text-[10px] text-secondary-muted">DGCA VALIDATION</span>
                   <span className="text-amber-signal font-bold text-[11px] leading-tight">
-                    Pending ({liveIndexData.distinct_dates_count || 2} { (liveIndexData.distinct_dates_count || 2) === 1 ? 'day' : 'days' } collected)
+                    {liveIndexData?.distinct_dates_count ? `Pending (${liveIndexData.distinct_dates_count} ${liveIndexData.distinct_dates_count === 1 ? 'day' : 'days'} collected)` : 'Pending Data'}
                   </span>
                   <span className="text-[10px] text-secondary-muted">Accumulating toward 1st comparison</span>
                 </div>
 
                 <div className="p-2.5 bg-surface-elevated/70 rounded border border-border-subtle flex flex-col gap-1">
                   <span className="text-[10px] text-secondary-muted">BASKET CORRIDORS</span>
-                  <span className="text-primary font-bold">{liveIndexData.active_routes_count || 16} / 16 CORRIDORS</span>
+                  <span className="text-primary font-bold">
+                    {liveIndexData ? `${liveIndexData.active_routes_count || 0} / 16 CORRIDORS` : '-- / 16 CORRIDORS'}
+                  </span>
                   <span className="text-[10px] text-secondary">86.8% Passenger Vol</span>
                 </div>
 
@@ -249,7 +290,7 @@ export function IndexOverview({ currentIndex, audioEnabled }: IndexOverviewProps
           </div>
           <div>
             <div className="text-2xl font-bold font-mono text-primary">
-              {liveIndexData.records_processed || 1420} QUOTES
+              {liveIndexData?.records_processed ? `${liveIndexData.records_processed.toLocaleString('en-IN')} QUOTES` : '-- QUOTES'}
             </div>
             <p className="text-[11px] font-mono text-secondary mt-1">
               IndiGo, Air India, SpiceJet & OTAs
