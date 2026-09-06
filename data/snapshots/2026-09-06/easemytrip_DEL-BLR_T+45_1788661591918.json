@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-BLR",
+  "origin": "DEL",
+  "destination": "BLR",
+  "source": "EaseMyTrip",
+  "booking_window": "T+45",
+  "flight_date": "2026-10-21",
+  "scraped_at": "2026-09-06T02:26:26.524Z",
+  "duration_ms": 5391,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|BLR-Bangalore-India|21/10/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}

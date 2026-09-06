@@ -1,0 +1,23 @@
+{
+  "route_id": "DEL-CCU",
+  "origin": "DEL",
+  "destination": "CCU",
+  "source": "Air India",
+  "booking_window": "T+7",
+  "flight_date": "2026-09-13",
+  "scraped_at": "2026-09-06T02:42:47.053Z",
+  "duration_ms": 58,
+  "success": false,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "error": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\nCall log:\n  - navigating to \"https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\", waiting until \"domcontentloaded\"\n",
+    "stack": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\nCall log:\n  - navigating to \"https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\", waiting until \"domcontentloaded\"\n\n    at AirIndiaScraper.executeExtraction (/home/runner/work/APIx/APIx/scraper/sources/airindia.ts:54:18)\n    at AirIndiaScraper.scrape (/home/runner/work/APIx/APIx/scraper/sources/base-scraper.ts:24:37)\n    at async ScraperRunner.runBatch (/home/runner/work/APIx/APIx/scraper/runner.ts:207:28)\n    at async main (/home/runner/work/APIx/APIx/scraper/cli.ts:73:21)"
+  },
+  "error": {
+    "type": "NETWORK_ERROR",
+    "message": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\nCall log:\n  - navigating to \"https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\", waiting until \"domcontentloaded\"\n",
+    "stack": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\nCall log:\n  - navigating to \"https://www.airindia.com/in/en/book-flights.html?origin=DEL&destination=CCU&departureDate=2026-09-13&tripType=O&adults=1\", waiting until \"domcontentloaded\"\n\n    at AirIndiaScraper.executeExtraction (/home/runner/work/APIx/APIx/scraper/sources/airindia.ts:54:18)\n    at AirIndiaScraper.scrape (/home/runner/work/APIx/APIx/scraper/sources/base-scraper.ts:24:37)\n    at async ScraperRunner.runBatch (/home/runner/work/APIx/APIx/scraper/runner.ts:207:28)\n    at async main (/home/runner/work/APIx/APIx/scraper/cli.ts:73:21)"
+  }
+}

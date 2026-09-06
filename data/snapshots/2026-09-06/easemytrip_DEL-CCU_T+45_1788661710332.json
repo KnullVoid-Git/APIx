@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-CCU",
+  "origin": "DEL",
+  "destination": "CCU",
+  "source": "EaseMyTrip",
+  "booking_window": "T+45",
+  "flight_date": "2026-10-21",
+  "scraped_at": "2026-09-06T02:28:24.935Z",
+  "duration_ms": 5396,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|CCU-Kolkata-India|21/10/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}

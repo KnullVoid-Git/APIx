@@ -1,0 +1,23 @@
+{
+  "route_id": "BLR-BOM",
+  "origin": "BLR",
+  "destination": "BOM",
+  "source": "Cleartrip",
+  "booking_window": "T+1",
+  "flight_date": "2026-09-07",
+  "scraped_at": "2026-09-06T02:35:01.798Z",
+  "duration_ms": 5072,
+  "success": false,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "error": "Bot verification encountered on Cleartrip: access denied",
+    "stack": "Error: Bot verification encountered on Cleartrip: access denied\n    at CleartripScraper.executeExtraction (/home/runner/work/APIx/APIx/scraper/sources/cleartrip.ts:65:15)\n    at async CleartripScraper.scrape (/home/runner/work/APIx/APIx/scraper/sources/base-scraper.ts:24:26)\n    at async ScraperRunner.runBatch (/home/runner/work/APIx/APIx/scraper/runner.ts:207:28)\n    at async main (/home/runner/work/APIx/APIx/scraper/cli.ts:73:21)"
+  },
+  "error": {
+    "type": "CAPTCHA_DETECTED",
+    "message": "Bot verification encountered on Cleartrip: access denied",
+    "stack": "Error: Bot verification encountered on Cleartrip: access denied\n    at CleartripScraper.executeExtraction (/home/runner/work/APIx/APIx/scraper/sources/cleartrip.ts:65:15)\n    at async CleartripScraper.scrape (/home/runner/work/APIx/APIx/scraper/sources/base-scraper.ts:24:26)\n    at async ScraperRunner.runBatch (/home/runner/work/APIx/APIx/scraper/runner.ts:207:28)\n    at async main (/home/runner/work/APIx/APIx/scraper/cli.ts:73:21)"
+  }
+}

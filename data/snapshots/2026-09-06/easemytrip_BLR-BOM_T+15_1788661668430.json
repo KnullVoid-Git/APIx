@@ -1,0 +1,18 @@
+{
+  "route_id": "BLR-BOM",
+  "origin": "BLR",
+  "destination": "BOM",
+  "source": "EaseMyTrip",
+  "booking_window": "T+15",
+  "flight_date": "2026-09-21",
+  "scraped_at": "2026-09-06T02:27:43.036Z",
+  "duration_ms": 5392,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=BLR-Bangalore-India|BOM-Mumbai-India|21/09/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}
