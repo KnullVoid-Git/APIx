@@ -54,7 +54,7 @@ jobs:
 
       - name: Execute Real Playwright Scraper across Basket
         run: |
-          npm run scrape -- --routes all --sources easemytrip,cleartrip,akasa --windows T+1,T+7,T+15,T+30,T+45
+          npm run scrape -- --routes all --sources easemytrip,cleartrip,akasa --windows T+1,T+7,T+15,T+30,T+45 --strict
 
       - name: Execute Data Cleaning & Outlier Detection ETL
         run: |

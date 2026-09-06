@@ -48,6 +48,9 @@ export interface DailyIndexRecord {
   total_records_processed: number;
   outliers_excluded_count: number;
   methodology_notes: string;
+  partial_basket?: boolean;
+  last_full_basket_delta_24h?: number;
+  last_full_basket_date?: string;
   route_breakdown: RouteFareAggregation[];
 }
 

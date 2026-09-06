@@ -13,6 +13,8 @@ export interface TimeSeriesPoint {
   delta24h: number;
   sampledRecords?: number;
   outliersExcluded?: number;
+  activeRoutes?: number;
+  partialBasket?: boolean;
 }
 
 type HorizonOption = 'ALL' | '30D' | '90D' | '365D';
@@ -29,7 +31,7 @@ export function IndexTrendChart() {
       if (res.ok) {
         const json = await res.json();
         if (json.data && Array.isArray(json.data) && json.data.length > 0) {
-          // Normalize API response fields (supporting index_date, apix_value, raw_weighted_fare, delta_24h)
+          // Normalize API response fields (supporting index_date, apix_value, raw_weighted_fare, delta_24h, active_routes_count, partial_basket)
           const validPoints: TimeSeriesPoint[] = json.data
             .map((item: any) => {
               const rawDate = item.index_date || item.date;
@@ -58,6 +60,8 @@ export function IndexTrendChart() {
 
               const sampledRecords = item.records_sampled || item.sampledRecords || 0;
               const outliersExcluded = item.outliers_excluded || item.outliersExcluded || 0;
+              const activeRoutes = item.active_routes_count || item.activeRoutes || 16;
+              const isPartial = item.partial_basket !== undefined ? Boolean(item.partial_basket) : activeRoutes < 16;
 
               return {
                 date,
@@ -66,6 +70,8 @@ export function IndexTrendChart() {
                 delta24h: Number.isFinite(delta24h) ? delta24h : 0,
                 sampledRecords: Number(sampledRecords) || 0,
                 outliersExcluded: Number(outliersExcluded) || 0,
+                activeRoutes,
+                partialBasket: isPartial,
               };
             })
             .filter((pt: TimeSeriesPoint) => pt.date && pt.date.length >= 5 && Number.isFinite(pt.apix));
@@ -206,7 +212,13 @@ export function IndexTrendChart() {
             <span className="text-secondary-muted">APIx:</span>
             <span className="text-amber-signal font-bold">{formatIndexValue(activePoint.apix)}</span>
           </div>
-          <DeltaBadge value={activePoint.delta24h} size="xs" />
+          {activePoint.partialBasket ? (
+            <span className="px-2 py-0.5 rounded bg-amber-signal/15 border border-amber-signal/40 text-[10px] font-mono text-amber-signal font-bold">
+              PARTIAL ({activePoint.activeRoutes ?? 2}/16 ROUTES)
+            </span>
+          ) : (
+            <DeltaBadge value={activePoint.delta24h} size="xs" prefix="24H " />
+          )}
         </div>
 
         {/* Live Observation Count */}
@@ -291,17 +303,41 @@ export function IndexTrendChart() {
           )}
 
           {/* Observation Point Dots */}
-          {data.map((pt, idx) => (
-            <circle
-              key={`dot-${pt.date || idx}`}
-              cx={getX(idx)}
-              cy={getY(pt.apix)}
-              r="4.5"
-              fill="#E8A33D"
-              stroke="#0E1420"
-              strokeWidth="2"
-            />
-          ))}
+          {data.map((pt, idx) => {
+            const isPartial = Boolean(pt.partialBasket);
+            if (isPartial) {
+              return (
+                <g key={`dot-${pt.date || idx}`}>
+                  <circle
+                    cx={getX(idx)}
+                    cy={getY(pt.apix)}
+                    r="4.5"
+                    fill="#161D2C"
+                    stroke="#E8A33D"
+                    strokeWidth="1.8"
+                    strokeDasharray="2.5 1.5"
+                  />
+                  <circle
+                    cx={getX(idx)}
+                    cy={getY(pt.apix)}
+                    r="1.5"
+                    fill="#E8A33D"
+                  />
+                </g>
+              );
+            }
+            return (
+              <circle
+                key={`dot-${pt.date || idx}`}
+                cx={getX(idx)}
+                cy={getY(pt.apix)}
+                r="4.5"
+                fill="#E8A33D"
+                stroke="#0E1420"
+                strokeWidth="2"
+              />
+            );
+          })}
 
           {/* X-axis ticks and labels */}
           {xLabels.map((pt, idx) => {
@@ -354,9 +390,9 @@ export function IndexTrendChart() {
               <circle
                 cx={getX(hoverIndex)}
                 cy={getY(data[hoverIndex].apix)}
-                r="4.5"
-                fill="#E8A33D"
-                stroke="#0E1420"
+                r="5.5"
+                fill={data[hoverIndex].partialBasket ? '#161D2C' : '#E8A33D'}
+                stroke={data[hoverIndex].partialBasket ? '#E8A33D' : '#0E1420'}
                 strokeWidth="2"
               />
             </g>
@@ -365,13 +401,19 @@ export function IndexTrendChart() {
       </div>
 
       {/* Axis Footer Annotations */}
-      <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-secondary-muted pt-1">
-        <div className="flex items-center gap-2">
-          <span className="w-2.5 h-0.5 bg-amber-signal inline-block" />
-          <span>NATIONAL AIRFARE PRICE INDEX (DAILY 06:00 IST)</span>
+      <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-secondary-muted pt-1">
+        <div className="flex flex-wrap items-center gap-4">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-signal inline-block" />
+            <span>FULL BASKET (16 CORRIDORS)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full border border-dashed border-amber-signal bg-[#161D2C] inline-block" />
+            <span>PARTIAL BASKET (DIAGNOSTIC RUN)</span>
+          </div>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-0.5 border-t border-dashed border-amber-signal/60 inline-block" />
+          <span className="w-3 h-0.5 border-t border-dashed border-amber-signal/60 inline-block" />
           <span>BASE PERIOD (JAN 2026 = 100.00)</span>
         </div>
       </div>

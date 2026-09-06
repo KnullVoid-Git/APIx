@@ -54,6 +54,9 @@ export function IndexOverview({ currentIndex, status = 'live', statusMessage, au
             methodology_notes: cur.methodology_notes || '',
             active_routes_count: cur.active_routes_count || 0,
             records_processed: cur.total_records_processed || cur.records_processed || 0,
+            partial_basket: cur.partial_basket !== undefined ? Boolean(cur.partial_basket) : (cur.active_routes_count ? cur.active_routes_count < 16 : false),
+            last_full_basket_delta_24h: cur.last_full_basket_delta_24h,
+            last_full_basket_date: cur.last_full_basket_date,
             distinct_dates_count: cur.distinct_dates_count || 0,
             collected_dates: cur.collected_dates || [],
           });
@@ -116,12 +119,26 @@ export function IndexOverview({ currentIndex, status = 'live', statusMessage, au
                   INSTRUMENT VALUE (BASE 2026.01 = 100.00):
                 </span>
                 {liveIndexData ? (
-                  <DeltaBadge
-                    value={liveIndexData.delta_24h ?? 0}
-                    format="percent"
-                    size="md"
-                    prefix="24H "
-                  />
+                  liveIndexData.partial_basket ? (
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="px-2 py-0.5 rounded bg-amber-signal/15 border border-amber-signal/40 text-xs font-mono text-amber-signal font-bold">
+                        PARTIAL ({liveIndexData.active_routes_count}/16 ROUTES)
+                      </span>
+                      <DeltaBadge
+                        value={liveIndexData.last_full_basket_delta_24h ?? liveIndexData.delta_24h ?? 0}
+                        format="percent"
+                        size="md"
+                        prefix={`FULL-BASKET 24H (${liveIndexData.last_full_basket_date ? liveIndexData.last_full_basket_date.slice(5) : '09-05'}) `}
+                      />
+                    </div>
+                  ) : (
+                    <DeltaBadge
+                      value={liveIndexData.delta_24h ?? 0}
+                      format="percent"
+                      size="md"
+                      prefix="24H "
+                    />
+                  )
                 ) : (
                   <span className="font-mono text-xs text-secondary-muted bg-surface px-2 py-0.5 rounded border border-border-subtle">
                     24H --%

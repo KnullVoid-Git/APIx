@@ -6,11 +6,12 @@
   "base_period_value": 100,
   "raw_weighted_fare": 9447.98,
   "base_weighted_fare": 5280,
-  "delta_24h": 27.66,
+  "delta_24h": 2.27,
   "active_routes_count": 16,
+  "partial_basket": false,
   "total_records_processed": 10374,
   "outliers_excluded_count": 665,
-  "methodology_notes": "Methodology: Laspeyres Weighted Basket Index (MoSPI CPI Transport Sub-Group Augmentation) | Base Period Value: 100.00 (Jan 2026 Reference Basket Fare = ₹5280.00) | Current 24h Weighted Basket Fare: ₹9447.98 | Active Corridors Sampled: 16/16 DGCA routes | Total Flight Quotes Evaluated: 10374 (665 outliers rejected via Tukey IQR) | Contributors: DEL-BOM (w=15.5%, P=₹7340); BOM-DEL (w=14.5%, P=₹7085); DEL-BLR (w=9.5%, P=₹11420); BLR-DEL (w=9.0%, P=₹10205); BOM-BLR (w=7.8%, P=₹9611); BLR-BOM (w=7.5%, P=₹9364); DEL-CCU (w=5.8%, P=₹9971); CCU-DEL (w=5.5%, P=₹9677); BLR-HYD (w=4.0%, P=₹7310); MAA-DEL (w=3.4%, P=₹11918); DEL-GAU (w=3.5%, P=₹10627); BOM-GOI (w=3.2%, P=₹9241); DEL-PAT (w=3.8%, P=₹15103); BLR-COK (w=2.8%, P=₹5572); DEL-IXC (w=2.2%, P=₹16159); BOM-PNQ (w=2.0%, P=₹13320)",
+  "methodology_notes": "Methodology: Laspeyres Weighted Basket Index (MoSPI CPI Transport Sub-Group Augmentation) | Base Period Value: 100.00 (Jan 2026 Reference Basket Fare = ₹5280.00) | Current 24h Weighted Basket Fare: ₹9447.98 | Active Corridors Sampled: 16/16 DGCA routes [FULL NATIONAL BASKET] | Total Flight Quotes Evaluated: 10374 (665 outliers rejected via Tukey IQR) | Contributors: DEL-BOM (w=15.5%, P=₹7340); BOM-DEL (w=14.5%, P=₹7085); DEL-BLR (w=9.5%, P=₹11420); BLR-DEL (w=9.0%, P=₹10205); BOM-BLR (w=7.8%, P=₹9611); BLR-BOM (w=7.5%, P=₹9364); DEL-CCU (w=5.8%, P=₹9971); CCU-DEL (w=5.5%, P=₹9677); BLR-HYD (w=4.0%, P=₹7310); MAA-DEL (w=3.4%, P=₹11918); DEL-GAU (w=3.5%, P=₹10627); BOM-GOI (w=3.2%, P=₹9241); DEL-PAT (w=3.8%, P=₹15103); BLR-COK (w=2.8%, P=₹5572); DEL-IXC (w=2.2%, P=₹16159); BOM-PNQ (w=2.0%, P=₹13320)",
   "route_breakdown": [
     {
       "route_id": "DEL-BOM",

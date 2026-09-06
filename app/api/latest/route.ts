@@ -62,9 +62,34 @@ function getDistinctDatesInfo(): { count: number; dates: string[] } {
   };
 }
 
+function getLatestFullBasketInfo(): { last_full_basket_delta_24h?: number; last_full_basket_date?: string } {
+  try {
+    const csvPath = path.join(process.cwd(), 'data', 'index', 'time_series.csv');
+    if (fs.existsSync(csvPath)) {
+      const content = fs.readFileSync(csvPath, 'utf-8');
+      const lines = content.trim().split('\n').slice(1);
+      for (let i = lines.length - 1; i >= 0; i--) {
+        const parts = lines[i].split(',');
+        if (parts.length >= 7) {
+          const activeRoutes = parts[8] ? parseInt(parts[8], 10) : 16;
+          const isPartial = parts[9] ? parts[9].trim().toLowerCase() === 'true' : activeRoutes < 16;
+          if (!isPartial && activeRoutes === 16) {
+            return {
+              last_full_basket_delta_24h: parseFloat(parts[5]) || 0,
+              last_full_basket_date: parts[0].trim(),
+            };
+          }
+        }
+      }
+    }
+  } catch {}
+  return {};
+}
+
 export async function GET(request: NextRequest) {
   try {
     const datesInfo = getDistinctDatesInfo();
+    const fullBasketInfo = getLatestFullBasketInfo();
 
     // 1. Try reading latest_index.json
     try {
@@ -76,12 +101,20 @@ export async function GET(request: NextRequest) {
         if (parsedData.current_index) {
           parsedData.current_index.distinct_dates_count = datesInfo.count;
           parsedData.current_index.collected_dates = datesInfo.dates;
+          if (parsedData.current_index.active_routes_count === undefined) {
+            parsedData.current_index.active_routes_count = parsedData.current_index.route_breakdown?.filter((r: any) => r.representative_daily_fare > 0).length || 16;
+          }
+          parsedData.current_index.partial_basket = parsedData.current_index.active_routes_count < 16;
+          parsedData.current_index.last_full_basket_delta_24h = fullBasketInfo.last_full_basket_delta_24h;
+          parsedData.current_index.last_full_basket_date = fullBasketInfo.last_full_basket_date;
         }
 
         return apiSuccess(parsedData, 1, {
           source: 'LOCAL_INDEX_FILE',
           distinct_dates_count: datesInfo.count,
           collected_dates: datesInfo.dates,
+          last_full_basket_delta_24h: fullBasketInfo.last_full_basket_delta_24h,
+          last_full_basket_date: fullBasketInfo.last_full_basket_date,
           computed_at: new Date().toISOString(),
         });
       }
@@ -96,10 +129,15 @@ export async function GET(request: NextRequest) {
         const files = fs.readdirSync(dailyDir).filter((f) => f.startsWith('daily_index_') && f.endsWith('.json')).sort().reverse();
         if (files.length > 0) {
           const newestDaily = JSON.parse(fs.readFileSync(path.join(dailyDir, files[0]), 'utf-8'));
+          const activeRoutes = newestDaily.active_routes_count || newestDaily.route_breakdown?.filter((r: any) => r.representative_daily_fare > 0).length || 16;
           return apiSuccess({
             updated_at: new Date().toISOString(),
             current_index: {
               ...newestDaily,
+              active_routes_count: activeRoutes,
+              partial_basket: activeRoutes < 16,
+              last_full_basket_delta_24h: fullBasketInfo.last_full_basket_delta_24h,
+              last_full_basket_date: fullBasketInfo.last_full_basket_date,
               distinct_dates_count: datesInfo.count,
               collected_dates: datesInfo.dates,
             },
@@ -108,6 +146,8 @@ export async function GET(request: NextRequest) {
             source: 'DAILY_ARCHIVE_FILE',
             distinct_dates_count: datesInfo.count,
             collected_dates: datesInfo.dates,
+            last_full_basket_delta_24h: fullBasketInfo.last_full_basket_delta_24h,
+            last_full_basket_date: fullBasketInfo.last_full_basket_date,
             computed_at: new Date().toISOString(),
           });
         }

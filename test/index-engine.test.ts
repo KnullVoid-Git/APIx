@@ -91,15 +91,35 @@ describe('LaspeyresIndexCalculator', () => {
     expect(result.apix_value).toBe(113.64);
   });
 
-  it('calculates 24-hour delta vs previous day index', () => {
+  it('calculates 24-hour delta vs previous day index for full basket', () => {
     const calc = new LaspeyresIndexCalculator(5000.0);
-    const routes = [createRouteAgg('DEL-BOM', 1.0, 5500)]; // APIx = 110.00
+    const weights16: Record<string, number> = {
+      'DEL-BOM': 0.155, 'BOM-DEL': 0.145, 'DEL-BLR': 0.095, 'BLR-DEL': 0.090,
+      'BOM-BLR': 0.078, 'BLR-BOM': 0.075, 'DEL-CCU': 0.058, 'CCU-DEL': 0.055,
+      'BLR-HYD': 0.040, 'MAA-DEL': 0.034, 'DEL-GAU': 0.035, 'BOM-GOI': 0.032,
+      'DEL-PAT': 0.038, 'BLR-COK': 0.028, 'DEL-IXC': 0.022, 'BOM-PNQ': 0.020,
+    };
+    const routes = Object.entries(weights16).map(([routeId, weight]) =>
+      createRouteAgg(routeId, weight, 5500)
+    );
     const prevIndex = 100.0;
 
     const result = calc.computeDailyIndex(routes, '2026-08-22', prevIndex);
 
+    expect(result.partial_basket).toBe(false);
     expect(result.apix_value).toBe(110.0);
     expect(result.delta_24h).toBe(10.0); // +10% 24h change
+  });
+
+  it('marks partial basket and suppresses headline delta when routes < 16', () => {
+    const calc = new LaspeyresIndexCalculator(5000.0);
+    const routes = [createRouteAgg('DEL-BOM', 1.0, 5500)]; // Only 1 route
+    const prevIndex = 100.0;
+
+    const result = calc.computeDailyIndex(routes, '2026-08-22', prevIndex);
+
+    expect(result.partial_basket).toBe(true);
+    expect(result.delta_24h).toBe(0);
   });
 });
 

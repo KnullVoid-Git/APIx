@@ -27,19 +27,28 @@ export class EaseMyTripScraper extends BaseScraper {
 
     const handleResponse = async (response: Response) => {
       const url = response.url().toLowerCase();
+      const isStatusOrAuxiliary =
+        url.includes('flightstatus') ||
+        url.includes('aircraft') ||
+        url.includes('delay') ||
+        url.includes('carbon') ||
+        url.includes('seat');
+
       if (
+        !isStatusOrAuxiliary &&
         (url.includes('flightlist') ||
           url.includes('getflightlist') ||
           url.includes('searchflight') ||
-          url.includes('/api/flight') ||
-          url.includes('flightstatus')) &&
+          url.includes('/api/flight')) &&
         response.status() === 200
       ) {
         try {
           const contentType = response.headers()['content-type'] || '';
           if (contentType.includes('application/json')) {
             const data = await response.json();
-            interceptedJson = data;
+            if (data && typeof data === 'object' && (data.FlightList || data.flights || data.flightResults || data.d || data.Flt)) {
+              interceptedJson = data;
+            }
           }
         } catch {
           // Ignore stream consume errors

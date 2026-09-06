@@ -64,6 +64,7 @@ export interface ScraperRunOptions {
   windows?: BookingWindow[]; // ['T+1', 'T+7', ...]
   headless?: boolean;
   dryRun?: boolean;
+  strict?: boolean;
   concurrency?: number;
   minJitterMs?: number;
   maxJitterMs?: number;

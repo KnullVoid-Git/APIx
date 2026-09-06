@@ -62,6 +62,9 @@ export default function HomePage() {
               methodology_notes: cur.methodology_notes || '',
               active_routes_count: cur.active_routes_count || 0,
               records_processed: cur.total_records_processed || cur.records_processed || 0,
+              partial_basket: cur.partial_basket !== undefined ? Boolean(cur.partial_basket) : (cur.active_routes_count ? cur.active_routes_count < 16 : false),
+              last_full_basket_delta_24h: cur.last_full_basket_delta_24h,
+              last_full_basket_date: cur.last_full_basket_date,
               distinct_dates_count: cur.distinct_dates_count || 0,
               collected_dates: cur.collected_dates || [],
             });

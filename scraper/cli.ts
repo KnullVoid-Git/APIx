@@ -22,6 +22,8 @@ function parseArgs(): ScraperRunOptions {
       i++;
     } else if (arg === '--dry-run') {
       options.dryRun = true;
+    } else if (arg === '--strict') {
+      options.strict = true;
     } else if (arg === '--no-headless' || arg === '--head') {
       options.headless = false;
     } else if (arg === '--min-delay' && args[i + 1]) {
@@ -52,6 +54,7 @@ Options:
   --routes <list>       Comma-separated route codes (e.g. DEL-BOM,DEL-GAU or 'all' for all 16 routes)
   --sources <list>      Target sources: easemytrip, cleartrip, akasa (default: all active)
   --windows <list>      Booking windows: T+1,T+7,T+15,T+30,T+45 (default: all)
+  --strict              Enforce full basket coverage; fail with exit 1 if any route has 0 quotes
   --dry-run             Simulate scrape without opening live browsers
   --no-headless         Run Playwright in visible headful mode for debugging
   --min-delay <ms>      Minimum jitter delay per domain in ms (default: 3000)
@@ -59,8 +62,8 @@ Options:
   --help, -h            Show this help guide
 
 Examples:
-  npm run scrape -- --routes DEL-BOM,DEL-GAU --windows T+1,T+7
-  npm run scrape -- --sources easemytrip,cleartrip,akasa,airindia --routes all
+  npm run scrape -- --routes all --strict
+  npm run scrape -- --sources easemytrip,cleartrip,akasa --routes all
   npm run scrape -- --dry-run
 `);
 }
@@ -71,6 +74,26 @@ async function main() {
 
   try {
     const summary = await runner.runBatch(options);
+    
+    // Evaluate Route Basket Coverage
+    const targetRouteCount = options.routes && options.routes[0] !== 'all' ? options.routes.length : 16;
+    const distinctSuccessfulRoutes = new Set(
+      summary.results.filter((r) => r.success && r.quotes.length > 0).map((r) => r.task.route.id)
+    );
+
+    console.log(`\n----------------------------------------------------------------------`);
+    console.log(`  BASKET COVERAGE AUDIT`);
+    console.log(`  Target Routes:       ${targetRouteCount}`);
+    console.log(`  Routes Captured:     ${distinctSuccessfulRoutes.size}/${targetRouteCount}`);
+    console.log(`  Total Quotes:        ${summary.total_quotes_collected}`);
+    console.log(`----------------------------------------------------------------------`);
+
+    const isStrict = options.strict || process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true';
+    if (isStrict && distinctSuccessfulRoutes.size < targetRouteCount) {
+      console.error(`\n🚨 CRITICAL SCRAPER ALERT: Incomplete basket scrape! Captured only ${distinctSuccessfulRoutes.size}/${targetRouteCount} corridors.`);
+      process.exit(1);
+    }
+
     if (summary.failed_scrapes > 0 && summary.successful_scrapes === 0) {
       process.exitCode = 1;
     }

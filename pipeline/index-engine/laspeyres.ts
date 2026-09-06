@@ -43,18 +43,20 @@ export class LaspeyresIndexCalculator {
     // Normalize against Base Period (Jan 2026 = 100.00)
     const apixValue = normalizedBasketFare > 0 ? Number(((normalizedBasketFare / this.baseBasketFare) * 100).toFixed(2)) : 0;
 
-    // Calculate 24h Delta
-    const delta24h = previousDayIndex
-      ? Number((((apixValue - previousDayIndex) / previousDayIndex) * 100).toFixed(2))
-      : 0;
-
     const sampledCorridorsCount = routeAggregations.filter((r) => r.representative_daily_fare > 0).length;
+    const isPartialBasket = sampledCorridorsCount < 16;
+
+    // Calculate 24h Delta: ONLY against the previous FULL basket day
+    let delta24h = 0;
+    if (!isPartialBasket && previousDayIndex && previousDayIndex > 0) {
+      delta24h = Number((((apixValue - previousDayIndex) / previousDayIndex) * 100).toFixed(2));
+    }
 
     const methodologyNotes = [
       `Methodology: Laspeyres Weighted Basket Index (MoSPI CPI Transport Sub-Group Augmentation)`,
       `Base Period Value: 100.00 (Jan 2026 Reference Basket Fare = ₹${this.baseBasketFare.toFixed(2)})`,
       `Current 24h Weighted Basket Fare: ₹${normalizedBasketFare.toFixed(2)}`,
-      `Active Corridors Sampled: ${sampledCorridorsCount}/${routeAggregations.length} DGCA routes`,
+      `Active Corridors Sampled: ${sampledCorridorsCount}/${routeAggregations.length} DGCA routes${isPartialBasket ? ' [PARTIAL BASKET DIAGNOSTIC RUN]' : ' [FULL NATIONAL BASKET]'}`,
       `Total Flight Quotes Evaluated: ${totalRecordsCount} (${totalOutliersCount} outliers rejected via Tukey IQR)`,
       `Contributors: ${routeContributors.join('; ')}`,
     ].join(' | ');
@@ -69,6 +71,7 @@ export class LaspeyresIndexCalculator {
       base_weighted_fare: this.baseBasketFare,
       delta_24h: delta24h,
       active_routes_count: sampledCorridorsCount,
+      partial_basket: isPartialBasket,
       total_records_processed: totalRecordsCount,
       outliers_excluded_count: totalOutliersCount,
       methodology_notes: methodologyNotes,

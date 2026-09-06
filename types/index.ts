@@ -46,7 +46,7 @@ export interface DailyIndex {
   frequency: IndexFrequency;
   apix_value: number; // e.g. 104.82 (Normalized to Base Period 100.00)
   base_period_value: number; // 100.00
-  delta_24h: number; // Percentage change compared to previous day (+1.42%)
+  delta_24h: number; // Percentage change compared to previous full basket day (+1.42%)
   delta_7d?: number;
   delta_30d?: number;
   median_basket_fare: number;
@@ -54,6 +54,9 @@ export interface DailyIndex {
   active_routes_count: number;
   records_processed: number;
   methodology_notes: string;
+  partial_basket?: boolean;
+  last_full_basket_delta_24h?: number;
+  last_full_basket_date?: string;
   distinct_dates_count?: number;
   collected_dates?: string[];
 }

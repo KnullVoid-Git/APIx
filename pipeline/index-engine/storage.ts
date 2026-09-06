@@ -72,8 +72,8 @@ export class IndexStorage {
   }
 
   private async updateTimeSeriesCsv(csvPath: string, index: DailyIndexRecord) {
-    const header = 'index_date,frequency,apix_value,base_period_value,raw_weighted_fare,delta_24h,records_sampled,outliers_excluded\n';
-    const row = `${index.index_date},${index.frequency},${index.apix_value},${index.base_period_value},${index.raw_weighted_fare},${index.delta_24h || 0},${index.total_records_processed},${index.outliers_excluded_count}`;
+    const header = 'index_date,frequency,apix_value,base_period_value,raw_weighted_fare,delta_24h,records_sampled,outliers_excluded,active_routes_count,partial_basket\n';
+    const row = `${index.index_date},${index.frequency},${index.apix_value},${index.base_period_value},${index.raw_weighted_fare},${index.delta_24h || 0},${index.total_records_processed},${index.outliers_excluded_count},${index.active_routes_count},${index.partial_basket ? 'true' : 'false'}`;
 
     const dateMap = new Map<string, string>();
 

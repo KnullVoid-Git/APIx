@@ -12,6 +12,8 @@ interface TimeSeriesRecord {
   delta24h: number;
   sampledRecords: number;
   outliersExcluded?: number;
+  activeRoutes?: number;
+  partialBasket?: boolean;
 }
 
 /**
@@ -30,6 +32,9 @@ function loadStoredTimeSeries(): TimeSeriesRecord[] {
         const parts = line.split(',');
         if (parts.length >= 7 && parts[0]) {
           const dateStr = parts[0].trim();
+          const activeRoutes = parts[8] ? parseInt(parts[8], 10) : 16;
+          const isPartial = parts[9] ? parts[9].trim().toLowerCase() === 'true' : activeRoutes < 16;
+
           recordsMap.set(dateStr, {
             date: dateStr,
             apix: parseFloat(parts[2]),
@@ -37,6 +42,8 @@ function loadStoredTimeSeries(): TimeSeriesRecord[] {
             delta24h: parseFloat(parts[5]),
             sampledRecords: parseInt(parts[6], 10),
             outliersExcluded: parts[7] ? parseInt(parts[7], 10) : 0,
+            activeRoutes,
+            partialBasket: isPartial,
           });
         }
       }
@@ -56,13 +63,18 @@ function loadStoredTimeSeries(): TimeSeriesRecord[] {
             const content = fs.readFileSync(path.join(dailyDir, file), 'utf-8');
             const parsed = JSON.parse(content);
             if (parsed.index_date && parsed.apix_value) {
+              const activeRoutes = parsed.active_routes_count || 16;
+              const isPartial = parsed.partial_basket !== undefined ? parsed.partial_basket : activeRoutes < 16;
+
               recordsMap.set(parsed.index_date, {
                 date: parsed.index_date,
                 apix: parsed.apix_value,
                 rawFare: parsed.raw_weighted_fare || 5585.36,
-                delta24h: parsed.delta_24h || 2.02,
+                delta24h: parsed.delta_24h || 0,
                 sampledRecords: parsed.total_records_processed || 676,
                 outliersExcluded: parsed.outliers_excluded_count || 62,
+                activeRoutes,
+                partialBasket: isPartial,
               });
             }
           } catch {}
@@ -226,6 +238,8 @@ export async function GET(request: NextRequest) {
     raw_weighted_fare: r.rawFare,
     delta_24h: r.delta24h,
     records_sampled: r.sampledRecords,
+    active_routes_count: r.activeRoutes || 16,
+    partial_basket: Boolean(r.partialBasket),
   }));
 
   const coverageStart = responseData.length > 0 ? responseData[0].index_date : null;
