@@ -27,55 +27,29 @@ export class ETLPipeline {
 
   /**
    * Discovers snapshot files to clean based on options
+  /**
+   * Discovers all available date directories in data/snapshots
    */
-  public findSnapshotFiles(dateOption?: string): string[] {
+  public getSnapshotDateDirs(): string[] {
     const snapshotsBase = path.join(process.cwd(), 'data', 'snapshots');
-    if (!fs.existsSync(snapshotsBase)) {
-      return [];
-    }
-
-    const files: string[] = [];
-    const dateDirs = fs
+    if (!fs.existsSync(snapshotsBase)) return [];
+    return fs
       .readdirSync(snapshotsBase)
-      .filter((d) => fs.statSync(path.join(snapshotsBase, d)).isDirectory());
-
-    let targetDirs = dateDirs.sort().reverse();
-    if (dateOption && dateOption !== 'all' && dateOption !== 'latest') {
-      targetDirs = dateDirs.filter((d) => d === dateOption);
-    } else if (dateOption === 'latest') {
-      targetDirs = targetDirs.slice(0, 1);
-    }
-
-    for (const dir of targetDirs) {
-      const fullDir = path.join(snapshotsBase, dir);
-      const entries = fs.readdirSync(fullDir).filter((f) => f.endsWith('.json'));
-      for (const entry of entries) {
-        files.push(path.join(fullDir, entry));
-      }
-    }
-
-    return files;
+      .filter((d) => fs.statSync(path.join(snapshotsBase, d)).isDirectory())
+      .sort();
   }
 
   /**
-   * Runs the full cleaning and normalization ETL pipeline
+   * Cleans a single date's raw snapshots strictly in isolation
    */
-  public async executePipeline(options: CleanerOptions = {}): Promise<ETLRunSummary> {
-    const runId = `etl_${Date.now()}`;
+  public async cleanDate(targetDate: string, options: CleanerOptions = {}): Promise<ETLRunSummary> {
+    const runId = `etl_${targetDate}_${Date.now()}`;
     const executedAt = new Date().toISOString();
+    const snapshotsBase = path.join(process.cwd(), 'data', 'snapshots');
+    const fullDir = path.join(snapshotsBase, targetDate);
 
-    console.log(`\n======================================================================`);
-    console.log(`  APIx DATA CLEANING & ETL PIPELINE (MoSPI PS 26056)`);
-    console.log(`  Run ID: ${runId}`);
-    console.log(`  Executed At: ${executedAt}`);
-    console.log(`  IQR Outlier Multiplier: ${options.outlierMultiplier ?? 1.5}x`);
-    console.log(`======================================================================\n`);
-
-    const snapshotFiles = this.findSnapshotFiles(options.date);
-    console.log(`[ETL Ingestion] Discovered ${snapshotFiles.length} raw snapshot file(s) to process.`);
-
-    if (snapshotFiles.length === 0) {
-      console.warn(`[ETL Ingestion] No raw snapshot files found. Run 'npm run scrape' first.`);
+    if (!fs.existsSync(fullDir)) {
+      console.warn(`[ETL Ingestion] Directory not found: ${fullDir}`);
       return {
         run_id: runId,
         executed_at: executedAt,
@@ -89,6 +63,13 @@ export class ETLPipeline {
         group_stats: [],
       };
     }
+
+    const snapshotFiles = fs
+      .readdirSync(fullDir)
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => path.join(fullDir, f));
+
+    console.log(`[ETL Ingestion: ${targetDate}] Discovered ${snapshotFiles.length} raw snapshot file(s).`);
 
     let rawQuotesParsed = 0;
     let invalidFaresSkipped = 0;
@@ -116,18 +97,18 @@ export class ETLPipeline {
       }
     }
 
-    console.log(`[ETL Parser ✓] Extracted ${candidateRecords.length} candidate flight fare entries (skipped ${invalidFaresSkipped} invalid/zero quotes).`);
+    console.log(`[ETL Parser ✓] ${targetDate}: Extracted ${candidateRecords.length} candidate quotes (skipped ${invalidFaresSkipped} invalid).`);
 
     // Stage 3: Deduplication
     this.deduplicator.reset();
     const { unique, duplicatesCount } = this.deduplicator.deduplicate(candidateRecords);
-    console.log(`[ETL Deduplication ✓] Dropped ${duplicatesCount} duplicate entries. ${unique.length} unique quotes retained.`);
+    console.log(`[ETL Deduplication ✓] ${targetDate}: Dropped ${duplicatesCount} duplicates. ${unique.length} unique quotes retained.`);
 
     // Stage 4: Outlier Detection (Tukey IQR)
     const { taggedRecords, groupStats, totalOutliers } = this.outlierDetector.detectAndTagOutliers(unique);
-    console.log(`[ETL Outliers ✓] Evaluated ${groupStats.length} (route × window) partitions. Flagged ${totalOutliers} statistical outlier(s).`);
+    console.log(`[ETL Outliers ✓] ${targetDate}: Evaluated ${groupStats.length} partitions. Flagged ${totalOutliers} outlier(s).`);
 
-    // Stage 5: Persistence
+    // Stage 5: Persistence strictly to that date's directory
     const summary: ETLRunSummary = {
       run_id: runId,
       executed_at: executedAt,
@@ -142,44 +123,59 @@ export class ETLPipeline {
     };
 
     if (!options.dryRun) {
-      const { jsonPath, csvPath } = await this.storage.saveCleanedRecords(taggedRecords, summary);
+      const { jsonPath, csvPath } = await this.storage.saveCleanedRecords(taggedRecords, summary, targetDate);
       summary.output_file = jsonPath;
-      console.log(`[ETL Storage ✓] Saved cleaned records to:`);
-      console.log(`   JSON: ${path.relative(process.cwd(), jsonPath)}`);
-      console.log(`   CSV:  ${path.relative(process.cwd(), csvPath)}`);
+      console.log(`[ETL Storage ✓] Saved cleaned records for ${targetDate} (${taggedRecords.length} records) to: ${path.relative(process.cwd(), jsonPath)}`);
     } else {
       console.log(`[ETL Storage] DRY-RUN enabled: skipped writing to disk/database.`);
     }
 
-    // Print Partition Statistics Summary Table
-    console.log(`\n----------------------------------------------------------------------`);
-    console.log(`  PARTITION SUMMARY (Median & IQR Fences)`);
-    console.log(`----------------------------------------------------------------------`);
-    console.log(`  Route     Win    Quotes   Median      IQR Fence (Low - High)    Outliers`);
-    console.log(`  --------- -----  ------   -------     ----------------------    --------`);
-    for (const stat of groupStats.slice(0, 15)) {
-      const routePad = stat.route_id.padEnd(9);
-      const winPad = stat.booking_window.padEnd(6);
-      const cntPad = String(stat.count).padStart(5);
-      const medPad = `₹${stat.median}`.padStart(9);
-      const fencePad = `₹${stat.lower_fence} - ₹${stat.upper_fence}`.padStart(22);
-      const outPad = String(stat.outlier_count).padStart(8);
-      console.log(`  ${routePad} ${winPad} ${cntPad} ${medPad}   ${fencePad}    ${outPad}`);
+    return summary;
+  }
+
+  /**
+   * Runs the full cleaning and normalization ETL pipeline (strictly isolated per date)
+   */
+  public async executePipeline(options: CleanerOptions = {}): Promise<ETLRunSummary> {
+    const availableDates = this.getSnapshotDateDirs();
+    if (availableDates.length === 0) {
+      console.warn(`[ETL Ingestion] No raw snapshot directories found. Run 'npm run scrape' first.`);
+      return {
+        run_id: `etl_${Date.now()}`,
+        executed_at: new Date().toISOString(),
+        snapshots_processed: 0,
+        total_raw_quotes_parsed: 0,
+        duplicates_skipped: 0,
+        invalid_fares_skipped: 0,
+        valid_records_processed: 0,
+        outliers_flagged: 0,
+        records_inserted: 0,
+        group_stats: [],
+      };
     }
-    if (groupStats.length > 15) {
-      console.log(`  ... and ${groupStats.length - 15} more partitions.`);
+
+    let targetDates: string[] = [];
+    if (options.date && options.date === 'all') {
+      targetDates = availableDates;
+    } else if (options.date && options.date !== 'latest') {
+      targetDates = [options.date];
+    } else {
+      // Default: process latest date only (daily scheduled cron mode)
+      targetDates = [availableDates[availableDates.length - 1]];
     }
 
     console.log(`\n======================================================================`);
-    console.log(`  ETL PIPELINE SUMMARY`);
-    console.log(`  Raw Snapshots Ingested:   ${summary.snapshots_processed}`);
-    console.log(`  Raw Quotes Extracted:     ${summary.total_raw_quotes_parsed}`);
-    console.log(`  Duplicates Removed:       ${summary.duplicates_skipped}`);
-    console.log(`  Invalid/Zero Dropped:     ${summary.invalid_fares_skipped}`);
-    console.log(`  Clean Records Output:     ${summary.records_inserted}`);
-    console.log(`  Outliers Tagged (Audited):${summary.outliers_flagged} (${((summary.outliers_flagged / (summary.records_inserted || 1)) * 100).toFixed(1)}%)`);
+    console.log(`  APIx DATA CLEANING & ETL PIPELINE (MoSPI PS 26056)`);
+    console.log(`  Target Date(s): ${targetDates.join(', ')}`);
+    console.log(`  IQR Outlier Multiplier: ${options.outlierMultiplier ?? 1.5}x`);
+    console.log(`  Mode: Strictly isolated per-date extraction (no historical pooling)`);
     console.log(`======================================================================\n`);
 
-    return summary;
+    let lastSummary: ETLRunSummary = {} as ETLRunSummary;
+    for (const d of targetDates) {
+      lastSummary = await this.cleanDate(d, options);
+    }
+
+    return lastSummary;
   }
 }

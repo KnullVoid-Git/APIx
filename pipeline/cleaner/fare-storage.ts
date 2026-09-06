@@ -14,10 +14,11 @@ export class CleanedFareStorage {
    */
   public async saveCleanedRecords(
     records: CleanedFareRecord[],
-    summary: ETLRunSummary
+    summary: ETLRunSummary,
+    targetDate?: string
   ): Promise<{ jsonPath: string; csvPath: string }> {
-    const today = new Date().toISOString().split('T')[0];
-    const targetDir = path.join(this.baseDir, today);
+    const dateFolder = targetDate || (records[0]?.scraped_at ? records[0].scraped_at.split('T')[0] : new Date().toISOString().split('T')[0]);
+    const targetDir = path.join(this.baseDir, dateFolder);
 
     if (!fs.existsSync(targetDir)) {
       fs.mkdirSync(targetDir, { recursive: true });

@@ -1,0 +1,133 @@
+{
+  "run_id": "etl_2026-09-04_1788701812246",
+  "executed_at": "2026-09-06T13:36:52.246Z",
+  "snapshots_processed": 480,
+  "total_raw_quotes_parsed": 3921,
+  "duplicates_skipped": 1734,
+  "invalid_fares_skipped": 0,
+  "valid_records_processed": 1718,
+  "outliers_flagged": 188,
+  "records_inserted": 1718,
+  "group_stats": [
+    {
+      "route_id": "BOM-DEL",
+      "booking_window": "T+15",
+      "count": 162,
+      "q1": 6720,
+      "median": 6996,
+      "q3": 9204,
+      "iqr": 2484,
+      "lower_fence": 2994,
+      "upper_fence": 12930,
+      "outlier_count": 34
+    },
+    {
+      "route_id": "BOM-DEL",
+      "booking_window": "T+1",
+      "count": 150,
+      "q1": 6562,
+      "median": 7032,
+      "q3": 11429,
+      "iqr": 4867,
+      "lower_fence": 500,
+      "upper_fence": 18730,
+      "outlier_count": 16
+    },
+    {
+      "route_id": "BOM-DEL",
+      "booking_window": "T+30",
+      "count": 168,
+      "q1": 6894,
+      "median": 7289,
+      "q3": 9820,
+      "iqr": 2926,
+      "lower_fence": 2505,
+      "upper_fence": 14209,
+      "outlier_count": 19
+    },
+    {
+      "route_id": "BOM-DEL",
+      "booking_window": "T+45",
+      "count": 170,
+      "q1": 7051,
+      "median": 7360,
+      "q3": 8096,
+      "iqr": 1045,
+      "lower_fence": 5484,
+      "upper_fence": 9664,
+      "outlier_count": 35
+    },
+    {
+      "route_id": "BOM-DEL",
+      "booking_window": "T+7",
+      "count": 160,
+      "q1": 6891,
+      "median": 10910,
+      "q3": 17917,
+      "iqr": 11026,
+      "lower_fence": 500,
+      "upper_fence": 34456,
+      "outlier_count": 1
+    },
+    {
+      "route_id": "DEL-BOM",
+      "booking_window": "T+15",
+      "count": 168,
+      "q1": 6618,
+      "median": 7000,
+      "q3": 11648,
+      "iqr": 5030,
+      "lower_fence": 500,
+      "upper_fence": 19193,
+      "outlier_count": 23
+    },
+    {
+      "route_id": "DEL-BOM",
+      "booking_window": "T+1",
+      "count": 210,
+      "q1": 6530,
+      "median": 7000,
+      "q3": 11672,
+      "iqr": 5142,
+      "lower_fence": 500,
+      "upper_fence": 19385,
+      "outlier_count": 21
+    },
+    {
+      "route_id": "DEL-BOM",
+      "booking_window": "T+30",
+      "count": 175,
+      "q1": 7120,
+      "median": 7475,
+      "q3": 12414,
+      "iqr": 5294,
+      "lower_fence": 500,
+      "upper_fence": 20355,
+      "outlier_count": 15
+    },
+    {
+      "route_id": "DEL-BOM",
+      "booking_window": "T+45",
+      "count": 185,
+      "q1": 7019,
+      "median": 7489,
+      "q3": 10491,
+      "iqr": 3472,
+      "lower_fence": 1811,
+      "upper_fence": 15699,
+      "outlier_count": 18
+    },
+    {
+      "route_id": "DEL-BOM",
+      "booking_window": "T+7",
+      "count": 170,
+      "q1": 6530,
+      "median": 7553,
+      "q3": 13307,
+      "iqr": 6777,
+      "lower_fence": 500,
+      "upper_fence": 23473,
+      "outlier_count": 6
+    }
+  ]
+}

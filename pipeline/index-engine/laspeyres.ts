@@ -19,13 +19,17 @@ export class LaspeyresIndexCalculator {
     previousDayIndex?: number
   ): DailyIndexRecord {
     let rawWeightedSum = 0;
+    let totalSampledWeight = 0;
     let totalRecordsCount = 0;
     let totalOutliersCount = 0;
 
     const routeContributors: string[] = [];
 
     for (const route of routeAggregations) {
-      rawWeightedSum += route.weighted_fare_contribution;
+      if (route.representative_daily_fare > 0) {
+        rawWeightedSum += route.representative_daily_fare * route.dgca_traffic_weight;
+        totalSampledWeight += route.dgca_traffic_weight;
+      }
       totalRecordsCount += route.total_quotes_count;
       totalOutliersCount += route.outliers_excluded;
 
@@ -34,21 +38,23 @@ export class LaspeyresIndexCalculator {
       );
     }
 
-    rawWeightedSum = Number(rawWeightedSum.toFixed(2));
+    const normalizedBasketFare = totalSampledWeight > 0 ? Number((rawWeightedSum / totalSampledWeight).toFixed(2)) : 0;
 
     // Normalize against Base Period (Jan 2026 = 100.00)
-    const apixValue = Number(((rawWeightedSum / this.baseBasketFare) * 100).toFixed(2));
+    const apixValue = normalizedBasketFare > 0 ? Number(((normalizedBasketFare / this.baseBasketFare) * 100).toFixed(2)) : 0;
 
     // Calculate 24h Delta
     const delta24h = previousDayIndex
       ? Number((((apixValue - previousDayIndex) / previousDayIndex) * 100).toFixed(2))
-      : Number((((apixValue - 100) * 0.35)).toFixed(2));
+      : 0;
+
+    const sampledCorridorsCount = routeAggregations.filter((r) => r.representative_daily_fare > 0).length;
 
     const methodologyNotes = [
       `Methodology: Laspeyres Weighted Basket Index (MoSPI CPI Transport Sub-Group Augmentation)`,
       `Base Period Value: 100.00 (Jan 2026 Reference Basket Fare = ₹${this.baseBasketFare.toFixed(2)})`,
-      `Current 24h Weighted Basket Fare: ₹${rawWeightedSum.toFixed(2)}`,
-      `Active Corridors Sampled: ${routeAggregations.length}/10 DGCA routes`,
+      `Current 24h Weighted Basket Fare: ₹${normalizedBasketFare.toFixed(2)}`,
+      `Active Corridors Sampled: ${sampledCorridorsCount}/${routeAggregations.length} DGCA routes`,
       `Total Flight Quotes Evaluated: ${totalRecordsCount} (${totalOutliersCount} outliers rejected via Tukey IQR)`,
       `Contributors: ${routeContributors.join('; ')}`,
     ].join(' | ');
@@ -59,10 +65,10 @@ export class LaspeyresIndexCalculator {
       frequency: 'daily',
       apix_value: apixValue,
       base_period_value: 100.0,
-      raw_weighted_fare: rawWeightedSum,
+      raw_weighted_fare: normalizedBasketFare,
       base_weighted_fare: this.baseBasketFare,
       delta_24h: delta24h,
-      active_routes_count: routeAggregations.length,
+      active_routes_count: sampledCorridorsCount,
       total_records_processed: totalRecordsCount,
       outliers_excluded_count: totalOutliersCount,
       methodology_notes: methodologyNotes,

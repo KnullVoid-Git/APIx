@@ -1,0 +1,25 @@
+{
+  "run_id": "etl_2026-08-30_1788701811992",
+  "executed_at": "2026-09-06T13:36:51.992Z",
+  "snapshots_processed": 240,
+  "total_raw_quotes_parsed": 531,
+  "duplicates_skipped": 134,
+  "invalid_fares_skipped": 0,
+  "valid_records_processed": 158,
+  "outliers_flagged": 7,
+  "records_inserted": 158,
+  "group_stats": [
+    {
+      "route_id": "DEL-BOM",
+      "booking_window": "T+1",
+      "count": 158,
+      "q1": 7906,
+      "median": 11760,
+      "q3": 17304,
+      "iqr": 9398,
+      "lower_fence": 500,
+      "upper_fence": 31401,
+      "outlier_count": 7
+    }
+  ]
+}
