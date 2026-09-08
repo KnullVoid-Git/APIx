@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-GAU",
+  "origin": "DEL",
+  "destination": "GAU",
+  "source": "Akasa Air",
+  "booking_window": "T+7",
+  "flight_date": "2026-09-15",
+  "scraped_at": "2026-09-08T21:40:25.484Z",
+  "duration_ms": 4545,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.akasaair.com/flight-search?origin=DEL&destination=GAU&departureDate=2026-09-15&tripType=OW&adults=1&children=0&infants=0&cabinClass=ECONOMY"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-IXC",
+  "origin": "DEL",
+  "destination": "IXC",
+  "source": "Akasa Air",
+  "booking_window": "T+1",
+  "flight_date": "2026-09-09",
+  "scraped_at": "2026-09-08T21:42:02.369Z",
+  "duration_ms": 4383,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.akasaair.com/flight-search?origin=DEL&destination=IXC&departureDate=2026-09-09&tripType=OW&adults=1&children=0&infants=0&cabinClass=ECONOMY"
+  }
+}

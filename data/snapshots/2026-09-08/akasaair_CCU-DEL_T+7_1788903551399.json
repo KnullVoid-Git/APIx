@@ -1,0 +1,18 @@
+{
+  "route_id": "CCU-DEL",
+  "origin": "CCU",
+  "destination": "DEL",
+  "source": "Akasa Air",
+  "booking_window": "T+7",
+  "flight_date": "2026-09-15",
+  "scraped_at": "2026-09-08T21:39:06.719Z",
+  "duration_ms": 4679,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.akasaair.com/flight-search?origin=CCU&destination=DEL&departureDate=2026-09-15&tripType=OW&adults=1&children=0&infants=0&cabinClass=ECONOMY"
+  }
+}
