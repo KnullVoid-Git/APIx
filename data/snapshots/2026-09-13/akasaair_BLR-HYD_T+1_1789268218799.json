@@ -1,0 +1,18 @@
+{
+  "route_id": "BLR-HYD",
+  "origin": "BLR",
+  "destination": "HYD",
+  "source": "Akasa Air",
+  "booking_window": "T+1",
+  "flight_date": "2026-09-14",
+  "scraped_at": "2026-09-13T02:56:54.253Z",
+  "duration_ms": 4544,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.akasaair.com/flight-search?origin=BLR&destination=HYD&departureDate=2026-09-14&tripType=OW&adults=1&children=0&infants=0&cabinClass=ECONOMY"
+  }
+}

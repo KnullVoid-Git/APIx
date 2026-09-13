@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-BLR",
+  "origin": "DEL",
+  "destination": "BLR",
+  "source": "Akasa Air",
+  "booking_window": "T+7",
+  "flight_date": "2026-09-20",
+  "scraped_at": "2026-09-13T02:54:24.205Z",
+  "duration_ms": 4371,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.akasaair.com/flight-search?origin=DEL&destination=BLR&departureDate=2026-09-20&tripType=OW&adults=1&children=0&infants=0&cabinClass=ECONOMY"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "route_id": "MAA-DEL",
+  "origin": "MAA",
+  "destination": "DEL",
+  "source": "EaseMyTrip",
+  "booking_window": "T+7",
+  "flight_date": "2026-09-20",
+  "scraped_at": "2026-09-13T02:42:38.430Z",
+  "duration_ms": 6034,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=MAA-Chennai-India|DEL-Delhi-India|20/09/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}
