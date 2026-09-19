@@ -1,0 +1,18 @@
+{
+  "route_id": "BLR-BOM",
+  "origin": "BLR",
+  "destination": "BOM",
+  "source": "Akasa Air",
+  "booking_window": "T+7",
+  "flight_date": "2026-09-26",
+  "scraped_at": "2026-09-19T02:58:55.628Z",
+  "duration_ms": 4454,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.akasaair.com/flight-search?origin=BLR&destination=BOM&departureDate=2026-09-26&tripType=OW&adults=1&children=0&infants=0&cabinClass=ECONOMY"
+  }
+}

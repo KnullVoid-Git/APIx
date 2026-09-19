@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-BOM",
+  "origin": "DEL",
+  "destination": "BOM",
+  "source": "Akasa Air",
+  "booking_window": "T+7",
+  "flight_date": "2026-09-26",
+  "scraped_at": "2026-09-19T02:56:48.037Z",
+  "duration_ms": 4741,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.akasaair.com/flight-search?origin=DEL&destination=BOM&departureDate=2026-09-26&tripType=OW&adults=1&children=0&infants=0&cabinClass=ECONOMY"
+  }
+}
