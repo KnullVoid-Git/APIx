@@ -1,0 +1,18 @@
+{
+  "route_id": "BOM-DEL",
+  "origin": "BOM",
+  "destination": "DEL",
+  "source": "EaseMyTrip",
+  "booking_window": "T+30",
+  "flight_date": "2026-11-05",
+  "scraped_at": "2026-10-06T04:21:58.378Z",
+  "duration_ms": 5395,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=BOM-Mumbai-India|DEL-Delhi-India|05/11/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}
