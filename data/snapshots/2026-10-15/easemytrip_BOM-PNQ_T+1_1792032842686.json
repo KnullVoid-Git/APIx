@@ -1,0 +1,71 @@
+{
+  "route_id": "BOM-PNQ",
+  "origin": "BOM",
+  "destination": "PNQ",
+  "source": "EaseMyTrip",
+  "booking_window": "T+1",
+  "flight_date": "2026-10-16",
+  "scraped_at": "2026-10-15T02:53:56.853Z",
+  "duration_ms": 5818,
+  "success": true,
+  "quotes_count": 4,
+  "quotes": [
+    {
+      "source": "EaseMyTrip",
+      "carrier": "AI",
+      "carrier_name": "Air India",
+      "flight_number": "AI-1891",
+      "departure_time": "08:10",
+      "arrival_time": "17:35",
+      "is_nonstop": false,
+      "fare_class": "Economy",
+      "base_fare": 9469,
+      "taxes": 2078,
+      "total_fare": 11547
+    },
+    {
+      "source": "EaseMyTrip",
+      "carrier": "AI",
+      "carrier_name": "Air India",
+      "flight_number": "AI-1891",
+      "departure_time": "08:10",
+      "arrival_time": "17:35",
+      "is_nonstop": false,
+      "fare_class": "Economy",
+      "base_fare": 9469,
+      "taxes": 2078,
+      "total_fare": 11547
+    },
+    {
+      "source": "EaseMyTrip",
+      "carrier": "AI",
+      "carrier_name": "Air India",
+      "flight_number": "AI-2641",
+      "departure_time": "18:30",
+      "arrival_time": "23:30",
+      "is_nonstop": false,
+      "fare_class": "Economy",
+      "base_fare": 33213,
+      "taxes": 7291,
+      "total_fare": 40504
+    },
+    {
+      "source": "EaseMyTrip",
+      "carrier": "AI",
+      "carrier_name": "Air India",
+      "flight_number": "AI-2641",
+      "departure_time": "18:30",
+      "arrival_time": "23:30",
+      "is_nonstop": false,
+      "fare_class": "Economy",
+      "base_fare": 33213,
+      "taxes": 7291,
+      "total_fare": 40504
+    }
+  ],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 4,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=BOM-Mumbai-India|PNQ-Pune-India|16/10/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}
