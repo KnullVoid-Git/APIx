@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-GAU",
+  "origin": "DEL",
+  "destination": "GAU",
+  "source": "Cleartrip",
+  "booking_window": "T+7",
+  "flight_date": "2026-10-25",
+  "scraped_at": "2026-10-18T02:49:28.860Z",
+  "duration_ms": 5877,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=25/10/2026&from=DEL&to=GAU&intl=n"
+  }
+}
