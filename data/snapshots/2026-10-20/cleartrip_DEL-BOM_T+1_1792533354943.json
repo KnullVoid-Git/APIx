@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-BOM",
+  "origin": "DEL",
+  "destination": "BOM",
+  "source": "Cleartrip",
+  "booking_window": "T+1",
+  "flight_date": "2026-10-21",
+  "scraped_at": "2026-10-20T21:55:48.661Z",
+  "duration_ms": 6280,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=21/10/2026&from=DEL&to=BOM&intl=n"
+  }
+}
