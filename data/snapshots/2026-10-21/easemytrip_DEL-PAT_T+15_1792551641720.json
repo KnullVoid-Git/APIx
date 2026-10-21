@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-PAT",
+  "origin": "DEL",
+  "destination": "PAT",
+  "source": "EaseMyTrip",
+  "booking_window": "T+15",
+  "flight_date": "2026-11-05",
+  "scraped_at": "2026-10-21T03:00:36.042Z",
+  "duration_ms": 5652,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|PAT-Patna-India|05/11/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}
