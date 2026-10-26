@@ -1,0 +1,18 @@
+{
+  "route_id": "BLR-DEL",
+  "origin": "BLR",
+  "destination": "DEL",
+  "source": "Cleartrip",
+  "booking_window": "T+45",
+  "flight_date": "2026-12-10",
+  "scraped_at": "2026-10-26T02:53:48.001Z",
+  "duration_ms": 6676,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=10/12/2026&from=BLR&to=DEL&intl=n"
+  }
+}

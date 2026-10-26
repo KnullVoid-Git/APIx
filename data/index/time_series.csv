@@ -34,3 +34,4 @@ index_date,frequency,apix_value,base_period_value,raw_weighted_fare,delta_24h,re
 2026-10-23,daily,234.76,100,12395.36,0,7362,252,16,false
 2026-10-24,daily,200.82,100,10603.04,0,6292,538,16,false
 2026-10-25,daily,198.58,100,10484.99,0,5295,390,16,false
+2026-10-26,daily,187.85,100,9918.29,0,3561,308,16,false
