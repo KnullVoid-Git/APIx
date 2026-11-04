@@ -1,0 +1,18 @@
+{
+  "route_id": "CCU-DEL",
+  "origin": "CCU",
+  "destination": "DEL",
+  "source": "Cleartrip",
+  "booking_window": "T+15",
+  "flight_date": "2026-11-19",
+  "scraped_at": "2026-11-04T04:37:14.021Z",
+  "duration_ms": 6096,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=19/11/2026&from=CCU&to=DEL&intl=n"
+  }
+}
