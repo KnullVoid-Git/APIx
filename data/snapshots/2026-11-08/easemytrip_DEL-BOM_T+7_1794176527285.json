@@ -1,0 +1,23 @@
+{
+  "route_id": "DEL-BOM",
+  "origin": "DEL",
+  "destination": "BOM",
+  "source": "EaseMyTrip",
+  "booking_window": "T+7",
+  "flight_date": "2026-11-15",
+  "scraped_at": "2026-11-08T22:21:32.236Z",
+  "duration_ms": 35045,
+  "success": false,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "error": "page.goto: Timeout 35000ms exceeded.\nCall log:\n  - navigating to \"https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|BOM-Mumbai-India|15/11/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true\", waiting until \"domcontentloaded\"\n",
+    "stack": "page.goto: Timeout 35000ms exceeded.\nCall log:\n  - navigating to \"https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|BOM-Mumbai-India|15/11/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true\", waiting until \"domcontentloaded\"\n\n    at EaseMyTripScraper.executeExtraction (/home/runner/work/APIx/APIx/scraper/sources/easemytrip.ts:80:18)\n    at EaseMyTripScraper.scrape (/home/runner/work/APIx/APIx/scraper/sources/base-scraper.ts:24:37)\n    at async ScraperRunner.runBatch (/home/runner/work/APIx/APIx/scraper/runner.ts:207:28)\n    at async main (/home/runner/work/APIx/APIx/scraper/cli.ts:76:21)"
+  },
+  "error": {
+    "type": "TIMEOUT",
+    "message": "page.goto: Timeout 35000ms exceeded.\nCall log:\n  - navigating to \"https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|BOM-Mumbai-India|15/11/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true\", waiting until \"domcontentloaded\"\n",
+    "stack": "page.goto: Timeout 35000ms exceeded.\nCall log:\n  - navigating to \"https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|BOM-Mumbai-India|15/11/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true\", waiting until \"domcontentloaded\"\n\n    at EaseMyTripScraper.executeExtraction (/home/runner/work/APIx/APIx/scraper/sources/easemytrip.ts:80:18)\n    at EaseMyTripScraper.scrape (/home/runner/work/APIx/APIx/scraper/sources/base-scraper.ts:24:37)\n    at async ScraperRunner.runBatch (/home/runner/work/APIx/APIx/scraper/runner.ts:207:28)\n    at async main (/home/runner/work/APIx/APIx/scraper/cli.ts:76:21)"
+  }
+}
