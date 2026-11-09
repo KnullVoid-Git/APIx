@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-IXC",
+  "origin": "DEL",
+  "destination": "IXC",
+  "source": "EaseMyTrip",
+  "booking_window": "T+7",
+  "flight_date": "2026-11-16",
+  "scraped_at": "2026-11-09T04:13:39.545Z",
+  "duration_ms": 5810,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://flight.easemytrip.com/FlightList/Index?srch=DEL-Delhi-India|IXC-Chandigarh-India|16/11/2026&px=1-0-0&cbn=0&ar=undefined&isqs=true"
+  }
+}
