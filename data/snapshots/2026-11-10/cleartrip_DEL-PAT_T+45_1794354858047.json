@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-PAT",
+  "origin": "DEL",
+  "destination": "PAT",
+  "source": "Cleartrip",
+  "booking_window": "T+45",
+  "flight_date": "2026-12-25",
+  "scraped_at": "2026-11-10T23:54:11.747Z",
+  "duration_ms": 6286,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=25/12/2026&from=DEL&to=PAT&intl=n"
+  }
+}
