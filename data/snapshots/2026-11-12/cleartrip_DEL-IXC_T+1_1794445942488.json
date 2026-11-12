@@ -1,0 +1,18 @@
+{
+  "route_id": "DEL-IXC",
+  "origin": "DEL",
+  "destination": "IXC",
+  "source": "Cleartrip",
+  "booking_window": "T+1",
+  "flight_date": "2026-11-13",
+  "scraped_at": "2026-11-12T01:12:16.111Z",
+  "duration_ms": 6366,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "dom_extracted_count": 0,
+    "url": "https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=13/11/2026&from=DEL&to=IXC&intl=n"
+  }
+}
