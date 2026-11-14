@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-13T05:01:21.881Z",
+  "updated_at": "2026-11-14T00:10:40.456Z",
   "current_index": {
-    "id": "daily_index_2026-11-13",
-    "index_date": "2026-11-13",
+    "id": "daily_index_2026-11-14",
+    "index_date": "2026-11-14",
     "frequency": "daily",
     "apix_value": 207.98,
     "base_period_value": 100,
@@ -502,8 +502,8 @@
     ]
   },
   "weekly_rollup": {
-    "id": "weekly_index_2026-11-13",
-    "index_date": "2026-11-13",
+    "id": "weekly_index_2026-11-14",
+    "index_date": "2026-11-14",
     "frequency": "weekly",
     "apix_value": 207.98,
     "base_period_value": 100,
