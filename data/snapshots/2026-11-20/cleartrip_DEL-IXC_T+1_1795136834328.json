@@ -1,0 +1,4634 @@
+{
+  "route_id": "DEL-IXC",
+  "origin": "DEL",
+  "destination": "IXC",
+  "source": "Cleartrip",
+  "booking_window": "T+1",
+  "flight_date": "2026-11-21",
+  "scraped_at": "2026-11-20T01:07:08.272Z",
+  "duration_ms": 6045,
+  "success": true,
+  "quotes_count": 0,
+  "quotes": [],
+  "intercepted_api": false,
+  "raw_payload": {
+    "searchIntent": {
+      "J1": {
+        "seq": 1,
+        "journeyId": "J1",
+        "origin": "DEL",
+        "destination": "IXC",
+        "departDate": "21/11/2026",
+        "cabin": "ECONOMY",
+        "paxCriteria": [
+          {
+            "type": "ADT",
+            "count": 1,
+            "supportedPaxCategories": [
+              "DEFAULT"
+            ]
+          }
+        ]
+      }
+    },
+    "cards": {
+      "J1": [
+        {
+          "cardId": 0,
+          "travelOptionId": "6E-2557-DEL-IXC-1795278000",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "6E",
+                "flightNumber": "2557"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "6E",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "2",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T21:50:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "6E",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T22:40:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 0,
+              "mm": 50
+            },
+            "stops": 0,
+            "timelineText": "Non-stop",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "6E-2557-DEL-IXC-1795278000"
+          ],
+          "samePriceCards": [],
+          "layover": [],
+          "flightInsights": {
+            "onTimePercentage": 63
+          },
+          "previouslySelected": false
+        },
+        {
+          "cardId": 1,
+          "travelOptionId": "6E-5162-DEL-IXC-1795266900",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "6E",
+                "flightNumber": "5162"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "6E",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T18:45:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "6E",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T19:40:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 0,
+              "mm": 55
+            },
+            "stops": 0,
+            "timelineText": "Non-stop",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "6E-5162-DEL-IXC-1795266900"
+          ],
+          "samePriceCards": [],
+          "layover": [],
+          "flightInsights": {
+            "onTimePercentage": 63
+          },
+          "previouslySelected": false
+        },
+        {
+          "cardId": 2,
+          "travelOptionId": "AI-2643-DEL-IXC-1795220400",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2643"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T05:50:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T06:55:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 1,
+              "mm": 5
+            },
+            "stops": 0,
+            "timelineText": "Non-stop",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2643-DEL-IXC-1795220400"
+          ],
+          "samePriceCards": [],
+          "layover": [],
+          "flightInsights": {
+            "onTimePercentage": 100
+          },
+          "previouslySelected": false
+        },
+        {
+          "cardId": 3,
+          "travelOptionId": "6E-6050-DEL-IXC-1795232700",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "6E",
+                "flightNumber": "6050"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "6E",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "1",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T09:15:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "6E",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T10:20:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 1,
+              "mm": 5
+            },
+            "stops": 0,
+            "timelineText": "Non-stop",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "6E-6050-DEL-IXC-1795232700"
+          ],
+          "samePriceCards": [],
+          "layover": [],
+          "flightInsights": {
+            "onTimePercentage": 98
+          },
+          "previouslySelected": false
+        },
+        {
+          "cardId": 4,
+          "travelOptionId": "AI-1742-DEL-IXC-1795269600",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "1742"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "2",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T19:30:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T20:30:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 1,
+              "mm": 0
+            },
+            "stops": 0,
+            "timelineText": "Non-stop",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-1742-DEL-IXC-1795269600"
+          ],
+          "samePriceCards": [],
+          "layover": [],
+          "flightInsights": {
+            "onTimePercentage": 75
+          },
+          "previouslySelected": false
+        },
+        {
+          "cardId": 5,
+          "travelOptionId": "AI-2532-DEL-IXC-1795239300",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2532"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T11:05:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T12:10:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 1,
+              "mm": 5
+            },
+            "stops": 0,
+            "timelineText": "Non-stop",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2532-DEL-IXC-1795239300"
+          ],
+          "samePriceCards": [],
+          "layover": [],
+          "flightInsights": {
+            "onTimePercentage": 60
+          },
+          "previouslySelected": false
+        },
+        {
+          "cardId": 6,
+          "travelOptionId": "AI-2706-DEL-IXC-1795254000",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2706"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T15:10:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T16:20:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 1,
+              "mm": 10
+            },
+            "stops": 0,
+            "timelineText": "Non-stop",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2706-DEL-IXC-1795254000"
+          ],
+          "samePriceCards": [],
+          "layover": [],
+          "flightInsights": {
+            "onTimePercentage": 69
+          },
+          "previouslySelected": false
+        },
+        {
+          "cardId": 7,
+          "travelOptionId": "AI-2977-DEL-BOM-1795277700__AI-2681-BOM-IXC-1795326900",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2977"
+              },
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2681"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T21:45:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-22T13:40:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 15,
+              "mm": 55
+            },
+            "stops": 1,
+            "timelineText": "1 stop (11h 15m in Chatrapati Shivaji Airport)",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2977-DEL-BOM-1795277700__AI-2681-BOM-IXC-1795326900"
+          ],
+          "samePriceCards": [
+            8
+          ],
+          "layover": [
+            {
+              "airport": "BOM",
+              "totalDuration": {
+                "hh": 11,
+                "mm": 15
+              },
+              "transitVisaMessage": null,
+              "baggageReCheckInRequired": false,
+              "transitVisaRequired": false
+            }
+          ],
+          "previouslySelected": false
+        },
+        {
+          "cardId": 8,
+          "travelOptionId": "AI-2433-DEL-BOM-1795276800__AI-2681-BOM-IXC-1795326900",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2433"
+              },
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2681"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T21:30:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-22T13:40:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 16,
+              "mm": 10
+            },
+            "stops": 1,
+            "timelineText": "1 stop (11h 40m in Chatrapati Shivaji Airport)",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2433-DEL-BOM-1795276800__AI-2681-BOM-IXC-1795326900"
+          ],
+          "samePriceCards": [
+            7
+          ],
+          "layover": [
+            {
+              "airport": "BOM",
+              "totalDuration": {
+                "hh": 11,
+                "mm": 40
+              },
+              "transitVisaMessage": null,
+              "baggageReCheckInRequired": false,
+              "transitVisaRequired": false
+            }
+          ],
+          "previouslySelected": false
+        },
+        {
+          "cardId": 9,
+          "travelOptionId": "AI-2981-DEL-BOM-1795275000__AI-2681-BOM-IXC-1795326900",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2981"
+              },
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2681"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T21:00:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-22T13:40:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 16,
+              "mm": 40
+            },
+            "stops": 1,
+            "timelineText": "1 stop (12h in Chatrapati Shivaji Airport)",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2981-DEL-BOM-1795275000__AI-2681-BOM-IXC-1795326900"
+          ],
+          "samePriceCards": [],
+          "layover": [
+            {
+              "airport": "BOM",
+              "totalDuration": {
+                "hh": 12,
+                "mm": 0
+              },
+              "transitVisaMessage": null,
+              "baggageReCheckInRequired": false,
+              "transitVisaRequired": false
+            }
+          ],
+          "previouslySelected": false
+        },
+        {
+          "cardId": 10,
+          "travelOptionId": "AI-2439-DEL-BOM-1795282200__AI-471-BOM-IXC-1795304700",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2439"
+              },
+              {
+                "airlineCode": "AI",
+                "flightNumber": "471"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T23:00:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-22T07:30:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 8,
+              "mm": 30
+            },
+            "stops": 1,
+            "timelineText": "1 stop (3h 50m in Chatrapati Shivaji Airport)",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2439-DEL-BOM-1795282200__AI-471-BOM-IXC-1795304700"
+          ],
+          "samePriceCards": [],
+          "layover": [
+            {
+              "airport": "BOM",
+              "totalDuration": {
+                "hh": 3,
+                "mm": 50
+              },
+              "transitVisaMessage": null,
+              "baggageReCheckInRequired": false,
+              "transitVisaRequired": false
+            }
+          ],
+          "previouslySelected": false
+        },
+        {
+          "cardId": 11,
+          "travelOptionId": "AI-2439-DEL-BOM-1795282200__AI-2659-BOM-IXC-1795338300",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2439"
+              },
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2659"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T23:00:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-22T17:05:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 18,
+              "mm": 5
+            },
+            "stops": 1,
+            "timelineText": "1 stop (13h 10m in Chatrapati Shivaji Airport)",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2439-DEL-BOM-1795282200__AI-2659-BOM-IXC-1795338300"
+          ],
+          "samePriceCards": [],
+          "layover": [
+            {
+              "airport": "BOM",
+              "totalDuration": {
+                "hh": 13,
+                "mm": 10
+              },
+              "transitVisaMessage": null,
+              "baggageReCheckInRequired": false,
+              "transitVisaRequired": false
+            }
+          ],
+          "previouslySelected": false
+        },
+        {
+          "cardId": 12,
+          "travelOptionId": "AI-2439-DEL-BOM-1795282200__AI-2681-BOM-IXC-1795326900",
+          "summary": {
+            "flights": [
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2439"
+              },
+              {
+                "airlineCode": "AI",
+                "flightNumber": "2681"
+              }
+            ],
+            "firstDeparture": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "DEL",
+                "terminal": {
+                  "name": "3",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-21T23:00:00.000+05:30"
+              }
+            },
+            "lastArrival": {
+              "airlineCode": "AI",
+              "airport": {
+                "code": "IXC",
+                "terminal": {
+                  "name": "",
+                  "gate": ""
+                },
+                "zoneId": "Asia/Kolkata",
+                "timeZone": "IST",
+                "time": "2026-11-22T13:40:00.000+05:30"
+              }
+            },
+            "totalDuration": {
+              "hh": 14,
+              "mm": 40
+            },
+            "stops": 1,
+            "timelineText": "1 stop (10h in Chatrapati Shivaji Airport)",
+            "lowestRoundTripPriceDetails": null
+          },
+          "subTravelOptionIds": [
+            "AI-2439-DEL-BOM-1795282200__AI-2681-BOM-IXC-1795326900"
+          ],
+          "samePriceCards": [],
+          "layover": [
+            {
+              "airport": "BOM",
+              "totalDuration": {
+                "hh": 10,
+                "mm": 0
+              },
+              "transitVisaMessage": null,
+              "baggageReCheckInRequired": false,
+              "transitVisaRequired": false
+            }
+          ],
+          "previouslySelected": false
+        }
+      ]
+    },
+    "subTravelOptions": {
+      "AI-2439-DEL-BOM-1795282200__AI-2659-BOM-IXC-1795338300": {
+        "subTravelOptionId": "AI-2439-DEL-BOM-1795282200__AI-2659-BOM-IXC-1795338300",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2439-DEL-BOM-1795282200",
+          "2": "AI-2659-BOM-IXC-1795338300"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z52kMKIJF4xGLWYbA+Id49uiZdOIEJCmeCHtHJbm2/jzM261rWVn4KfcIU9Ml1ZYHIHwLoYDOpnIhnPoUKKjlCdvJ/zMJvjpqSbM3v6VSdCPXS1No4hn5JKollTQqDbNHh6rfy/Z+xb4yVIpk9OcP7Tj8qOPKlCl+OZlLdLC9pJbF4TnOIfqVPVnZozkHi1mI9PiGpSPdbZ5nTmzX3x6WWj2hfXWdCYpCCAM3vrdmPZmRxiaI0HyKB8eIelLJBbKOvM9OFrC12lMeUrq8/rmoW+en8h0EuAI878HYmN565nON9xHjhnMag==~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z52kMKIJF4xGLWYbA+Id49uiZdOIEJCmeCHtHJbm2/jzM261rWVn4KfcIU9Ml1ZYHIHwLoYDOpnIhnPoUKKjlCdvJ/zMJvjpqSbM3v6VSdCPXS1No4hn5JKollTQqDbNHh6rfy/Z+xb4yVIpk9OcP7Tj8qOPKlCl+OZlLdLC9pJbF4TnOIfqVPVnZozkHi1mI9PiGpSPdbZ5nTmzX3x6WWj2hfXWdCYpCCAM3vrdmPZmRxiaI0HyKB8eIelLJBbKOvM9OFrC12lMeUrq8/rmoW+en8h0EuAI878HYmN565nON9xHjhnMag==~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "4346395c4ac89f2519a745de0e897670",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z52kMKIJF4xGLWYbA+Id49uiZdOIEJCmeCHtHJbm2/jzM261rWVn4KfcIU9Ml1ZYHIHwLoYDOpnIhnPoUKKjlCdvJ/zMJvjpqSbM3v6VSdCPXS1No4hn5JKollTQqDbNHh6rfy/Z+xb4yVIpk9OcP7Tj8qOPKlCl+OZlLdLC9pJbF4TnOIfqVPVnZozkHi1mI9PiGpSPdbZ5nTmzX3x6WWj2hfXWdCYpCCAM3vrdmPZmRxiaI0HyKB8eIelLJBbKOvM9OFrC12lMeUrq8/rmoW+en8h0EuAI878HYmN565nON9xHjhnMag==~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z52kMKIJF4xGLWYbA+Id49uiZdOIEJCmeCHtHJbm2/jzM261rWVn4KfcIU9Ml1ZYHIHwLoYDOpnIhnPoUKKjlCdvJ/zMJvjpqSbM3v6VSdCPXS1No4hn5JKollTQqDbNHh6rfy/Z+xb4yVIpk9OcP7Tj8qOPKlCl+OZlLdLC9pJbF4TnOIfqVPVnZozkHi1mI9PiGpSPdbZ5nTmzX3x6WWj2hfXWdCYpCCAM3vrdmPZmRxiaI0HyKB8eIelLJBbKOvM9OFrC12lMeUrq8/rmoW+en8h0EuAI878HYmN565nON9xHjhnMag==~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 24725,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z52kMKIJF4xGLWYbA+Id49uiZdOIEJCmeCHtHJbm2/jzM261rWVn4KfcIU9Ml1ZYHIHwLoYDOpnIhnPoUKKjlCdvJ/zMJvjpqSbM3v6VSdCPXS1No4hn5JKollTQqDbNHh6rfy/Z+xb4yVIpk9OcP7Tj8qOPKlCl+OZlLdLC9pJbF4TnOIfqVPVnZozkHi1mI9PiGpSPdbZ5nTmzX3x6WWj2hfXWdCYpCCAM3vrdmPZmRxiaI0HyKB8eIelLJBbKOvM9OFrC12lMeUrq8/rmoW+en8h0EuAI878HYmN565nON9xHjhnMag==~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2977-DEL-BOM-1795277700__AI-2681-BOM-IXC-1795326900": {
+        "subTravelOptionId": "AI-2977-DEL-BOM-1795277700__AI-2681-BOM-IXC-1795326900",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2977-DEL-BOM-1795277700",
+          "2": "AI-2681-BOM-IXC-1795326900"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51w+ORXa80qbIWSwVsUj8nYkWuXRFXXF771JFNPIg866qqvsjkWL9Io50UbrvZw/1s9oBqwWNXGhihA8XRXbYMskLcYbUOX/Q47jLDTJsxRMn8UqURTemTLysrVzZutglc8oNZ0WgVxxGK2Zb5z781xrFi8mCdkguYsGaqmrvILGVS6L5U8KhHuwSpNHpwWxNuK+SqCMjZfR+WXdXPvvf1sDKbfvhpucQb/fw8bNzuzXtXZx4bNy1JE66sbFHMG8MlG+jU22kdhHt21eRaWcFHWZbuiRdzV4/3n5rOdYMjHOuFcxSpmEQ==~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51w+ORXa80qbIWSwVsUj8nYkWuXRFXXF771JFNPIg866qqvsjkWL9Io50UbrvZw/1s9oBqwWNXGhihA8XRXbYMskLcYbUOX/Q47jLDTJsxRMn8UqURTemTLysrVzZutglc8oNZ0WgVxxGK2Zb5z781xrFi8mCdkguYsGaqmrvILGVS6L5U8KhHuwSpNHpwWxNuK+SqCMjZfR+WXdXPvvf1sDKbfvhpucQb/fw8bNzuzXtXZx4bNy1JE66sbFHMG8MlG+jU22kdhHt21eRaWcFHWZbuiRdzV4/3n5rOdYMjHOuFcxSpmEQ==~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "4346395c4ac89f2519a745de0e897670",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51w+ORXa80qbIWSwVsUj8nYkWuXRFXXF771JFNPIg866qqvsjkWL9Io50UbrvZw/1s9oBqwWNXGhihA8XRXbYMskLcYbUOX/Q47jLDTJsxRMn8UqURTemTLysrVzZutglc8oNZ0WgVxxGK2Zb5z781xrFi8mCdkguYsGaqmrvILGVS6L5U8KhHuwSpNHpwWxNuK+SqCMjZfR+WXdXPvvf1sDKbfvhpucQb/fw8bNzuzXtXZx4bNy1JE66sbFHMG8MlG+jU22kdhHt21eRaWcFHWZbuiRdzV4/3n5rOdYMjHOuFcxSpmEQ==~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51w+ORXa80qbIWSwVsUj8nYkWuXRFXXF771JFNPIg866qqvsjkWL9Io50UbrvZw/1s9oBqwWNXGhihA8XRXbYMskLcYbUOX/Q47jLDTJsxRMn8UqURTemTLysrVzZutglc8oNZ0WgVxxGK2Zb5z781xrFi8mCdkguYsGaqmrvILGVS6L5U8KhHuwSpNHpwWxNuK+SqCMjZfR+WXdXPvvf1sDKbfvhpucQb/fw8bNzuzXtXZx4bNy1JE66sbFHMG8MlG+jU22kdhHt21eRaWcFHWZbuiRdzV4/3n5rOdYMjHOuFcxSpmEQ==~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 17402,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51w+ORXa80qbIWSwVsUj8nYkWuXRFXXF771JFNPIg866qqvsjkWL9Io50UbrvZw/1s9oBqwWNXGhihA8XRXbYMskLcYbUOX/Q47jLDTJsxRMn8UqURTemTLysrVzZutglc8oNZ0WgVxxGK2Zb5z781xrFi8mCdkguYsGaqmrvILGVS6L5U8KhHuwSpNHpwWxNuK+SqCMjZfR+WXdXPvvf1sDKbfvhpucQb/fw8bNzuzXtXZx4bNy1JE66sbFHMG8MlG+jU22kdhHt21eRaWcFHWZbuiRdzV4/3n5rOdYMjHOuFcxSpmEQ==~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2439-DEL-BOM-1795282200__AI-2681-BOM-IXC-1795326900": {
+        "subTravelOptionId": "AI-2439-DEL-BOM-1795282200__AI-2681-BOM-IXC-1795326900",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2439-DEL-BOM-1795282200",
+          "2": "AI-2681-BOM-IXC-1795326900"
+        },
+        "totalFareCount": 1,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51gyctODraKxSBqmLkRqmolgrTK4klJXRQxGuBHIcLoXX8fOmYHtPz4m/8mZ6wiMP35hnvwhE6Gk0vIWImHqgE5rHMCgOAyF6gCySrMZc9FwMcQ45babj6md64BadW80d2w2TsvVfYGTMrC8mOZcF77KavjNvjt70eWLKEV2CzuuuiaHL56nX5GJm4/tNFyehlV33kV4uuhN4rt6D/scOIh9Mef+5D0oRPSY9zHiWkbYMCTO/pU2mS/QlVtq294GFnvKsOROygxHumopqyhm23omYENavWk7b3vqpIquH33/oNirlYohg==~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51gyctODraKxSBqmLkRqmolgrTK4klJXRQxGuBHIcLoXX8fOmYHtPz4m/8mZ6wiMP35hnvwhE6Gk0vIWImHqgE5rHMCgOAyF6gCySrMZc9FwMcQ45babj6md64BadW80d2w2TsvVfYGTMrC8mOZcF77KavjNvjt70eWLKEV2CzuuuiaHL56nX5GJm4/tNFyehlV33kV4uuhN4rt6D/scOIh9Mef+5D0oRPSY9zHiWkbYMCTO/pU2mS/QlVtq294GFnvKsOROygxHumopqyhm23omYENavWk7b3vqpIquH33/oNirlYohg==~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "4346395c4ac89f2519a745de0e897670",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51gyctODraKxSBqmLkRqmolgrTK4klJXRQxGuBHIcLoXX8fOmYHtPz4m/8mZ6wiMP35hnvwhE6Gk0vIWImHqgE5rHMCgOAyF6gCySrMZc9FwMcQ45babj6md64BadW80d2w2TsvVfYGTMrC8mOZcF77KavjNvjt70eWLKEV2CzuuuiaHL56nX5GJm4/tNFyehlV33kV4uuhN4rt6D/scOIh9Mef+5D0oRPSY9zHiWkbYMCTO/pU2mS/QlVtq294GFnvKsOROygxHumopqyhm23omYENavWk7b3vqpIquH33/oNirlYohg==~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51gyctODraKxSBqmLkRqmolgrTK4klJXRQxGuBHIcLoXX8fOmYHtPz4m/8mZ6wiMP35hnvwhE6Gk0vIWImHqgE5rHMCgOAyF6gCySrMZc9FwMcQ45babj6md64BadW80d2w2TsvVfYGTMrC8mOZcF77KavjNvjt70eWLKEV2CzuuuiaHL56nX5GJm4/tNFyehlV33kV4uuhN4rt6D/scOIh9Mef+5D0oRPSY9zHiWkbYMCTO/pU2mS/QlVtq294GFnvKsOROygxHumopqyhm23omYENavWk7b3vqpIquH33/oNirlYohg==~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": false,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 25276,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51gyctODraKxSBqmLkRqmolgrTK4klJXRQxGuBHIcLoXX8fOmYHtPz4m/8mZ6wiMP35hnvwhE6Gk0vIWImHqgE5rHMCgOAyF6gCySrMZc9FwMcQ45babj6md64BadW80d2w2TsvVfYGTMrC8mOZcF77KavjNvjt70eWLKEV2CzuuuiaHL56nX5GJm4/tNFyehlV33kV4uuhN4rt6D/scOIh9Mef+5D0oRPSY9zHiWkbYMCTO/pU2mS/QlVtq294GFnvKsOROygxHumopqyhm23omYENavWk7b3vqpIquH33/oNirlYohg==~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2706-DEL-IXC-1795254000": {
+        "subTravelOptionId": "AI-2706-DEL-IXC-1795254000",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2706-DEL-IXC-1795254000"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50nvT6P8rbpY88dXtadCL4IwHddUQeBmce8ef2E4JzgpemCerKnnYOzInWUatpUIRdGRfqVNJsUJVWPLGhk5VIojh0WRTj4SWW0DcOf2B7I5RSAHXOoStSLBMRgHYx9CacuQywHnQXKJqP+01nO2C1tPsTo2buVn3rY+JvVc1r87okM2YLPKHr3nkDDu7TZRO/29y0SFi+QYDKdFFr27bvvWGE05dgmQ7G8Kxa21GPXN6m3Mt9xgbAsDxaUg6Kzm4qS3W49j/z1BSSHasik~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50nvT6P8rbpY88dXtadCL4IwHddUQeBmce8ef2E4JzgpemCerKnnYOzInWUatpUIRdGRfqVNJsUJVWPLGhk5VIojh0WRTj4SWW0DcOf2B7I5RSAHXOoStSLBMRgHYx9CacuQywHnQXKJqP+01nO2C1tPsTo2buVn3rY+JvVc1r87okM2YLPKHr3nkDDu7TZRO/29y0SFi+QYDKdFFr27bvvWGE05dgmQ7G8Kxa21GPXN6m3Mt9xgbAsDxaUg6Kzm4qS3W49j/z1BSSHasik~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "4346395c4ac89f2519a745de0e897670",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50nvT6P8rbpY88dXtadCL4IwHddUQeBmce8ef2E4JzgpemCerKnnYOzInWUatpUIRdGRfqVNJsUJVWPLGhk5VIojh0WRTj4SWW0DcOf2B7I5RSAHXOoStSLBMRgHYx9CacuQywHnQXKJqP+01nO2C1tPsTo2buVn3rY+JvVc1r87okM2YLPKHr3nkDDu7TZRO/29y0SFi+QYDKdFFr27bvvWGE05dgmQ7G8Kxa21GPXN6m3Mt9xgbAsDxaUg6Kzm4qS3W49j/z1BSSHasik~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50nvT6P8rbpY88dXtadCL4IwHddUQeBmce8ef2E4JzgpemCerKnnYOzInWUatpUIRdGRfqVNJsUJVWPLGhk5VIojh0WRTj4SWW0DcOf2B7I5RSAHXOoStSLBMRgHYx9CacuQywHnQXKJqP+01nO2C1tPsTo2buVn3rY+JvVc1r87okM2YLPKHr3nkDDu7TZRO/29y0SFi+QYDKdFFr27bvvWGE05dgmQ7G8Kxa21GPXN6m3Mt9xgbAsDxaUg6Kzm4qS3W49j/z1BSSHasik~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 14113,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50nvT6P8rbpY88dXtadCL4IwHddUQeBmce8ef2E4JzgpemCerKnnYOzInWUatpUIRdGRfqVNJsUJVWPLGhk5VIojh0WRTj4SWW0DcOf2B7I5RSAHXOoStSLBMRgHYx9CacuQywHnQXKJqP+01nO2C1tPsTo2buVn3rY+JvVc1r87okM2YLPKHr3nkDDu7TZRO/29y0SFi+QYDKdFFr27bvvWGE05dgmQ7G8Kxa21GPXN6m3Mt9xgbAsDxaUg6Kzm4qS3W49j/z1BSSHasik~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2532-DEL-IXC-1795239300": {
+        "subTravelOptionId": "AI-2532-DEL-IXC-1795239300",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2532-DEL-IXC-1795239300"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50gyQ87uiNgEeLGU1EXBF/MYIBGZSoNyO8P4FmGS1qXZ1UPh0FSWvcv/CWJgKs/HzFgz1xGxBtlgxRD5zkxh1NRbGgRlLBOqNBOc0o+4Rj1/Q4/ReGZDl5UMVDy9LFgk0QiXu3ncQ8SlhTripbxiZ4KITW7ySbfK7wDqtKXrfaWvIMJAwPkYuCr3R8QbC+bL+M6KGOVZQAqaT97Uvz1fOEGZawJxD6U+7fXhjJ7ZuU1GtvIO2vwyeJ6iCegxCNoJTxCwPexJyJaxq95aWrw~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50gyQ87uiNgEeLGU1EXBF/MYIBGZSoNyO8P4FmGS1qXZ1UPh0FSWvcv/CWJgKs/HzFgz1xGxBtlgxRD5zkxh1NRbGgRlLBOqNBOc0o+4Rj1/Q4/ReGZDl5UMVDy9LFgk0QiXu3ncQ8SlhTripbxiZ4KITW7ySbfK7wDqtKXrfaWvIMJAwPkYuCr3R8QbC+bL+M6KGOVZQAqaT97Uvz1fOEGZawJxD6U+7fXhjJ7ZuU1GtvIO2vwyeJ6iCegxCNoJTxCwPexJyJaxq95aWrw~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "4346395c4ac89f2519a745de0e897670",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50gyQ87uiNgEeLGU1EXBF/MYIBGZSoNyO8P4FmGS1qXZ1UPh0FSWvcv/CWJgKs/HzFgz1xGxBtlgxRD5zkxh1NRbGgRlLBOqNBOc0o+4Rj1/Q4/ReGZDl5UMVDy9LFgk0QiXu3ncQ8SlhTripbxiZ4KITW7ySbfK7wDqtKXrfaWvIMJAwPkYuCr3R8QbC+bL+M6KGOVZQAqaT97Uvz1fOEGZawJxD6U+7fXhjJ7ZuU1GtvIO2vwyeJ6iCegxCNoJTxCwPexJyJaxq95aWrw~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50gyQ87uiNgEeLGU1EXBF/MYIBGZSoNyO8P4FmGS1qXZ1UPh0FSWvcv/CWJgKs/HzFgz1xGxBtlgxRD5zkxh1NRbGgRlLBOqNBOc0o+4Rj1/Q4/ReGZDl5UMVDy9LFgk0QiXu3ncQ8SlhTripbxiZ4KITW7ySbfK7wDqtKXrfaWvIMJAwPkYuCr3R8QbC+bL+M6KGOVZQAqaT97Uvz1fOEGZawJxD6U+7fXhjJ7ZuU1GtvIO2vwyeJ6iCegxCNoJTxCwPexJyJaxq95aWrw~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 12010,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50gyQ87uiNgEeLGU1EXBF/MYIBGZSoNyO8P4FmGS1qXZ1UPh0FSWvcv/CWJgKs/HzFgz1xGxBtlgxRD5zkxh1NRbGgRlLBOqNBOc0o+4Rj1/Q4/ReGZDl5UMVDy9LFgk0QiXu3ncQ8SlhTripbxiZ4KITW7ySbfK7wDqtKXrfaWvIMJAwPkYuCr3R8QbC+bL+M6KGOVZQAqaT97Uvz1fOEGZawJxD6U+7fXhjJ7ZuU1GtvIO2vwyeJ6iCegxCNoJTxCwPexJyJaxq95aWrw~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "6E-2557-DEL-IXC-1795278000": {
+        "subTravelOptionId": "6E-2557-DEL-IXC-1795278000",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "6E-2557-DEL-IXC-1795278000"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53QJt7hUun3AMG1OiwTbqbVk1cduGLytry8sCgUdCerUrHAmA/QlInf8vdzEdh78EfT2MIQPSqDcZrRgqRdEDb9lO4BOb/MK47PG7VL9oXBUqtJoclgM0AaRuyZZ2dF4mPz7bxX8t2oxi9zoiGwt9xUc4zJYwvEsr7WfCLC3zsV/6+dHTAqlwvyizTIgscQRyj/6QcupQcPbXgadHwixmktjaolFe0hOpvZrUIj42KChXgDZ+3h7ox2FUONMsB6dnCkDMsaal42eXknjbdWD71tYOC0~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53QJt7hUun3AMG1OiwTbqbVk1cduGLytry8sCgUdCerUrHAmA/QlInf8vdzEdh78EfT2MIQPSqDcZrRgqRdEDb9lO4BOb/MK47PG7VL9oXBUqtJoclgM0AaRuyZZ2dF4mPz7bxX8t2oxi9zoiGwt9xUc4zJYwvEsr7WfCLC3zsV/6+dHTAqlwvyizTIgscQRyj/6QcupQcPbXgadHwixmktjaolFe0hOpvZrUIj42KChXgDZ+3h7ox2FUONMsB6dnCkDMsaal42eXknjbdWD71tYOC0~~V3",
+            "displayText": {
+              "displayTitle": "SAVER",
+              "displaySubTitle": "SAVER",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "",
+              "benefitIds": [],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53QJt7hUun3AMG1OiwTbqbVk1cduGLytry8sCgUdCerUrHAmA/QlInf8vdzEdh78EfT2MIQPSqDcZrRgqRdEDb9lO4BOb/MK47PG7VL9oXBUqtJoclgM0AaRuyZZ2dF4mPz7bxX8t2oxi9zoiGwt9xUc4zJYwvEsr7WfCLC3zsV/6+dHTAqlwvyizTIgscQRyj/6QcupQcPbXgadHwixmktjaolFe0hOpvZrUIj42KChXgDZ+3h7ox2FUONMsB6dnCkDMsaal42eXknjbdWD71tYOC0~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53QJt7hUun3AMG1OiwTbqbVk1cduGLytry8sCgUdCerUrHAmA/QlInf8vdzEdh78EfT2MIQPSqDcZrRgqRdEDb9lO4BOb/MK47PG7VL9oXBUqtJoclgM0AaRuyZZ2dF4mPz7bxX8t2oxi9zoiGwt9xUc4zJYwvEsr7WfCLC3zsV/6+dHTAqlwvyizTIgscQRyj/6QcupQcPbXgadHwixmktjaolFe0hOpvZrUIj42KChXgDZ+3h7ox2FUONMsB6dnCkDMsaal42eXknjbdWD71tYOC0~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 6200,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53QJt7hUun3AMG1OiwTbqbVk1cduGLytry8sCgUdCerUrHAmA/QlInf8vdzEdh78EfT2MIQPSqDcZrRgqRdEDb9lO4BOb/MK47PG7VL9oXBUqtJoclgM0AaRuyZZ2dF4mPz7bxX8t2oxi9zoiGwt9xUc4zJYwvEsr7WfCLC3zsV/6+dHTAqlwvyizTIgscQRyj/6QcupQcPbXgadHwixmktjaolFe0hOpvZrUIj42KChXgDZ+3h7ox2FUONMsB6dnCkDMsaal42eXknjbdWD71tYOC0~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-1742-DEL-IXC-1795269600": {
+        "subTravelOptionId": "AI-1742-DEL-IXC-1795269600",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-1742-DEL-IXC-1795269600"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z510LPtFADe56K0vzF9RRNvOVuEMUoK8x5fbDF36QamSekS3RoM6EuiQ4OCDttoMTd5O9jR39cqAm6dh+59Bdi2pg5VreOXSTKXGT5HZe1PH4GUg6GmNHA30tTADJAGbIRvbA7WnssDdUu3uFVjaTnYWzwspMk6lAUiBTOAAC91D5zi11q+Kpsext6Y0kxJXeFV6Zi5dftCyuVpXEe4EYvAjbhCphPCcxROrInbnlNZX3j3m4YeNkbtHq1EPwjL00c6tmNFP+yMLhFckqLk=~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z510LPtFADe56K0vzF9RRNvOVuEMUoK8x5fbDF36QamSekS3RoM6EuiQ4OCDttoMTd5O9jR39cqAm6dh+59Bdi2pg5VreOXSTKXGT5HZe1PH4GUg6GmNHA30tTADJAGbIRvbA7WnssDdUu3uFVjaTnYWzwspMk6lAUiBTOAAC91D5zi11q+Kpsext6Y0kxJXeFV6Zi5dftCyuVpXEe4EYvAjbhCphPCcxROrInbnlNZX3j3m4YeNkbtHq1EPwjL00c6tmNFP+yMLhFckqLk=~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "4346395c4ac89f2519a745de0e897670",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z510LPtFADe56K0vzF9RRNvOVuEMUoK8x5fbDF36QamSekS3RoM6EuiQ4OCDttoMTd5O9jR39cqAm6dh+59Bdi2pg5VreOXSTKXGT5HZe1PH4GUg6GmNHA30tTADJAGbIRvbA7WnssDdUu3uFVjaTnYWzwspMk6lAUiBTOAAC91D5zi11q+Kpsext6Y0kxJXeFV6Zi5dftCyuVpXEe4EYvAjbhCphPCcxROrInbnlNZX3j3m4YeNkbtHq1EPwjL00c6tmNFP+yMLhFckqLk=~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z510LPtFADe56K0vzF9RRNvOVuEMUoK8x5fbDF36QamSekS3RoM6EuiQ4OCDttoMTd5O9jR39cqAm6dh+59Bdi2pg5VreOXSTKXGT5HZe1PH4GUg6GmNHA30tTADJAGbIRvbA7WnssDdUu3uFVjaTnYWzwspMk6lAUiBTOAAC91D5zi11q+Kpsext6Y0kxJXeFV6Zi5dftCyuVpXEe4EYvAjbhCphPCcxROrInbnlNZX3j3m4YeNkbtHq1EPwjL00c6tmNFP+yMLhFckqLk=~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 10657,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z510LPtFADe56K0vzF9RRNvOVuEMUoK8x5fbDF36QamSekS3RoM6EuiQ4OCDttoMTd5O9jR39cqAm6dh+59Bdi2pg5VreOXSTKXGT5HZe1PH4GUg6GmNHA30tTADJAGbIRvbA7WnssDdUu3uFVjaTnYWzwspMk6lAUiBTOAAC91D5zi11q+Kpsext6Y0kxJXeFV6Zi5dftCyuVpXEe4EYvAjbhCphPCcxROrInbnlNZX3j3m4YeNkbtHq1EPwjL00c6tmNFP+yMLhFckqLk=~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "6E-6050-DEL-IXC-1795232700": {
+        "subTravelOptionId": "6E-6050-DEL-IXC-1795232700",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "6E-6050-DEL-IXC-1795232700"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53ycW7qN2sycuTXdrFqFBmjRXbM/N3Owxf4bpM3JFiJyT+gQGuqnRXfj9DkierUT/w7IPYPq/G2Q+8s8ch7u+CfDy8axmT56fZM85u0wpqVEKSXFJ51232Uff/PV0ql57pFbonuUzgy0tEyBs2atettt4uj05lbBtuFA1+x1mrPT0ZdbIdFdpVWfi6p/yAn5cnjvmacYeG9bOEQlcPbRnIpGthfuePd4YlbUnX4S7RbgjHpEXqIslLFZAQJbnbZk3RN0kujGQQ2/Iov9rl03O9Lwe63~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53ycW7qN2sycuTXdrFqFBmjRXbM/N3Owxf4bpM3JFiJyT+gQGuqnRXfj9DkierUT/w7IPYPq/G2Q+8s8ch7u+CfDy8axmT56fZM85u0wpqVEKSXFJ51232Uff/PV0ql57pFbonuUzgy0tEyBs2atettt4uj05lbBtuFA1+x1mrPT0ZdbIdFdpVWfi6p/yAn5cnjvmacYeG9bOEQlcPbRnIpGthfuePd4YlbUnX4S7RbgjHpEXqIslLFZAQJbnbZk3RN0kujGQQ2/Iov9rl03O9Lwe63~~V3",
+            "displayText": {
+              "displayTitle": "SAVER",
+              "displaySubTitle": "SAVER",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "",
+              "benefitIds": [],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53ycW7qN2sycuTXdrFqFBmjRXbM/N3Owxf4bpM3JFiJyT+gQGuqnRXfj9DkierUT/w7IPYPq/G2Q+8s8ch7u+CfDy8axmT56fZM85u0wpqVEKSXFJ51232Uff/PV0ql57pFbonuUzgy0tEyBs2atettt4uj05lbBtuFA1+x1mrPT0ZdbIdFdpVWfi6p/yAn5cnjvmacYeG9bOEQlcPbRnIpGthfuePd4YlbUnX4S7RbgjHpEXqIslLFZAQJbnbZk3RN0kujGQQ2/Iov9rl03O9Lwe63~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53ycW7qN2sycuTXdrFqFBmjRXbM/N3Owxf4bpM3JFiJyT+gQGuqnRXfj9DkierUT/w7IPYPq/G2Q+8s8ch7u+CfDy8axmT56fZM85u0wpqVEKSXFJ51232Uff/PV0ql57pFbonuUzgy0tEyBs2atettt4uj05lbBtuFA1+x1mrPT0ZdbIdFdpVWfi6p/yAn5cnjvmacYeG9bOEQlcPbRnIpGthfuePd4YlbUnX4S7RbgjHpEXqIslLFZAQJbnbZk3RN0kujGQQ2/Iov9rl03O9Lwe63~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 7292,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53ycW7qN2sycuTXdrFqFBmjRXbM/N3Owxf4bpM3JFiJyT+gQGuqnRXfj9DkierUT/w7IPYPq/G2Q+8s8ch7u+CfDy8axmT56fZM85u0wpqVEKSXFJ51232Uff/PV0ql57pFbonuUzgy0tEyBs2atettt4uj05lbBtuFA1+x1mrPT0ZdbIdFdpVWfi6p/yAn5cnjvmacYeG9bOEQlcPbRnIpGthfuePd4YlbUnX4S7RbgjHpEXqIslLFZAQJbnbZk3RN0kujGQQ2/Iov9rl03O9Lwe63~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "6E-5162-DEL-IXC-1795266900": {
+        "subTravelOptionId": "6E-5162-DEL-IXC-1795266900",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "6E-5162-DEL-IXC-1795266900"
+        },
+        "totalFareCount": 2,
+        "fareIds": [
+          "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z52cdktTHjT4vC+ulydNPZRLObW7s0LP8GxhZXIo32kgV06jms9okvzN35a6A9Icr1F6GKnvq9p2z2zkI9W5KnX9gEFjiyzspiC9OjD57kbnxWBGT5YZcxU+UKwo2XGWZGBzB1wKko0qGG7YtZHObmxQSAk8bdBw7HVZ04npF5iVBZ73JLmQzd7Hles+wElybSSIdCZlE7CoVkCGdYm9SJOPk3Vi33fX3NhWAlHJWSa5ohVf1tvFfTZvCYZ7JyeYN9SvlTtK1T9ym4zj/HtlRAxFQMXw~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z52cdktTHjT4vC+ulydNPZRLObW7s0LP8GxhZXIo32kgV06jms9okvzN35a6A9Icr1F6GKnvq9p2z2zkI9W5KnX9gEFjiyzspiC9OjD57kbnxWBGT5YZcxU+UKwo2XGWZGBzB1wKko0qGG7YtZHObmxQSAk8bdBw7HVZ04npF5iVBZ73JLmQzd7Hles+wElybSSIdCZlE7CoVkCGdYm9SJOPk3Vi33fX3NhWAlHJWSa5ohVf1tvFfTZvCYZ7JyeYN9SvlTtK1T9ym4zj/HtlRAxFQMXw~~V3",
+            "displayText": {
+              "displayTitle": "SAVER",
+              "displaySubTitle": "SAVER",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "",
+              "benefitIds": [],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z52cdktTHjT4vC+ulydNPZRLObW7s0LP8GxhZXIo32kgV06jms9okvzN35a6A9Icr1F6GKnvq9p2z2zkI9W5KnX9gEFjiyzspiC9OjD57kbnxWBGT5YZcxU+UKwo2XGWZGBzB1wKko0qGG7YtZHObmxQSAk8bdBw7HVZ04npF5iVBZ73JLmQzd7Hles+wElybSSIdCZlE7CoVkCGdYm9SJOPk3Vi33fX3NhWAlHJWSa5ohVf1tvFfTZvCYZ7JyeYN9SvlTtK1T9ym4zj/HtlRAxFQMXw~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z52cdktTHjT4vC+ulydNPZRLObW7s0LP8GxhZXIo32kgV06jms9okvzN35a6A9Icr1F6GKnvq9p2z2zkI9W5KnX9gEFjiyzspiC9OjD57kbnxWBGT5YZcxU+UKwo2XGWZGBzB1wKko0qGG7YtZHObmxQSAk8bdBw7HVZ04npF5iVBZ73JLmQzd7Hles+wElybSSIdCZlE7CoVkCGdYm9SJOPk3Vi33fX3NhWAlHJWSa5ohVf1tvFfTZvCYZ7JyeYN9SvlTtK1T9ym4zj/HtlRAxFQMXw~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 6400,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z52cdktTHjT4vC+ulydNPZRLObW7s0LP8GxhZXIo32kgV06jms9okvzN35a6A9Icr1F6GKnvq9p2z2zkI9W5KnX9gEFjiyzspiC9OjD57kbnxWBGT5YZcxU+UKwo2XGWZGBzB1wKko0qGG7YtZHObmxQSAk8bdBw7HVZ04npF5iVBZ73JLmQzd7Hles+wElybSSIdCZlE7CoVkCGdYm9SJOPk3Vi33fX3NhWAlHJWSa5ohVf1tvFfTZvCYZ7JyeYN9SvlTtK1T9ym4zj/HtlRAxFQMXw~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2439-DEL-BOM-1795282200__AI-471-BOM-IXC-1795304700": {
+        "subTravelOptionId": "AI-2439-DEL-BOM-1795282200__AI-471-BOM-IXC-1795304700",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2439-DEL-BOM-1795282200",
+          "2": "AI-471-BOM-IXC-1795304700"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z53Ffp/UdfrnPz2PayuMZv/1/fizZYZj2DVZwGJzwkMTYeWLzZAkgFB0rgtwkECZgJv0BM0UFJsSgzPMqVP0tysNfR66t2HA494p31AFOwvMk0CTkmMo+znBqOsku9hU8cNcsF24HhPD621ARh36It68G+TZqJ3Xl0rfgpF6kUYpRypUP/euZnFtp7ASfV+ntjIRx9O8SmXBDZXg1742Mr2fQZuz8Igik/PWfsoLE+Uj2tL0wGzv4NMZZa63U9dEKeO9vst2F86PZP2NA2IDtv3t2G/0rpcaOWWUvoRBDojzgBNGxF3/~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z53Ffp/UdfrnPz2PayuMZv/1/fizZYZj2DVZwGJzwkMTYeWLzZAkgFB0rgtwkECZgJv0BM0UFJsSgzPMqVP0tysNfR66t2HA494p31AFOwvMk0CTkmMo+znBqOsku9hU8cNcsF24HhPD621ARh36It68G+TZqJ3Xl0rfgpF6kUYpRypUP/euZnFtp7ASfV+ntjIRx9O8SmXBDZXg1742Mr2fQZuz8Igik/PWfsoLE+Uj2tL0wGzv4NMZZa63U9dEKeO9vst2F86PZP2NA2IDtv3t2G/0rpcaOWWUvoRBDojzgBNGxF3/~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "4346395c4ac89f2519a745de0e897670",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z53Ffp/UdfrnPz2PayuMZv/1/fizZYZj2DVZwGJzwkMTYeWLzZAkgFB0rgtwkECZgJv0BM0UFJsSgzPMqVP0tysNfR66t2HA494p31AFOwvMk0CTkmMo+znBqOsku9hU8cNcsF24HhPD621ARh36It68G+TZqJ3Xl0rfgpF6kUYpRypUP/euZnFtp7ASfV+ntjIRx9O8SmXBDZXg1742Mr2fQZuz8Igik/PWfsoLE+Uj2tL0wGzv4NMZZa63U9dEKeO9vst2F86PZP2NA2IDtv3t2G/0rpcaOWWUvoRBDojzgBNGxF3/~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z53Ffp/UdfrnPz2PayuMZv/1/fizZYZj2DVZwGJzwkMTYeWLzZAkgFB0rgtwkECZgJv0BM0UFJsSgzPMqVP0tysNfR66t2HA494p31AFOwvMk0CTkmMo+znBqOsku9hU8cNcsF24HhPD621ARh36It68G+TZqJ3Xl0rfgpF6kUYpRypUP/euZnFtp7ASfV+ntjIRx9O8SmXBDZXg1742Mr2fQZuz8Igik/PWfsoLE+Uj2tL0wGzv4NMZZa63U9dEKeO9vst2F86PZP2NA2IDtv3t2G/0rpcaOWWUvoRBDojzgBNGxF3/~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 24565,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z53Ffp/UdfrnPz2PayuMZv/1/fizZYZj2DVZwGJzwkMTYeWLzZAkgFB0rgtwkECZgJv0BM0UFJsSgzPMqVP0tysNfR66t2HA494p31AFOwvMk0CTkmMo+znBqOsku9hU8cNcsF24HhPD621ARh36It68G+TZqJ3Xl0rfgpF6kUYpRypUP/euZnFtp7ASfV+ntjIRx9O8SmXBDZXg1742Mr2fQZuz8Igik/PWfsoLE+Uj2tL0wGzv4NMZZa63U9dEKeO9vst2F86PZP2NA2IDtv3t2G/0rpcaOWWUvoRBDojzgBNGxF3/~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2981-DEL-BOM-1795275000__AI-2681-BOM-IXC-1795326900": {
+        "subTravelOptionId": "AI-2981-DEL-BOM-1795275000__AI-2681-BOM-IXC-1795326900",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2981-DEL-BOM-1795275000",
+          "2": "AI-2681-BOM-IXC-1795326900"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50cWvnjL1SILj8fZCPPAfUDoZQmx6F8G8wWCZVLHFtpuPQndmkTCIUC543UeYbrWIt5hSJjR/oEglIxttAAXjtvGQYwZb32sMLSbq1oZwuooJxH7K4uDEllP8s11/y+ywnT31pUIV4xewGf3GsP6QBPWzJHv1fubW9zjHs0+QaovPEZzyXdpW/z4TM+m4mJ9bRZmFM64O+yT2tmlVUF8o9f7Qmr6D66HdCRKpv7JDqB71teNMkQhObMhxpCiIUBIVm/ANumF8NF0pkEN4uJSRVPgXrr8DsovySB+C3M7x6WyVHvSd0bmw==~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50cWvnjL1SILj8fZCPPAfUDoZQmx6F8G8wWCZVLHFtpuPQndmkTCIUC543UeYbrWIt5hSJjR/oEglIxttAAXjtvGQYwZb32sMLSbq1oZwuooJxH7K4uDEllP8s11/y+ywnT31pUIV4xewGf3GsP6QBPWzJHv1fubW9zjHs0+QaovPEZzyXdpW/z4TM+m4mJ9bRZmFM64O+yT2tmlVUF8o9f7Qmr6D66HdCRKpv7JDqB71teNMkQhObMhxpCiIUBIVm/ANumF8NF0pkEN4uJSRVPgXrr8DsovySB+C3M7x6WyVHvSd0bmw==~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "4346395c4ac89f2519a745de0e897670",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50cWvnjL1SILj8fZCPPAfUDoZQmx6F8G8wWCZVLHFtpuPQndmkTCIUC543UeYbrWIt5hSJjR/oEglIxttAAXjtvGQYwZb32sMLSbq1oZwuooJxH7K4uDEllP8s11/y+ywnT31pUIV4xewGf3GsP6QBPWzJHv1fubW9zjHs0+QaovPEZzyXdpW/z4TM+m4mJ9bRZmFM64O+yT2tmlVUF8o9f7Qmr6D66HdCRKpv7JDqB71teNMkQhObMhxpCiIUBIVm/ANumF8NF0pkEN4uJSRVPgXrr8DsovySB+C3M7x6WyVHvSd0bmw==~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50cWvnjL1SILj8fZCPPAfUDoZQmx6F8G8wWCZVLHFtpuPQndmkTCIUC543UeYbrWIt5hSJjR/oEglIxttAAXjtvGQYwZb32sMLSbq1oZwuooJxH7K4uDEllP8s11/y+ywnT31pUIV4xewGf3GsP6QBPWzJHv1fubW9zjHs0+QaovPEZzyXdpW/z4TM+m4mJ9bRZmFM64O+yT2tmlVUF8o9f7Qmr6D66HdCRKpv7JDqB71teNMkQhObMhxpCiIUBIVm/ANumF8NF0pkEN4uJSRVPgXrr8DsovySB+C3M7x6WyVHvSd0bmw==~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 18109,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50cWvnjL1SILj8fZCPPAfUDoZQmx6F8G8wWCZVLHFtpuPQndmkTCIUC543UeYbrWIt5hSJjR/oEglIxttAAXjtvGQYwZb32sMLSbq1oZwuooJxH7K4uDEllP8s11/y+ywnT31pUIV4xewGf3GsP6QBPWzJHv1fubW9zjHs0+QaovPEZzyXdpW/z4TM+m4mJ9bRZmFM64O+yT2tmlVUF8o9f7Qmr6D66HdCRKpv7JDqB71teNMkQhObMhxpCiIUBIVm/ANumF8NF0pkEN4uJSRVPgXrr8DsovySB+C3M7x6WyVHvSd0bmw==~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2433-DEL-BOM-1795276800__AI-2681-BOM-IXC-1795326900": {
+        "subTravelOptionId": "AI-2433-DEL-BOM-1795276800__AI-2681-BOM-IXC-1795326900",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2433-DEL-BOM-1795276800",
+          "2": "AI-2681-BOM-IXC-1795326900"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50YH204u0ddKjMN4447s4iCE8TT5wuFaGoD4fItYyiI2SfiL8OLtsy3v5snrYZ/sjJxl4ibJ1JBRBv6pNu03QTLoYbqnkVsm2SFAnfPh1HBIG+9gR6z8VsKn9UFcIAScA07+Mzqzd6BCJhbqCeHpgtIBuNVwAM8HqWPgYI4TtOSyeIg5uvVZaQacjAgqHksbpsDIC8jKeRrC+v5SCoSZwldpZS61BsLoIU/c0YZNxRHVmD35H2qvUEyjtYFV1WiLuDc7ud7A8yvVZpM3pPDps4dpGRNUjJFbcT0BAzszzsAyIghHkTmHQ==~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50YH204u0ddKjMN4447s4iCE8TT5wuFaGoD4fItYyiI2SfiL8OLtsy3v5snrYZ/sjJxl4ibJ1JBRBv6pNu03QTLoYbqnkVsm2SFAnfPh1HBIG+9gR6z8VsKn9UFcIAScA07+Mzqzd6BCJhbqCeHpgtIBuNVwAM8HqWPgYI4TtOSyeIg5uvVZaQacjAgqHksbpsDIC8jKeRrC+v5SCoSZwldpZS61BsLoIU/c0YZNxRHVmD35H2qvUEyjtYFV1WiLuDc7ud7A8yvVZpM3pPDps4dpGRNUjJFbcT0BAzszzsAyIghHkTmHQ==~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "4346395c4ac89f2519a745de0e897670",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50YH204u0ddKjMN4447s4iCE8TT5wuFaGoD4fItYyiI2SfiL8OLtsy3v5snrYZ/sjJxl4ibJ1JBRBv6pNu03QTLoYbqnkVsm2SFAnfPh1HBIG+9gR6z8VsKn9UFcIAScA07+Mzqzd6BCJhbqCeHpgtIBuNVwAM8HqWPgYI4TtOSyeIg5uvVZaQacjAgqHksbpsDIC8jKeRrC+v5SCoSZwldpZS61BsLoIU/c0YZNxRHVmD35H2qvUEyjtYFV1WiLuDc7ud7A8yvVZpM3pPDps4dpGRNUjJFbcT0BAzszzsAyIghHkTmHQ==~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50YH204u0ddKjMN4447s4iCE8TT5wuFaGoD4fItYyiI2SfiL8OLtsy3v5snrYZ/sjJxl4ibJ1JBRBv6pNu03QTLoYbqnkVsm2SFAnfPh1HBIG+9gR6z8VsKn9UFcIAScA07+Mzqzd6BCJhbqCeHpgtIBuNVwAM8HqWPgYI4TtOSyeIg5uvVZaQacjAgqHksbpsDIC8jKeRrC+v5SCoSZwldpZS61BsLoIU/c0YZNxRHVmD35H2qvUEyjtYFV1WiLuDc7ud7A8yvVZpM3pPDps4dpGRNUjJFbcT0BAzszzsAyIghHkTmHQ==~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 17402,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50YH204u0ddKjMN4447s4iCE8TT5wuFaGoD4fItYyiI2SfiL8OLtsy3v5snrYZ/sjJxl4ibJ1JBRBv6pNu03QTLoYbqnkVsm2SFAnfPh1HBIG+9gR6z8VsKn9UFcIAScA07+Mzqzd6BCJhbqCeHpgtIBuNVwAM8HqWPgYI4TtOSyeIg5uvVZaQacjAgqHksbpsDIC8jKeRrC+v5SCoSZwldpZS61BsLoIU/c0YZNxRHVmD35H2qvUEyjtYFV1WiLuDc7ud7A8yvVZpM3pPDps4dpGRNUjJFbcT0BAzszzsAyIghHkTmHQ==~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      },
+      "AI-2643-DEL-IXC-1795220400": {
+        "subTravelOptionId": "AI-2643-DEL-IXC-1795220400",
+        "type": "flight",
+        "subTravelOptionKey": "DEL_IXC",
+        "sequenceToFlightIdMap": {
+          "1": "AI-2643-DEL-IXC-1795220400"
+        },
+        "totalFareCount": 3,
+        "fareIds": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50yXrm9TofDImLKivCNfpFAubIsBANRmTHPYZ99rC79LaHS0GPTGZRPv45EZRbA8b54ETlryuKDpzylKlWEEyTLHFNsE5s1Zo1AfXc0o4Uho+/YlaN5kdZr8RrXvhiP/7WqqMJloyQ4g35PKia4vJf0nqAUadshFwp8dR6WrVa9rBPprgDFL+QWQQbAjVHdg8hufaSbUZ9M8NHBLBVzRLs/enh9k0rzQpV8efIGS60YSmhFsCxXhq58FF0b+rRTypNaQzeDdR/Rb+B2ig==~~V3"
+        ],
+        "fareList": [
+          {
+            "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50yXrm9TofDImLKivCNfpFAubIsBANRmTHPYZ99rC79LaHS0GPTGZRPv45EZRbA8b54ETlryuKDpzylKlWEEyTLHFNsE5s1Zo1AfXc0o4Uho+/YlaN5kdZr8RrXvhiP/7WqqMJloyQ4g35PKia4vJf0nqAUadshFwp8dR6WrVa9rBPprgDFL+QWQQbAjVHdg8hufaSbUZ9M8NHBLBVzRLs/enh9k0rzQpV8efIGS60YSmhFsCxXhq58FF0b+rRTypNaQzeDdR/Rb+B2ig==~~V3",
+            "displayText": {
+              "displayTitle": "ECO VALUE",
+              "displaySubTitle": "ECO VALUE",
+              "titleLogo": null
+            },
+            "benefitTags": [
+              {
+                "benefitType": "PARTIAL_REFUNDABLE",
+                "benefitValue": "FREE",
+                "displayText": "Partial Refundable",
+                "logo": null
+              }
+            ],
+            "benefits": {
+              "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+              "benefitIds": [
+                "096a06549a80ff5267f682e9068f2f30",
+                "d6cbff7fb40e0fa60fdb72a37450a4aa",
+                "4346395c4ac89f2519a745de0e897670",
+                "424bacfb3a387fff438f4f1966e0d700",
+                "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+              ],
+              "penalty": []
+            }
+          }
+        ],
+        "defaultFareShowCount": 4,
+        "cheapestFareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50yXrm9TofDImLKivCNfpFAubIsBANRmTHPYZ99rC79LaHS0GPTGZRPv45EZRbA8b54ETlryuKDpzylKlWEEyTLHFNsE5s1Zo1AfXc0o4Uho+/YlaN5kdZr8RrXvhiP/7WqqMJloyQ4g35PKia4vJf0nqAUadshFwp8dR6WrVa9rBPprgDFL+QWQQbAjVHdg8hufaSbUZ9M8NHBLBVzRLs/enh9k0rzQpV8efIGS60YSmhFsCxXhq58FF0b+rRTypNaQzeDdR/Rb+B2ig==~~V3",
+        "sortList": [
+          "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50yXrm9TofDImLKivCNfpFAubIsBANRmTHPYZ99rC79LaHS0GPTGZRPv45EZRbA8b54ETlryuKDpzylKlWEEyTLHFNsE5s1Zo1AfXc0o4Uho+/YlaN5kdZr8RrXvhiP/7WqqMJloyQ4g35PKia4vJf0nqAUadshFwp8dR6WrVa9rBPprgDFL+QWQQbAjVHdg8hufaSbUZ9M8NHBLBVzRLs/enh9k0rzQpV8efIGS60YSmhFsCxXhq58FF0b+rRTypNaQzeDdR/Rb+B2ig==~~V3"
+        ],
+        "tags": [],
+        "showInterstitial": true,
+        "cabinClassSummary": {
+          "ECONOMY": {
+            "minCabinPrice": 7080,
+            "cabinFareIds": [
+              "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50yXrm9TofDImLKivCNfpFAubIsBANRmTHPYZ99rC79LaHS0GPTGZRPv45EZRbA8b54ETlryuKDpzylKlWEEyTLHFNsE5s1Zo1AfXc0o4Uho+/YlaN5kdZr8RrXvhiP/7WqqMJloyQ4g35PKia4vJf0nqAUadshFwp8dR6WrVa9rBPprgDFL+QWQQbAjVHdg8hufaSbUZ9M8NHBLBVzRLs/enh9k0rzQpV8efIGS60YSmhFsCxXhq58FF0b+rRTypNaQzeDdR/Rb+B2ig==~~V3"
+            ],
+            "cabinPromoBanner": null
+          }
+        }
+      }
+    },
+    "flights": {
+      "AI-471-BOM-IXC-1795304700": {
+        "id": "AI-471-BOM-IXC-1795304700",
+        "fltNo": "471",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "BOM",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T05:15:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T07:30:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 2,
+          "mm": 15
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2981-DEL-BOM-1795275000": {
+        "id": "AI-2981-DEL-BOM-1795275000",
+        "fltNo": "2981",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T21:00:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "BOM",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T23:25:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 2,
+          "mm": 25
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2977-DEL-BOM-1795277700": {
+        "id": "AI-2977-DEL-BOM-1795277700",
+        "fltNo": "2977",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T21:45:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "BOM",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T00:10:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 2,
+          "mm": 25
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2439-DEL-BOM-1795282200": {
+        "id": "AI-2439-DEL-BOM-1795282200",
+        "fltNo": "2439",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T23:00:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "BOM",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T01:25:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 2,
+          "mm": 25
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2706-DEL-IXC-1795254000": {
+        "id": "AI-2706-DEL-IXC-1795254000",
+        "fltNo": "2706",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T15:10:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T16:20:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 1,
+          "mm": 10
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2532-DEL-IXC-1795239300": {
+        "id": "AI-2532-DEL-IXC-1795239300",
+        "fltNo": "2532",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T11:05:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T12:10:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 1,
+          "mm": 5
+        },
+        "stopFlightDurations": []
+      },
+      "6E-2557-DEL-IXC-1795278000": {
+        "id": "6E-2557-DEL-IXC-1795278000",
+        "fltNo": "2557",
+        "equipmentCode": null,
+        "aircraftType": "320",
+        "airlineCode": "6E",
+        "marketingAirlineCode": "6E",
+        "operatingAirlineCode": "6E",
+        "departure": {
+          "airlineCode": "6E",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T21:50:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "6E",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T22:40:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 0,
+          "mm": 50
+        },
+        "stopFlightDurations": []
+      },
+      "AI-1742-DEL-IXC-1795269600": {
+        "id": "AI-1742-DEL-IXC-1795269600",
+        "fltNo": "1742",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T19:30:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T20:30:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 1,
+          "mm": 0
+        },
+        "stopFlightDurations": []
+      },
+      "6E-6050-DEL-IXC-1795232700": {
+        "id": "6E-6050-DEL-IXC-1795232700",
+        "fltNo": "6050",
+        "equipmentCode": null,
+        "aircraftType": "320",
+        "airlineCode": "6E",
+        "marketingAirlineCode": "6E",
+        "operatingAirlineCode": "6E",
+        "departure": {
+          "airlineCode": "6E",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "1",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T09:15:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "6E",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T10:20:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 1,
+          "mm": 5
+        },
+        "stopFlightDurations": []
+      },
+      "6E-5162-DEL-IXC-1795266900": {
+        "id": "6E-5162-DEL-IXC-1795266900",
+        "fltNo": "5162",
+        "equipmentCode": null,
+        "aircraftType": "320",
+        "airlineCode": "6E",
+        "marketingAirlineCode": "6E",
+        "operatingAirlineCode": "6E",
+        "departure": {
+          "airlineCode": "6E",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T18:45:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "6E",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T19:40:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 0,
+          "mm": 55
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2681-BOM-IXC-1795326900": {
+        "id": "AI-2681-BOM-IXC-1795326900",
+        "fltNo": "2681",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "BOM",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T11:25:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T13:40:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 2,
+          "mm": 15
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2643-DEL-IXC-1795220400": {
+        "id": "AI-2643-DEL-IXC-1795220400",
+        "fltNo": "2643",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T05:50:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T06:55:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 1,
+          "mm": 5
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2433-DEL-BOM-1795276800": {
+        "id": "AI-2433-DEL-BOM-1795276800",
+        "fltNo": "2433",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "DEL",
+            "terminal": {
+              "name": "3",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T21:30:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "BOM",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-21T23:45:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 2,
+          "mm": 15
+        },
+        "stopFlightDurations": []
+      },
+      "AI-2659-BOM-IXC-1795338300": {
+        "id": "AI-2659-BOM-IXC-1795338300",
+        "fltNo": "2659",
+        "equipmentCode": null,
+        "aircraftType": "",
+        "airlineCode": "AI",
+        "marketingAirlineCode": "AI",
+        "operatingAirlineCode": "AI",
+        "departure": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "BOM",
+            "terminal": {
+              "name": "2",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T14:35:00.000+05:30"
+          }
+        },
+        "arrival": {
+          "airlineCode": "AI",
+          "airport": {
+            "code": "IXC",
+            "terminal": {
+              "name": "",
+              "gate": ""
+            },
+            "zoneId": "Asia/Kolkata",
+            "timeZone": "IST",
+            "time": "2026-11-22T17:05:00.000+05:30"
+          }
+        },
+        "stops": [],
+        "duration": {
+          "hh": 2,
+          "mm": 30
+        },
+        "stopFlightDurations": []
+      }
+    },
+    "fares": {
+      "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51w+ORXa80qbIWSwVsUj8nYkWuXRFXXF771JFNPIg866qqvsjkWL9Io50UbrvZw/1s9oBqwWNXGhihA8XRXbYMskLcYbUOX/Q47jLDTJsxRMn8UqURTemTLysrVzZutglc8oNZ0WgVxxGK2Zb5z781xrFi8mCdkguYsGaqmrvILGVS6L5U8KhHuwSpNHpwWxNuK+SqCMjZfR+WXdXPvvf1sDKbfvhpucQb/fw8bNzuzXtXZx4bNy1JE66sbFHMG8MlG+jU22kdhHt21eRaWcFHWZbuiRdzV4/3n5rOdYMjHOuFcxSpmEQ==~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51w+ORXa80qbIWSwVsUj8nYkWuXRFXXF771JFNPIg866qqvsjkWL9Io50UbrvZw/1s9oBqwWNXGhihA8XRXbYMskLcYbUOX/Q47jLDTJsxRMn8UqURTemTLysrVzZutglc8oNZ0WgVxxGK2Zb5z781xrFi8mCdkguYsGaqmrvILGVS6L5U8KhHuwSpNHpwWxNuK+SqCMjZfR+WXdXPvvf1sDKbfvhpucQb/fw8bNzuzXtXZx4bNy1JE66sbFHMG8MlG+jU22kdhHt21eRaWcFHWZbuiRdzV4/3n5rOdYMjHOuFcxSpmEQ==~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 17402,
+            "totalTax": 3239,
+            "totalBaseFare": 14163,
+            "message": "₹1280 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 17402,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 1280,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1280 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 16122,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 17402,
+            "totalTax": 3239,
+            "totalBaseFare": 14163,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 17402,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1280 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 17402,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "4346395c4ac89f2519a745de0e897670",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 811,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 1700,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 340,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 14163,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2977-DEL-BOM-1795277700",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "LU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "L"
+                }
+              },
+              {
+                "flightId": "AI-2681-BOM-IXC-1795326900",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "LU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "L"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53ycW7qN2sycuTXdrFqFBmjRXbM/N3Owxf4bpM3JFiJyT+gQGuqnRXfj9DkierUT/w7IPYPq/G2Q+8s8ch7u+CfDy8axmT56fZM85u0wpqVEKSXFJ51232Uff/PV0ql57pFbonuUzgy0tEyBs2atettt4uj05lbBtuFA1+x1mrPT0ZdbIdFdpVWfi6p/yAn5cnjvmacYeG9bOEQlcPbRnIpGthfuePd4YlbUnX4S7RbgjHpEXqIslLFZAQJbnbZk3RN0kujGQQ2/Iov9rl03O9Lwe63~~V3": {
+        "fareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53ycW7qN2sycuTXdrFqFBmjRXbM/N3Owxf4bpM3JFiJyT+gQGuqnRXfj9DkierUT/w7IPYPq/G2Q+8s8ch7u+CfDy8axmT56fZM85u0wpqVEKSXFJ51232Uff/PV0ql57pFbonuUzgy0tEyBs2atettt4uj05lbBtuFA1+x1mrPT0ZdbIdFdpVWfi6p/yAn5cnjvmacYeG9bOEQlcPbRnIpGthfuePd4YlbUnX4S7RbgjHpEXqIslLFZAQJbnbZk3RN0kujGQQ2/Iov9rl03O9Lwe63~~V3",
+        "displayText": {
+          "displayTitle": "SAVER",
+          "displaySubTitle": "SAVER",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "SAVER",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "SAVER",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 7292,
+            "totalTax": 1092,
+            "totalBaseFare": 6200,
+            "message": "₹536 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 7292,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 536,
+              "couponCode": "CTFKSBIC",
+              "message": "₹536 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 6756,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 7292,
+            "totalTax": 1092,
+            "totalBaseFare": 6200,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 7292,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹536 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 7292,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "",
+          "benefitIds": [],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 6200,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 1092,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "6E-6050-DEL-IXC-1795232700",
+                "baggageAllowances": [],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "R",
+                  "fareBasisCode": "T0IP",
+                  "availableSeatCount": 4,
+                  "brandName": "SAVER",
+                  "brand": "SAVER",
+                  "rbd": "T"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50nvT6P8rbpY88dXtadCL4IwHddUQeBmce8ef2E4JzgpemCerKnnYOzInWUatpUIRdGRfqVNJsUJVWPLGhk5VIojh0WRTj4SWW0DcOf2B7I5RSAHXOoStSLBMRgHYx9CacuQywHnQXKJqP+01nO2C1tPsTo2buVn3rY+JvVc1r87okM2YLPKHr3nkDDu7TZRO/29y0SFi+QYDKdFFr27bvvWGE05dgmQ7G8Kxa21GPXN6m3Mt9xgbAsDxaUg6Kzm4qS3W49j/z1BSSHasik~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50nvT6P8rbpY88dXtadCL4IwHddUQeBmce8ef2E4JzgpemCerKnnYOzInWUatpUIRdGRfqVNJsUJVWPLGhk5VIojh0WRTj4SWW0DcOf2B7I5RSAHXOoStSLBMRgHYx9CacuQywHnQXKJqP+01nO2C1tPsTo2buVn3rY+JvVc1r87okM2YLPKHr3nkDDu7TZRO/29y0SFi+QYDKdFFr27bvvWGE05dgmQ7G8Kxa21GPXN6m3Mt9xgbAsDxaUg6Kzm4qS3W49j/z1BSSHasik~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 14113,
+            "totalTax": 1612,
+            "totalBaseFare": 12501,
+            "message": "₹1038 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 14113,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 1038,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1038 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 13075,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 14113,
+            "totalTax": 1612,
+            "totalBaseFare": 12501,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 14113,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1038 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 14113,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "4346395c4ac89f2519a745de0e897670",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 654,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 400,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 170,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 12501,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2706-DEL-IXC-1795254000",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "YU1YXSII",
+                  "availableSeatCount": 9,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "Y"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z510LPtFADe56K0vzF9RRNvOVuEMUoK8x5fbDF36QamSekS3RoM6EuiQ4OCDttoMTd5O9jR39cqAm6dh+59Bdi2pg5VreOXSTKXGT5HZe1PH4GUg6GmNHA30tTADJAGbIRvbA7WnssDdUu3uFVjaTnYWzwspMk6lAUiBTOAAC91D5zi11q+Kpsext6Y0kxJXeFV6Zi5dftCyuVpXEe4EYvAjbhCphPCcxROrInbnlNZX3j3m4YeNkbtHq1EPwjL00c6tmNFP+yMLhFckqLk=~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z510LPtFADe56K0vzF9RRNvOVuEMUoK8x5fbDF36QamSekS3RoM6EuiQ4OCDttoMTd5O9jR39cqAm6dh+59Bdi2pg5VreOXSTKXGT5HZe1PH4GUg6GmNHA30tTADJAGbIRvbA7WnssDdUu3uFVjaTnYWzwspMk6lAUiBTOAAC91D5zi11q+Kpsext6Y0kxJXeFV6Zi5dftCyuVpXEe4EYvAjbhCphPCcxROrInbnlNZX3j3m4YeNkbtHq1EPwjL00c6tmNFP+yMLhFckqLk=~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 10657,
+            "totalTax": 1447,
+            "totalBaseFare": 9210,
+            "message": "₹784 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 10657,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 784,
+              "couponCode": "CTFKSBIC",
+              "message": "₹784 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 9873,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 10657,
+            "totalTax": 1447,
+            "totalBaseFare": 9210,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 10657,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹784 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 10657,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "4346395c4ac89f2519a745de0e897670",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 489,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 400,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 170,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 9210,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-1742-DEL-IXC-1795269600",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "MU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "M"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51gyctODraKxSBqmLkRqmolgrTK4klJXRQxGuBHIcLoXX8fOmYHtPz4m/8mZ6wiMP35hnvwhE6Gk0vIWImHqgE5rHMCgOAyF6gCySrMZc9FwMcQ45babj6md64BadW80d2w2TsvVfYGTMrC8mOZcF77KavjNvjt70eWLKEV2CzuuuiaHL56nX5GJm4/tNFyehlV33kV4uuhN4rt6D/scOIh9Mef+5D0oRPSY9zHiWkbYMCTO/pU2mS/QlVtq294GFnvKsOROygxHumopqyhm23omYENavWk7b3vqpIquH33/oNirlYohg==~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z51gyctODraKxSBqmLkRqmolgrTK4klJXRQxGuBHIcLoXX8fOmYHtPz4m/8mZ6wiMP35hnvwhE6Gk0vIWImHqgE5rHMCgOAyF6gCySrMZc9FwMcQ45babj6md64BadW80d2w2TsvVfYGTMrC8mOZcF77KavjNvjt70eWLKEV2CzuuuiaHL56nX5GJm4/tNFyehlV33kV4uuhN4rt6D/scOIh9Mef+5D0oRPSY9zHiWkbYMCTO/pU2mS/QlVtq294GFnvKsOROygxHumopqyhm23omYENavWk7b3vqpIquH33/oNirlYohg==~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 25276,
+            "totalTax": 3614,
+            "totalBaseFare": 21662,
+            "message": "₹1500 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 25276,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 1500,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1500 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 23776,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 25276,
+            "totalTax": 3614,
+            "totalBaseFare": 21662,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 25276,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1500 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 25276,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "4346395c4ac89f2519a745de0e897670",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 1186,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 1700,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 340,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 21662,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2439-DEL-BOM-1795282200",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "MU1YXSII",
+                  "availableSeatCount": 9,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "M"
+                }
+              },
+              {
+                "flightId": "AI-2681-BOM-IXC-1795326900",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "LU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "L"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53QJt7hUun3AMG1OiwTbqbVk1cduGLytry8sCgUdCerUrHAmA/QlInf8vdzEdh78EfT2MIQPSqDcZrRgqRdEDb9lO4BOb/MK47PG7VL9oXBUqtJoclgM0AaRuyZZ2dF4mPz7bxX8t2oxi9zoiGwt9xUc4zJYwvEsr7WfCLC3zsV/6+dHTAqlwvyizTIgscQRyj/6QcupQcPbXgadHwixmktjaolFe0hOpvZrUIj42KChXgDZ+3h7ox2FUONMsB6dnCkDMsaal42eXknjbdWD71tYOC0~~V3": {
+        "fareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z53QJt7hUun3AMG1OiwTbqbVk1cduGLytry8sCgUdCerUrHAmA/QlInf8vdzEdh78EfT2MIQPSqDcZrRgqRdEDb9lO4BOb/MK47PG7VL9oXBUqtJoclgM0AaRuyZZ2dF4mPz7bxX8t2oxi9zoiGwt9xUc4zJYwvEsr7WfCLC3zsV/6+dHTAqlwvyizTIgscQRyj/6QcupQcPbXgadHwixmktjaolFe0hOpvZrUIj42KChXgDZ+3h7ox2FUONMsB6dnCkDMsaal42eXknjbdWD71tYOC0~~V3",
+        "displayText": {
+          "displayTitle": "SAVER",
+          "displaySubTitle": "SAVER",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "SAVER",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "SAVER",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 6200,
+            "totalTax": 1040,
+            "totalBaseFare": 5160,
+            "message": "₹456 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 6200,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 456,
+              "couponCode": "CTFKSBIC",
+              "message": "₹456 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 5744,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 6200,
+            "totalTax": 1040,
+            "totalBaseFare": 5160,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 6200,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹456 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 6200,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "",
+          "benefitIds": [],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 5160,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 1040,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "6E-2557-DEL-IXC-1795278000",
+                "baggageAllowances": [],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "R",
+                  "fareBasisCode": "R0IP",
+                  "availableSeatCount": 25,
+                  "brandName": "SAVER",
+                  "brand": "SAVER",
+                  "rbd": "R"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z52cdktTHjT4vC+ulydNPZRLObW7s0LP8GxhZXIo32kgV06jms9okvzN35a6A9Icr1F6GKnvq9p2z2zkI9W5KnX9gEFjiyzspiC9OjD57kbnxWBGT5YZcxU+UKwo2XGWZGBzB1wKko0qGG7YtZHObmxQSAk8bdBw7HVZ04npF5iVBZ73JLmQzd7Hles+wElybSSIdCZlE7CoVkCGdYm9SJOPk3Vi33fX3NhWAlHJWSa5ohVf1tvFfTZvCYZ7JyeYN9SvlTtK1T9ym4zj/HtlRAxFQMXw~~V3": {
+        "fareId": "REGULAR__21/11/2026__6E__6E__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S050__SAVER__AVN+Z52cdktTHjT4vC+ulydNPZRLObW7s0LP8GxhZXIo32kgV06jms9okvzN35a6A9Icr1F6GKnvq9p2z2zkI9W5KnX9gEFjiyzspiC9OjD57kbnxWBGT5YZcxU+UKwo2XGWZGBzB1wKko0qGG7YtZHObmxQSAk8bdBw7HVZ04npF5iVBZ73JLmQzd7Hles+wElybSSIdCZlE7CoVkCGdYm9SJOPk3Vi33fX3NhWAlHJWSa5ohVf1tvFfTZvCYZ7JyeYN9SvlTtK1T9ym4zj/HtlRAxFQMXw~~V3",
+        "displayText": {
+          "displayTitle": "SAVER",
+          "displaySubTitle": "SAVER",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "SAVER",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "SAVER",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 6400,
+            "totalTax": 1049,
+            "totalBaseFare": 5351,
+            "message": "₹471 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 6400,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 471,
+              "couponCode": "CTFKSBIC",
+              "message": "₹471 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 5929,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 6400,
+            "totalTax": 1049,
+            "totalBaseFare": 5351,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 6400,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹471 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 6400,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "",
+          "benefitIds": [],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 5351,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 1049,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "6E-5162-DEL-IXC-1795266900",
+                "baggageAllowances": [],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "R",
+                  "fareBasisCode": "R0IP",
+                  "availableSeatCount": 10,
+                  "brandName": "SAVER",
+                  "brand": "SAVER",
+                  "rbd": "R"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50YH204u0ddKjMN4447s4iCE8TT5wuFaGoD4fItYyiI2SfiL8OLtsy3v5snrYZ/sjJxl4ibJ1JBRBv6pNu03QTLoYbqnkVsm2SFAnfPh1HBIG+9gR6z8VsKn9UFcIAScA07+Mzqzd6BCJhbqCeHpgtIBuNVwAM8HqWPgYI4TtOSyeIg5uvVZaQacjAgqHksbpsDIC8jKeRrC+v5SCoSZwldpZS61BsLoIU/c0YZNxRHVmD35H2qvUEyjtYFV1WiLuDc7ud7A8yvVZpM3pPDps4dpGRNUjJFbcT0BAzszzsAyIghHkTmHQ==~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50YH204u0ddKjMN4447s4iCE8TT5wuFaGoD4fItYyiI2SfiL8OLtsy3v5snrYZ/sjJxl4ibJ1JBRBv6pNu03QTLoYbqnkVsm2SFAnfPh1HBIG+9gR6z8VsKn9UFcIAScA07+Mzqzd6BCJhbqCeHpgtIBuNVwAM8HqWPgYI4TtOSyeIg5uvVZaQacjAgqHksbpsDIC8jKeRrC+v5SCoSZwldpZS61BsLoIU/c0YZNxRHVmD35H2qvUEyjtYFV1WiLuDc7ud7A8yvVZpM3pPDps4dpGRNUjJFbcT0BAzszzsAyIghHkTmHQ==~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 17402,
+            "totalTax": 3239,
+            "totalBaseFare": 14163,
+            "message": "₹1280 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 17402,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 1280,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1280 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 16122,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 17402,
+            "totalTax": 3239,
+            "totalBaseFare": 14163,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 17402,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1280 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 17402,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "4346395c4ac89f2519a745de0e897670",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 811,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 1700,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 340,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 14163,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2433-DEL-BOM-1795276800",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "LU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "L"
+                }
+              },
+              {
+                "flightId": "AI-2681-BOM-IXC-1795326900",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "LU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "L"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z52kMKIJF4xGLWYbA+Id49uiZdOIEJCmeCHtHJbm2/jzM261rWVn4KfcIU9Ml1ZYHIHwLoYDOpnIhnPoUKKjlCdvJ/zMJvjpqSbM3v6VSdCPXS1No4hn5JKollTQqDbNHh6rfy/Z+xb4yVIpk9OcP7Tj8qOPKlCl+OZlLdLC9pJbF4TnOIfqVPVnZozkHi1mI9PiGpSPdbZ5nTmzX3x6WWj2hfXWdCYpCCAM3vrdmPZmRxiaI0HyKB8eIelLJBbKOvM9OFrC12lMeUrq8/rmoW+en8h0EuAI878HYmN565nON9xHjhnMag==~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z52kMKIJF4xGLWYbA+Id49uiZdOIEJCmeCHtHJbm2/jzM261rWVn4KfcIU9Ml1ZYHIHwLoYDOpnIhnPoUKKjlCdvJ/zMJvjpqSbM3v6VSdCPXS1No4hn5JKollTQqDbNHh6rfy/Z+xb4yVIpk9OcP7Tj8qOPKlCl+OZlLdLC9pJbF4TnOIfqVPVnZozkHi1mI9PiGpSPdbZ5nTmzX3x6WWj2hfXWdCYpCCAM3vrdmPZmRxiaI0HyKB8eIelLJBbKOvM9OFrC12lMeUrq8/rmoW+en8h0EuAI878HYmN565nON9xHjhnMag==~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 24725,
+            "totalTax": 3587,
+            "totalBaseFare": 21138,
+            "message": "₹1500 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 24725,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 1500,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1500 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 23225,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 24725,
+            "totalTax": 3587,
+            "totalBaseFare": 21138,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 24725,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1500 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 24725,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "4346395c4ac89f2519a745de0e897670",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 1159,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 1700,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 340,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 21138,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2439-DEL-BOM-1795282200",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "MU1YXSII",
+                  "availableSeatCount": 9,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "M"
+                }
+              },
+              {
+                "flightId": "AI-2659-BOM-IXC-1795338300",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "TU1YXSII",
+                  "availableSeatCount": 9,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "T"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50cWvnjL1SILj8fZCPPAfUDoZQmx6F8G8wWCZVLHFtpuPQndmkTCIUC543UeYbrWIt5hSJjR/oEglIxttAAXjtvGQYwZb32sMLSbq1oZwuooJxH7K4uDEllP8s11/y+ywnT31pUIV4xewGf3GsP6QBPWzJHv1fubW9zjHs0+QaovPEZzyXdpW/z4TM+m4mJ9bRZmFM64O+yT2tmlVUF8o9f7Qmr6D66HdCRKpv7JDqB71teNMkQhObMhxpCiIUBIVm/ANumF8NF0pkEN4uJSRVPgXrr8DsovySB+C3M7x6WyVHvSd0bmw==~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z50cWvnjL1SILj8fZCPPAfUDoZQmx6F8G8wWCZVLHFtpuPQndmkTCIUC543UeYbrWIt5hSJjR/oEglIxttAAXjtvGQYwZb32sMLSbq1oZwuooJxH7K4uDEllP8s11/y+ywnT31pUIV4xewGf3GsP6QBPWzJHv1fubW9zjHs0+QaovPEZzyXdpW/z4TM+m4mJ9bRZmFM64O+yT2tmlVUF8o9f7Qmr6D66HdCRKpv7JDqB71teNMkQhObMhxpCiIUBIVm/ANumF8NF0pkEN4uJSRVPgXrr8DsovySB+C3M7x6WyVHvSd0bmw==~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 18109,
+            "totalTax": 3272,
+            "totalBaseFare": 14837,
+            "message": "₹1332 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 18109,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 1332,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1332 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 16777,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 18109,
+            "totalTax": 3272,
+            "totalBaseFare": 14837,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 18109,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1332 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 18109,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "4346395c4ac89f2519a745de0e897670",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 844,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 1700,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 340,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 14837,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2981-DEL-BOM-1795275000",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "WU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "W"
+                }
+              },
+              {
+                "flightId": "AI-2681-BOM-IXC-1795326900",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "LU1YXSII",
+                  "availableSeatCount": 1,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "L"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50yXrm9TofDImLKivCNfpFAubIsBANRmTHPYZ99rC79LaHS0GPTGZRPv45EZRbA8b54ETlryuKDpzylKlWEEyTLHFNsE5s1Zo1AfXc0o4Uho+/YlaN5kdZr8RrXvhiP/7WqqMJloyQ4g35PKia4vJf0nqAUadshFwp8dR6WrVa9rBPprgDFL+QWQQbAjVHdg8hufaSbUZ9M8NHBLBVzRLs/enh9k0rzQpV8efIGS60YSmhFsCxXhq58FF0b+rRTypNaQzeDdR/Rb+B2ig==~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50yXrm9TofDImLKivCNfpFAubIsBANRmTHPYZ99rC79LaHS0GPTGZRPv45EZRbA8b54ETlryuKDpzylKlWEEyTLHFNsE5s1Zo1AfXc0o4Uho+/YlaN5kdZr8RrXvhiP/7WqqMJloyQ4g35PKia4vJf0nqAUadshFwp8dR6WrVa9rBPprgDFL+QWQQbAjVHdg8hufaSbUZ9M8NHBLBVzRLs/enh9k0rzQpV8efIGS60YSmhFsCxXhq58FF0b+rRTypNaQzeDdR/Rb+B2ig==~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 7080,
+            "totalTax": 1277,
+            "totalBaseFare": 5803,
+            "message": "₹521 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 7080,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 521,
+              "couponCode": "CTFKSBIC",
+              "message": "₹521 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 6559,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 7080,
+            "totalTax": 1277,
+            "totalBaseFare": 5803,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 7080,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹521 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 7080,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "4346395c4ac89f2519a745de0e897670",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 319,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 400,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 170,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 5803,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2643-DEL-IXC-1795220400",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "GU1YXFII",
+                  "availableSeatCount": 9,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "G"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50gyQ87uiNgEeLGU1EXBF/MYIBGZSoNyO8P4FmGS1qXZ1UPh0FSWvcv/CWJgKs/HzFgz1xGxBtlgxRD5zkxh1NRbGgRlLBOqNBOc0o+4Rj1/Q4/ReGZDl5UMVDy9LFgk0QiXu3ncQ8SlhTripbxiZ4KITW7ySbfK7wDqtKXrfaWvIMJAwPkYuCr3R8QbC+bL+M6KGOVZQAqaT97Uvz1fOEGZawJxD6U+7fXhjJ7ZuU1GtvIO2vwyeJ6iCegxCNoJTxCwPexJyJaxq95aWrw~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI__AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE__AVN+Z50gyQ87uiNgEeLGU1EXBF/MYIBGZSoNyO8P4FmGS1qXZ1UPh0FSWvcv/CWJgKs/HzFgz1xGxBtlgxRD5zkxh1NRbGgRlLBOqNBOc0o+4Rj1/Q4/ReGZDl5UMVDy9LFgk0QiXu3ncQ8SlhTripbxiZ4KITW7ySbfK7wDqtKXrfaWvIMJAwPkYuCr3R8QbC+bL+M6KGOVZQAqaT97Uvz1fOEGZawJxD6U+7fXhjJ7ZuU1GtvIO2vwyeJ6iCegxCNoJTxCwPexJyJaxq95aWrw~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 12010,
+            "totalTax": 1512,
+            "totalBaseFare": 10498,
+            "message": "₹883 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 12010,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 883,
+              "couponCode": "CTFKSBIC",
+              "message": "₹883 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 11127,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 12010,
+            "totalTax": 1512,
+            "totalBaseFare": 10498,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 12010,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹883 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 12010,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "4346395c4ac89f2519a745de0e897670",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 554,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 400,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 170,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 10498,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2532-DEL-IXC-1795239300",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "BU1YXSII",
+                  "availableSeatCount": 2,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "B"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      },
+      "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z53Ffp/UdfrnPz2PayuMZv/1/fizZYZj2DVZwGJzwkMTYeWLzZAkgFB0rgtwkECZgJv0BM0UFJsSgzPMqVP0tysNfR66t2HA494p31AFOwvMk0CTkmMo+znBqOsku9hU8cNcsF24HhPD621ARh36It68G+TZqJ3Xl0rfgpF6kUYpRypUP/euZnFtp7ASfV+ntjIRx9O8SmXBDZXg1742Mr2fQZuz8Igik/PWfsoLE+Uj2tL0wGzv4NMZZa63U9dEKeO9vst2F86PZP2NA2IDtv3t2G/0rpcaOWWUvoRBDojzgBNGxF3/~~V3": {
+        "fareId": "REGULAR__21/11/2026__AI^AI__AI^AI__DEL_IXC__true__RETAIL__E__DOM__OW__UNKNOWN__S043__ECO VALUE,ECO VALUE__AVN+Z53Ffp/UdfrnPz2PayuMZv/1/fizZYZj2DVZwGJzwkMTYeWLzZAkgFB0rgtwkECZgJv0BM0UFJsSgzPMqVP0tysNfR66t2HA494p31AFOwvMk0CTkmMo+znBqOsku9hU8cNcsF24HhPD621ARh36It68G+TZqJ3Xl0rfgpF6kUYpRypUP/euZnFtp7ASfV+ntjIRx9O8SmXBDZXg1742Mr2fQZuz8Igik/PWfsoLE+Uj2tL0wGzv4NMZZa63U9dEKeO9vst2F86PZP2NA2IDtv3t2G/0rpcaOWWUvoRBDojzgBNGxF3/~~V3",
+        "displayText": {
+          "displayTitle": "ECO VALUE",
+          "displaySubTitle": "ECO VALUE",
+          "titleLogo": null
+        },
+        "farePerks": null,
+        "fareGroup": "REGULAR_FARE",
+        "fareCategory": "RETAIL",
+        "fareFamilyType": "SUPPLY",
+        "fareFamilySubType": "ECO VALUE",
+        "additionalBenefitWorth": null,
+        "bestValue": false,
+        "ptcFare": false,
+        "brand": "ECO VALUE",
+        "pricing": {
+          "totalPricing": {
+            "totalPrice": 24565,
+            "totalTax": 3580,
+            "totalBaseFare": 20985,
+            "message": "₹1500 off with CTFKSBIC",
+            "amendInsuranceCharges": 0,
+            "cancelInsuranceCharges": 0,
+            "travelInsuranceCharges": 0,
+            "visaRejectionCoverCharges": 0,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 24565,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 1500,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1500 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 23065,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          },
+          "perAdultPricing": {
+            "totalPrice": 24565,
+            "totalTax": 3580,
+            "totalBaseFare": 20985,
+            "message": "Get {discountAmount} off on total with {couponCode}",
+            "amendInsuranceCharges": null,
+            "cancelInsuranceCharges": null,
+            "travelInsuranceCharges": null,
+            "visaRejectionCoverCharges": null,
+            "strikeOffDetails": {
+              "strikeOffPrice": null,
+              "displayPrice": 24565,
+              "discountAmount": 0
+            },
+            "couponDetails": {
+              "discountAmount": 0,
+              "couponCode": "CTFKSBIC",
+              "message": "₹1500 off with CTFKSBIC",
+              "adultCouponMessage": "Get {discountAmount} off on total with {couponCode}",
+              "discountedPrice": 24565,
+              "slasherCouponCode": null,
+              "wowDisplayPrice": null
+            }
+          }
+        },
+        "benefitTags": [
+          {
+            "benefitType": "PARTIAL_REFUNDABLE",
+            "benefitValue": "FREE",
+            "displayText": "Partial Refundable",
+            "logo": null
+          }
+        ],
+        "benefits": {
+          "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95",
+          "benefitIds": [
+            "096a06549a80ff5267f682e9068f2f30",
+            "d6cbff7fb40e0fa60fdb72a37450a4aa",
+            "4346395c4ac89f2519a745de0e897670",
+            "424bacfb3a387fff438f4f1966e0d700",
+            "00b3aaf5e9fe0cad32282e70d7d9d8c3"
+          ],
+          "penalty": []
+        },
+        "checkInBaggageAllowed": true,
+        "subTravelOptionFare": [
+          {
+            "subTravelOptionKey": "DEL_IXC",
+            "benefitIds": null,
+            "paxFare": [
+              {
+                "paxType": "ADT",
+                "paxCount": 1,
+                "priceComponents": [
+                  {
+                    "category": "TAX",
+                    "code": "K3",
+                    "amount": 1152,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YQ",
+                    "amount": 1700,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "YR",
+                    "amount": 340,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "TAX",
+                    "code": "AIRLINE-MSC",
+                    "amount": 388,
+                    "currency": "INR"
+                  },
+                  {
+                    "category": "BF",
+                    "code": "",
+                    "amount": 20985,
+                    "currency": "INR"
+                  }
+                ]
+              }
+            ],
+            "flightFare": [
+              {
+                "flightId": "AI-2439-DEL-BOM-1795282200",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "MU1YXSII",
+                  "availableSeatCount": 9,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "M"
+                }
+              },
+              {
+                "flightId": "AI-471-BOM-IXC-1795304700",
+                "baggageAllowances": [
+                  {
+                    "paxType": "ADT",
+                    "baggageAllowanceId": "acd372200d87083dfd31172adfa65d95"
+                  }
+                ],
+                "benefitIds": null,
+                "paxFares": [],
+                "identifiers": {
+                  "cabinType": "ECONOMY",
+                  "fareClass": "RP",
+                  "fareBasisCode": "TU1YXFII",
+                  "availableSeatCount": 9,
+                  "brandName": "ECO VALUE",
+                  "brand": "ECO VALUE",
+                  "rbd": "T"
+                }
+              }
+            ],
+            "revenue": 0
+          }
+        ],
+        "cabinType": "ECONOMY",
+        "displayCabinType": "ECONOMY",
+        "upgradeCallout": null,
+        "smePolicy": null
+      }
+    },
+    "metaData": {
+      "airlineDetail": {
+        "AI": {
+          "code": "AI",
+          "name": "Air India",
+          "logoURL": ""
+        },
+        "6E": {
+          "code": "6E",
+          "name": "IndiGo",
+          "logoURL": ""
+        }
+      },
+      "airportDetail": {
+        "BOM": {
+          "code": "BOM",
+          "name": "Chatrapati Shivaji Airport",
+          "city": "Mumbai",
+          "country": "India",
+          "countryCode": "IN"
+        },
+        "IXC": {
+          "code": "IXC",
+          "name": "Chandigarh",
+          "city": "Chandigarh",
+          "country": "India",
+          "countryCode": "IN"
+        },
+        "DEL": {
+          "code": "DEL",
+          "name": "Indira Gandhi Airport",
+          "city": "New Delhi",
+          "country": "India",
+          "countryCode": "IN"
+        }
+      }
+    },
+    "travelOptionIdsToFareIdsMap": {},
+    "specialRTFareMap": {},
+    "sortData": {
+      "arrival_down": {
+        "J1": [
+          11,
+          12,
+          9,
+          8,
+          7,
+          10,
+          0,
+          4,
+          1,
+          6,
+          5,
+          3,
+          2
+        ]
+      },
+      "round_trip_price_up": {},
+      "departure_up": {
+        "J1": [
+          2,
+          3,
+          5,
+          6,
+          1,
+          4,
+          9,
+          8,
+          7,
+          0,
+          10,
+          11,
+          12
+        ]
+      },
+      "duration_up": {
+        "J1": [
+          0,
+          1,
+          4,
+          2,
+          3,
+          5,
+          6,
+          10,
+          12,
+          7,
+          8,
+          9,
+          11
+        ]
+      },
+      "arrival_up": {
+        "J1": [
+          2,
+          3,
+          5,
+          6,
+          1,
+          4,
+          0,
+          10,
+          7,
+          8,
+          9,
+          12,
+          11
+        ]
+      },
+      "ptc_fare_price_up": {
+        "J1": []
+      },
+      "price_up": {
+        "J1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "departure_down": {
+        "J1": [
+          12,
+          11,
+          10,
+          0,
+          7,
+          8,
+          9,
+          4,
+          1,
+          6,
+          5,
+          3,
+          2
+        ]
+      },
+      "check_in_baggage_price_down": {
+        "J1": [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "ptc_fare_price_down": {
+        "J1": []
+      },
+      "duration_down": {
+        "J1": [
+          11,
+          9,
+          8,
+          7,
+          12,
+          10,
+          6,
+          5,
+          3,
+          2,
+          4,
+          1,
+          0
+        ]
+      },
+      "price_down": {
+        "J1": [
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "check_in_baggage_price_up": {
+        "J1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    "filterData": {
+      "onwardLeg": {
+        "nearbyAirportFilter": [],
+        "stops": {
+          "options": [
+            0,
+            1
+          ],
+          "prices": [
+            6200,
+            17402
+          ],
+          "selectedValues": [],
+          "pricesADT": [
+            6200,
+            17402
+          ]
+        },
+        "airlineFilter": {
+          "options": [
+            {
+              "label": "Air India",
+              "value": "AI",
+              "priceLabel": 7080,
+              "priceLabelADT": 7080
+            },
+            {
+              "label": "IndiGo",
+              "value": "6E",
+              "priceLabel": 6200,
+              "priceLabelADT": 6200
+            }
+          ],
+          "selectedValues": [],
+          "showNoResultsWhenNoneSelected": true,
+          "showMultiAirlineItineraries": true
+        },
+        "layoverDuration": {
+          "min": 0,
+          "max": 14,
+          "current": {
+            "min": 0,
+            "max": 14
+          }
+        },
+        "fareInclusions": {
+          "options": [
+            {
+              "label": "With Baggage",
+              "value": "withBaggage"
+            }
+          ],
+          "selectedValues": []
+        },
+        "layoverAirport": {
+          "availableLayoverAirport": {
+            "India": [
+              "Mumbai(BOM)"
+            ]
+          },
+          "selectedOptions": {
+            "India": [
+              "Mumbai(BOM)"
+            ]
+          }
+        },
+        "tripDuration": {
+          "min": 0,
+          "max": 19,
+          "current": {
+            "min": 0,
+            "max": 19
+          }
+        },
+        "oneWayPrice": {
+          "min": 6200,
+          "max": 25276,
+          "minADT": 6200,
+          "maxADT": 25276,
+          "currentADT": 25276,
+          "current": 25276
+        },
+        "departureTimeFrom": [
+          {
+            "airportCode": "DEL",
+            "options": [
+              "0000",
+              "0800",
+              "1200",
+              "1600",
+              "2000"
+            ],
+            "selectedValues": []
+          }
+        ],
+        "arrivalTimeFrom": [
+          {
+            "airportCode": "IXC",
+            "options": [
+              "0000",
+              "0800",
+              "1200",
+              "1600",
+              "2000"
+            ],
+            "selectedValues": []
+          }
+        ],
+        "ctUpgrade": false,
+        "visaRejection": false,
+        "ptcFare": false,
+        "smePolicyFilter": {
+          "options": {
+            "0": "IN_POLICY"
+          }
+        },
+        "cfwSme": false
+      },
+      "returnLeg": null,
+      "totalRoundTripPrice": null,
+      "checkInBaggageRequired": false
+    },
+    "highRpsTravelOptionIds": [
+      "6E-2557-DEL-IXC-1795278000"
+    ],
+    "previousSelectedCards": {
+      "J1": []
+    },
+    "baggageAllowances": {},
+    "benefits": {},
+    "trackingId": "ONE_DEMAND_SEARCH-323013e3-bd08-4725-ab83-482d720d03c0",
+    "searchId": "DC_Search-d70bb8e0-595e-40f6-9c5c-430e9ba6f271",
+    "couponUIResponse": null,
+    "dataId": "AVN+Z50PFhMzbSwbn3a95KZ5oKWNLdxo3VqvS5rIOveNAPFLrAEV5FBkLjwCzdTUaARnAVQFY/kM6Wh8pfrVpY4UTL7CimJFcUkhgxriCUCE6nZ5AIIcRrtrUa8qRy9dty9VfTZdWM8SJUcDCqYIVBqa3fYRTIX9HfyOY8Vlj6KO+IDkpWmuFhQjJv1UDx4NmZKVL/8rqA6uBbxUF+0CBw6NA+e29W5+BUZl44Lk3a2gHUo7Qhn3ZS1xp1DWUFTAST+B8CnhUeoOLg==",
+    "supercoins": null,
+    "fareBenefits": {},
+    "configData": {
+      "initialWowSolutionsCount": 30,
+      "progressiveWowSolutionsCount": 15
+    },
+    "userDialogue": null,
+    "programContext": {
+      "loyaltyTrackerDetails": [
+        {
+          "loyaltyStatus": "INACTIVE",
+          "displayStatus": "INACTIVE",
+          "subscriptionDetails": null,
+          "tierTrackerDetails": [
+            {
+              "name": "ELITE",
+              "version": 1,
+              "order": 1,
+              "displayName": "ELITE",
+              "strategy": "PROMOTION",
+              "viewStatus": "ACTIVE",
+              "allotmentDate": null,
+              "viewExpiryDate": null,
+              "constraintList": [
+                {
+                  "type": "COUNT",
+                  "evaluationDomain": "BOOKING",
+                  "target": 2,
+                  "current": 0,
+                  "upcoming": 0,
+                  "pending": 2
+                }
+              ],
+              "hasStarted": false
+            }
+          ]
+        }
+      ],
+      "benefitDetails": [
+        {
+          "programName": "ELITE",
+          "eligible": true,
+          "benefits": [
+            {
+              "name": "CLEARCHOICE_PLUS",
+              "limits": {
+                "type": "FUP",
+                "available": 6,
+                "used": 0,
+                "availableBy": "2027-08-19T12:34:00.000+05:30"
+              },
+              "discountDetail": {
+                "type": "FIXED_PRICE",
+                "value": 9
+              },
+              "paxLevelConfig": {}
+            },
+            {
+              "name": "EARN_SUPERCOINS",
+              "discountDetail": {
+                "type": "PER_SPEND_FIXED_PRICE",
+                "value": 1
+              }
+            }
+          ],
+          "redeemable": false
+        }
+      ]
+    }
+  }
+}
