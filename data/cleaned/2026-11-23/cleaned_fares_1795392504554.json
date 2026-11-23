@@ -1,0 +1,25 @@
+{
+  "run_id": "etl_2026-11-23_1795392504514",
+  "executed_at": "2026-11-23T00:08:24.514Z",
+  "total_records": 1,
+  "outliers_count": 0,
+  "records": [
+    {
+      "id": "fare_DEL-IXC_6E_2026-11-23_T+1_1795392504547_cmoa",
+      "route_id": "DEL-IXC",
+      "source": "Cleartrip",
+      "carrier": "6E",
+      "flight_number": "6E-5162",
+      "flight_date": "2026-11-23",
+      "booking_window": "T+1",
+      "fare_class": "Economy",
+      "base_fare": 5248,
+      "taxes": 1152,
+      "total_fare": 6400,
+      "scraped_at": "2026-11-23T00:00:12.936Z",
+      "is_outlier": false,
+      "departure_time": "18:45",
+      "is_nonstop": true
+    }
+  ]
+}
